@@ -9,14 +9,15 @@
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!--swiper-->  
         <link rel="stylesheet" type="text/css" href="./css/main.css">
 
-        <script defer src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/jquery-3.6.0.min.js"></script>
         <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--aos-->
         <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!--swiper-->
-        <script src="./js/index.js"></script>
+        <script defer src="./js/index.js"></script>
+        <script defer src="./js/common.js"></script>
     </head>
     <body>
         <header class="header">
-            <div class="header__container">
+            <div class="header__container wide-container">
                 <div class="header__logo">
                     <a class="header__logo--menu-btn">
                         <span class="header__logo--line"></span>
@@ -28,30 +29,52 @@
                     </a>
                 </div>
                 <nav class="header__menu">
+                    <a class="header__mobile-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
                     <ul class="header__menu--ul">
-                        <li class="header__menu--li">
-                            <a href="">New Arrivals</a>
-                            <div class="header__menu--sub">
+                        <!--서브메뉴가 있다면 has--sub-menu 추가 -->
+                        <li class="header__menu--li has--sub-menu">
+                            <a href="" class="header__menu--a" data-href="#1">New Arrivals</a>
+                            <div class="header__menu--sub2">
                                 <ul class="header__menu--ul2">
-                                    <li class="header__menu--li2">
-                                        <a href="">subMenu1</a>
+                                    <!--서브메뉴가 있다면 has--sub-menu2 추가 -->
+                                    <li class="header__menu--li2 has--sub-menu2">
+                                        <a href="" class="header__menu--a2" data-href="#1-1">subMenu1</a>
+                                        <div class="header__menu--sub3">
+                                            <ul class="header__menu--ul3">
+                                                <li class="header__menu--li3">
+                                                    <a href="" class="header__menu--a3">subMenu1-1</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="" class="header__menu--a3">subMenu1-2</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="" class="header__menu--a3">subMenu1-3</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="" class="header__menu--a3">subMenu1-4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="header__menu--li2">
-                                        <a href="">subMenu2</a>
+                                        <a href="" class="header__menu--a2">subMenu2</a>
                                     </li>
                                     <li class="header__menu--li2">
-                                        <a href="">subMenu3</a>
+                                        <a href="" class="header__menu--a2">subMenu3</a>
                                     </li>
                                     <li class="header__menu--li2">
-                                        <a href="">subMenu4</a>
+                                        <a href="" class="header__menu--a2">subMenu4</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="header__menu--li"><a href="">Womens</a></li>
-                        <li class="header__menu--li"><a href="">Mens</a></li>
-                        <li class="header__menu--li"><a href="">Gift Certificates</a></li>
-                        <li class="header__menu--li"><a href="">Top Sellers</a></li>
+                        <li class="header__menu--li"><a href="" class="header__menu--a">Womens</a></li>
+                        <li class="header__menu--li"><a href="" class="header__menu--a">Mens</a></li>
+                        <li class="header__menu--li"><a href="" class="header__menu--a">Gift Certificates</a></li>
+                        <li class="header__menu--li"><a href="" class="header__menu--a">Top Sellers</a></li>
                     </ul>
                 </nav>
                 <div class="header__buttons">
@@ -68,52 +91,55 @@
                 <div class="header__search">
                     <form action="">
                         <button type="submit" class="header__search--button"><img src="./img/Ic_search.png" alt="검색 아이콘"></button>
-                        <input type="text" class="header__search--input">
+                        <input type="text" class="header__search--input" placeholder="상품을 검색해주세요">
                     </form>
                 </div>
             </div>
         </header>
-        <section class="main-banner">
-            <div class="swiper-container">
-                <div class="swiper-banner swiper-wrapper">
-                    <div class="swiper-slide swiper-banner-slide">
-                        <div class="swiper-banner-img">
-                            <img src="./img/img_mainslide01.jpg" alt="메인배너 이미지1">
-                        </div>
-                        <div class="swiper-banner-text">
-                            <h4><a href="javascript:;" class="swiper-banner-text__subject">미리 준비하는 설날선물</a></h4>
-                            <p class="swiper-banner-text__desc">기간한정 추가할인</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-banner-slide">
-                        <div class="swiper-banner-img">
-                            <img src="./img/img_mainslide02.jpg" alt="메인배너 이미지2">
-                        </div>
-                        <div class="swiper-banner-text">
-                            <h4><a href="javascript:;" class="swiper-banner-text__subject">설날을 풍선하게 채울 완벽한 선물</a></h4>
-                            <p class="swiper-banner-text__desc">주말에만 최대 75%</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-banner-slide">
-                        <div class="swiper-banner-img">
-                            <img src="./img/img_mainslide03.jpg" alt="메인배너 이미지3">
-                        </div>
-                        <div class="swiper-banner-text">
-                            <h4><a href="javascript:;" class="swiper-banner-text__subject">22 S/S NEW ARRIVAL</a></h4>
-                            <p class="swiper-banner-text__desc">가장먼저 만나보는 신상품</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-banner-slide">
-                        <div class="swiper-banner-img">
-                            <img src="./img/img_mainslide04.jpg" alt="메인배너 이미지4">
-                        </div>
-                        <div class="swiper-banner-text">
-                            <h4><a href="javascript:;" class="swiper-banner-text__subject">원피스로 봄날 준비하기</a></h4>
-                            <p class="swiper-banner-text__desc">추가 20%할인 이벤트</p>
-                        </div>
+        <section class="slider__banner">
+            <div class="wide-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <a class="swiper-slide">
+                            <div class="slider__banner--img">
+                                <img src="./img/img_mainslide01.jpg" alt="메인배너 이미지1">
+                            </div>
+                            <div class="slider__banner--text">
+                                <h4 class="slider__banner--text-subject">미리 준비하는 설날선물</h4>
+                                <p class="slider__banner--text-desc">기간한정 추가할인</p>
+                            </div>
+                        </a>
+                        <a class="swiper-slide">
+                            <div class="slider__banner--img">
+                                <img src="./img/img_mainslide02.jpg" alt="메인배너 이미지2">
+                            </div>
+                            <div class="slider__banner--text">
+                                <h4 class="slider__banner--text-subject">설날을 풍선하게 채울 완벽한 선물</h4>
+                                <p class="slider__banner--text-desc">주말에만 최대 75%</p>
+                            </div>
+                        </a>
+                        <a class="swiper-slide">
+                            <div class="slider__banner--img">
+                                <img src="./img/img_mainslide03.jpg" alt="메인배너 이미지3">
+                            </div>
+                            <div class="slider__banner--text">
+                                <h4 class="slider__banner--text-subject">22 S/S NEW ARRIVAL</h4>
+                                <p class="slider__banner--text-desc">가장먼저 만나보는 신상품</p>
+                            </div>
+                        </a>
+                        <a class="swiper-slide">
+                            <div class="slider__banner--img">
+                                <img src="./img/img_mainslide04.jpg" alt="메인배너 이미지4">
+                            </div>
+                            <div class="slider__banner--text">
+                                <h4 class="slider__banner--text-subject">원피스로 봄날 준비하기</h4>
+                                <p class="slider__banner--text-desc">추가 20%할인 이벤트</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+        <footer></footer>
     </body>
 </html>

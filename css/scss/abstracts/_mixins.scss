@@ -1,8 +1,11 @@
 /*responsive mixin*/
 @mixin mediaQuery($width){
-    @media (max-width: $widthpx){ 
+    @media (max-width: $width){ 
         @content;
     }
+}
+@mixin transition($second){
+    transition: all $second ease-in-out;
 }
 
 /*common mixin*/
@@ -11,6 +14,16 @@
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
+}
+
+@mixin opacityHidden{
+    opacity:0;
+    visibility:hidden;
+}
+
+@mixin opacityVisible{
+    opacity:1;
+    visibility:visible
 }
 
 @mixin translateX{
@@ -35,4 +48,24 @@
     display:flex;
     align-items:center;
     justify-content:center;
+}
+@mixin boxShadow{
+    box-shadow:0px 3px 6px rgba(0,0,0,0.08);
+}
+
+@mixin buttonReset{
+    outline:none;
+    box-shadow:none;
+    border:0;
+    padding:0;
+    border-radius:0;
+    background:none;
+}
+@mixin inputReset{
+    outline:none;
+    box-shadow:none;
+    border-radius:0;
+}
+@mixin border($color){
+    border: 1px solid $color;
 }

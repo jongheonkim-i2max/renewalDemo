@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 /*main top banner*/
-/*
-let mainBannerSwiper = new Swiper('.main-banner .swiper-container', {
+var mainBannerSwiper = new Swiper('.slider__banner .swiper-container', {
     slidesPerView: 3,
     spaceBetween:60,
     loop: true,
@@ -14,10 +13,12 @@ let mainBannerSwiper = new Swiper('.main-banner .swiper-container', {
     //loopedSlides: 1,
     speed:1000,
     autoplay:false,
+    /*
     autoplay: {
         delay : 3000,
         disableOnInteraction: false,
     },
+    */
     breakpoints: {
         360: {
             slidesPerView: 1,
@@ -39,4 +40,3 @@ let mainBannerSwiper = new Swiper('.main-banner .swiper-container', {
         }
     },
 });
-*/
