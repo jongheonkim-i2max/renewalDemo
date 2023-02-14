@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/*common*/
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 14px;
+}
+body {
+    overflow-x: hidden;
+    color: #222222;
+}
+p {
+    line-height: 1.8;
+}
+a {
+    color: #222222;
+    text-decoration: none;
+}
+section{
+    padding:0 5rem;
+    @include width1200{ 
+        padding:0 40px;
+    }
+}
+.clearFix {
+    &:before {
+        display: block;
+        content: '';
+        line-height: 0;
+    }
+
+    &:after {
+        display: block;
+        content: '';
+        line-height: 0;
+        clear: both;
+    }
+}
+
+/* main (index) */
+/* main-banner */
+.main-banner{
+    position:relative; 
+
+    &::before{
+        content:"";
+        width:100%;
+        height:28rem;
+        background:#f6f6f6;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+
+    .swiper-container{
+        padding:50px 0;
+        overflow:hidden;
+
+        .swiper-banner{
+            &-slide{
+                position:relative;
+                overflow:hidden;
+                border-top-left-radius:6rem;
+                border-bottom-right-radius:6rem;
+                box-shadow:2px 2px 5px 1px rgb(1 1 1 / 10%);
+            }
+
+            &-img{
+                position:relative;
+                width:100%;
+                // padding-bottom:50%;
+                height:40rem;
+                z-index:1;
+                img{
+                    position:absolute;
+                    //width:100%;
+                    height:100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-text{
+                z-index:2;
+                position:absolute;
+                text-align:right;
+                right:0;
+                padding:0 30px;
+                bottom:0;
+                width:70%;
+                height:40%;
+                color:#fff;
+                word-break: keep-all;
+                font-size:18px;
+
+                &__subject{
+                    font-size:2vw;
+                    line-height:2.5vw;
+                    color:#fff;
+                }
+
+                &__desc{
+                    font-style: italic;
+                    margin-top:20px;
+                }
+            }
+        }
+    }
+}
