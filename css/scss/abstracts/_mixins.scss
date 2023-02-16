@@ -50,7 +50,7 @@
     justify-content:center;
 }
 @mixin boxShadow{
-    box-shadow:0px 3px 6px rgba(0,0,0,0.08);
+    box-shadow:0px 3px 6px rgba(0,0,0,0.16);
 }
 
 @mixin buttonReset{
@@ -68,4 +68,52 @@
 }
 @mixin border($color){
     border: 1px solid $color;
+}
+@mixin commonPadding{
+    padding: 150px 0;
+    @include mediaQuery(768px){
+        padding: 100px 0;
+    }
+    @include mediaQuery(480px){
+        padding:70px 0;
+    }
+}
+@mixin commonMarginBottom{
+    margin-bottom: 150px;
+    @include mediaQuery(768px){
+        margin-bottom: 100px;
+    }
+    @include mediaQuery(480px){
+        margin-bottom:70px;
+    }
+}
+@mixin visualHidden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%); 
+    margin: -1px;
+}
+
+@mixin letter($px){
+    letter-spacing:$px;
+}
+
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
 }

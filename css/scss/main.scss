@@ -1,7 +1,7 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-//@import 'vendors/bootstrap';
+@import 'vendors/swiper';
 
 @import 'base/reset';
 @import 'base/fonts';
@@ -10,7 +10,8 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-//@import 'components/buttons';
+@import 'components/icon';
+@import 'components/items';
 
 @import 'pages/home';
 

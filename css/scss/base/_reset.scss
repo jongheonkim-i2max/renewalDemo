@@ -13,7 +13,7 @@ button, input, select {
     margin:0
 }
 a, a:hover{
-    color:$color-black;
+    color:var(--color-black);
     outline:none;
     box-shadow:none;
     text-decoration: none;

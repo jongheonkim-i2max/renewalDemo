@@ -1,7 +1,11 @@
+.visual-hidden{
+    @include visualHidden;
+}
 .header{
     width:100%;
     position:relative;
-    background:$color-white;
+    background:var(--color-white);
+    z-index:3;
     @include boxShadow;
     @include mediaQuery(1200px){
         padding-bottom:30px;    
@@ -108,8 +112,8 @@
             width:300px;
             height:100%;
             padding:50px 15px;
-            background:#fff;
-            border-right:1px solid #e5e5e5;
+            background:var(--color-white);
+            border-right:1px solid var(--color-Lgrey);
             @include opacityHidden;
             @include transition(500ms);
 
@@ -136,7 +140,7 @@
                     top:-1px;
                     left:10px;
                     transform:rotate(-45deg);
-                    background:$color-black;
+                    background:var(--color-black);
 
                     &:nth-child(2){
                         transform:rotate(45deg);
@@ -148,7 +152,7 @@
         &--ul{
             display:flex;
             align-items:center;
-            background:$color-white;
+            background:var(--color-white);
             @include mediaQuery(991px){
                 display:block;
             }
@@ -173,7 +177,7 @@
                             position:absolute;
                             border-top:5px solid transparent;
                             border-bottom:5px solid transparent;
-                            border-left:5px solid #000;
+                            border-left:5px solid var(--color-black);
                             top:8px;
                             right:5px;
                             @include transition(100ms);
@@ -199,7 +203,7 @@
                 > a{
                     font-size:22px;
                     display:block;
-                    color:$color-black;
+                    color:var(--color-black);
                     line-height:100px;
 
                     @include mediaQuery(1500px){
@@ -218,7 +222,7 @@
             text-align:center;
             z-index:1;
             top:150px;
-            background:$color-white;
+            background:var(--color-white);
             @include border(#e5e5e5);
             @include opacityHidden;
             @include transition(200ms);
@@ -235,7 +239,7 @@
                 top:auto;
                 padding:20px 0 0;
                 border:0;
-                border-top:1px solid #e5e5e5;
+                border-top:1px solid var(--color-grey);
                 margin-top:20px;
                 @include opacityVisible;
                 display:none;
@@ -264,7 +268,7 @@
                             position:absolute;
                             border-top:5px solid transparent;
                             border-bottom:5px solid transparent;
-                            border-left:5px solid #000;
+                            border-left:5px solid var(--color-black);
                             top:8px;
                             right:10px;
                             @include transition(100ms);
@@ -290,14 +294,13 @@
                     }
                     > a{
                         font-size:16px;
-                        color:$color-black;
+                        color:var(--color-black);
                         position:relative; 
-                        display:block;
                         &::after{
                             content:"";
                             width:0;
                             height:1px;
-                            background: $color-black;
+                            background: var(--color-black);
                             bottom:-5px;
                             @include translateX;
                             @include transition(200ms);
@@ -308,6 +311,7 @@
                         }
                         @include mediaQuery(991px){
                             padding-left:20px;
+                            display:block;
                             &::after{
                                 content:"";
                                 width:5px;
@@ -315,7 +319,7 @@
                                 position:absolute;
                                 top:12px;
                                 left:5px;
-                                background:$color-black;
+                                background:var(--color-black);
                                 transition:none;
                                 transform:translateX(0);
                                 bottom:auto;
@@ -333,7 +337,7 @@
             padding:20px 15px;
             text-align:center;
             z-index:2;
-            background:$color-white;
+            background:var(--color-white);
             @include border(#e5e5e5);
             @include transition(200ms);
             @include opacityHidden;
@@ -368,7 +372,7 @@
                     a{
                         position:relative;
                         font-size:15px;
-                        color:$color-black;
+                        color:var(--color-black);
                         @include mediaQuery(1500px){
                             font-size:13px;
                         }
@@ -379,7 +383,7 @@
                             content:"";
                             width:0;
                             height:1px;
-                            background:$color-black;
+                            background:var(--color-black);
                             @include translateX;
                             @include transition(200ms);
                             bottom:-5px;
@@ -390,7 +394,7 @@
                                 position:absolute;
                                 top:11px;
                                 left:25px;
-                                background:$color-black;
+                                background:var(--color-black);
                                 border-radius:50%;
                                 transition:none;
                                 transform:translateX(0);
@@ -441,7 +445,7 @@
             @include inputReset;
             border:1px solid #C2CAD3;
             padding: 0 15px 0 45px;
-            color:$color-black;
+            color:var(--color-black);
             @include mediaQuery(480px){
                 height:36px;
                 line-height:36px;

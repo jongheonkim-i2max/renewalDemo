@@ -1,0 +1,70 @@
+/*icon*/
+[class^='ico_'] {
+    display: inline-flex;
+    vertical-align: middle;
+    background: url('/img/ico_PageDesign.png') no-repeat;
+    @include mediaQuery(768px){
+        background: url('../img/ico_PageDesign_Mo.png') no-repeat;
+    }
+}
+
+.ico_starR {
+    width: 14px;
+    height: 14px;
+    background-position: 0px -240px;
+    @include mediaQuery(768px){
+        width: 11px;
+        height: 11px;
+        background-position: 0 -192px;
+    }
+}
+.ico_starG {
+    width: 14px;
+    height: 14px;
+    background-position: -120px -240px;
+    @include mediaQuery(768px){
+        width: 11px;
+        height: 11px;
+        background-position: -96px -192px;
+    }
+}
+.ico_best{
+    width: 55px;
+    height: 45px;
+    z-index: 2;
+    background-position:-480px -240px;
+    @include mediaQuery(991px){
+        background: url('../img/ico_PageDesign_Mo.png') no-repeat;
+        width: 44px;
+        height: 34px;
+        background-position: -384px -192px;
+    }
+}
+.ico_cart{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: var(--color-coral) url('../img/ico_PageDesign.png');
+    background-position: 0 -360px;
+    z-index: 1;
+}
+.ico_like{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: var(--color-coral) url('../img/ico_PageDesign.png');
+    background-position: -120px -360px;
+    z-index: 1;
+    box-shadow: 2px 2px 5px 1px rgba(1, 1, 1, 0.2);
+}
+
+.item-review{
+    display:inline-flex;
+    align-items:center;
+    i{
+        margin-right:4px;
+        &:last-child{
+            margin-right:0;
+        }
+    }
+}
