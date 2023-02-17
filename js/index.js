@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
     /*aos start*/
-    AOS.init();
+    AOS.init({
+        duration: 800,
+        once:true,
+    });
+
+    $('.slider__banner').addClass('ani');
 });
 
 /*main top banner*/

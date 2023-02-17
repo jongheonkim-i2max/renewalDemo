@@ -116,6 +116,7 @@
             border-right:1px solid var(--color-Lgrey);
             @include opacityHidden;
             @include transition(500ms);
+            @include boxShadow;
 
             &.active{
                 left:0;

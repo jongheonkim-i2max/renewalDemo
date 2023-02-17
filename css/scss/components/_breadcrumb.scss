@@ -1,0 +1,44 @@
+ol.breadcrumb{
+    display:flex;
+    align-items:center;
+    li{
+        position:relative;
+        margin-right:35px;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 9px;
+            right: -21px;
+            width: 8px;
+            height: 13px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url('../img/ico_PageDesign.png') no-repeat;
+            background-position: -360px -120px;
+        }
+        &:last-child{
+            margin-right:0;
+        }
+        &:last-child::after{
+            display:none;
+        }
+        a{
+            font-size:18px;
+            color:#616060;
+        }
+        @include mediaQuery(768px){
+            margin-right:25px;
+            &::after{
+                background: url('../img/ico_PageDesign_Mo.png') no-repeat;
+                top: 8px;
+                right: -16px;
+                width: 7px;
+                height: 11px;
+                background-position: -288px -96px;
+            }
+            a{
+                font-size:16px;
+            }
+        }
+    }
+}

@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size:100%;
     font-weight:400
 }
+select{
+    outline:none;
+    box-shadow:none;
+}
 ul, ol{
     list-style:none
 }

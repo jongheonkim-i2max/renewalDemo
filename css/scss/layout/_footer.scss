@@ -63,8 +63,8 @@
             line-height:45px;
             padding:0 15px 0 20px;
             background: #444444;
+            border:#444444;
             color:var(--color-white);
-            border: #444;
             @include mediaQuery(480px){
                 width:100%;
                 height:35px;

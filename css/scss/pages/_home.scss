@@ -3,6 +3,13 @@
 .slider__banner{
     position:relative;
     @include commonPadding;
+    @include opacityHidden;
+    @include transition(800ms);
+    transform:translate(0, 100px);
+    &.ani{
+        @include opacityVisible;
+        transform: translate(0, 0);
+    }
 
     &::before{
         content:"";
@@ -679,11 +686,11 @@
         &::after{
             content:"";
             width:100px;
-            height:100%;
+            height:calc(100% + 50px);
             position:absolute;
-            top:0;
+            top:-50px;
             left:-120px;
-            background:linear-gradient(180deg, #f6f6f6 34.5%, #fff 34.5%);
+            background:linear-gradient(180deg, #f6f6f6 41.5%, #fff 41.5%);
             z-index:2;
         }
         &::after{

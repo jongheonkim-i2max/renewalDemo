@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Main</title>
+        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos-->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!--swiper-->  
         <link rel="stylesheet" type="text/css" href="./css/main.css">
-        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--aos-->
@@ -27,7 +27,7 @@
                         <span class="header__logo--line"></span>
                     </a>
                     <a href="./" class="logo">
-                        <img src="/img/logo.svg" alt="사이트 로고">
+                        <img src="./img/logo.svg" alt="사이트 로고">
                     </a>
                 </div>
                 <nav class="header__menu">
@@ -138,7 +138,7 @@
             <div class="wide-container">
                 <div class="keyword__ranking">
                     <h2 class="keyword__ranking--subject">Keyword list</h2>
-                    <a href="" class="keyword__ranking--link">
+                    <a href="" class="keyword__ranking--link aos-init" data-aos="fade-right">
                         <div class="keyword__ranking--number">
                             <i class="ico_best best"></i>
                             <span class="num">1</span>
@@ -163,7 +163,7 @@
                             <span class="keyword__ranking--line"></span> 
                         </div>
                     </a>
-                    <a href="" class="keyword__ranking--link">
+                    <a href="" class="keyword__ranking--link aos-init" data-aos="fade-right" data-aos-delay="100">
                         <div class="keyword__ranking--number">
                             <span class="num">2</span>
                         </div>
@@ -171,7 +171,7 @@
                             <div class="keyword__ranking--img">
                                 <img src="./img/img_keyworld02.jpg" alt="키워드랭킹 이미지 2">
                             </div>
-                            <div class="keyword__ranking--info">
+                            <div class="keyword__ranking--info aos-init" data-aos="fade-right" data-aos-delay="200">
                                 <h5 class="keyword__ranking--title">T-shirt</h5>
                                 <div class="item-review">
                                     <i class="ico_starR"></i>
@@ -187,7 +187,7 @@
                             <span class="keyword__ranking--line"></span> 
                         </div>
                     </a>
-                    <a href="" class="keyword__ranking--link">
+                    <a href="" class="keyword__ranking--link aos-init" data-aos="fade-right" data-aos-delay="300">
                         <div class="keyword__ranking--number">
                             <span class="num">3</span>
                         </div>
@@ -211,7 +211,7 @@
                             <span class="keyword__ranking--line"></span> 
                         </div>
                     </a>
-                    <a href="" class="keyword__ranking--link">
+                    <a href="" class="keyword__ranking--link aos-init" data-aos="fade-right" data-aos-delay="400">
                         <div class="keyword__ranking--number">
                             <span class="num">4</span>
                         </div>
@@ -235,7 +235,7 @@
                             <span class="keyword__ranking--line"></span> 
                         </div>
                     </a>
-                    <a href="" class="keyword__ranking--link">
+                    <a href="" class="keyword__ranking--link aos-init" data-aos="fade-right" data-aos-delay="500">
                         <div class="keyword__ranking--number">
                             <span class="num">5</span>
                         </div>
@@ -260,16 +260,16 @@
                         </div>
                     </a>
                 </div>
-                <div class="keyword__banner">
+                <div class="keyword__banner aos-init" data-aos="fade-up" data-aos-delay="800">
                     <div class="keyword__banner--img01">
                         <img src="./img/img_bestofseason01.jpg" alt="베스트시즌 이미지1">
                     </div>
-                    <div class="keyword__banner--img02">
+                    <div class="keyword__banner--img02 aos-init" data-aos="fade-down" data-aos-delay="900">
                         <img src="./img/img_bestofseason02.jpg" alt="베스트시즌 이미지2">
                         <div class="main__common--text">
-                            <p>22 S/S FW</p>
-                            <h5>Best of Season</h5>
-                            <span>New Arrival Spring</span>
+                            <p class="aos-init" data-aos="fade-right" data-aos-delay="1000">22 S/S FW</p>
+                            <h5 class="aos-init" data-aos="fade-right" data-aos-delay="1100">Best of Season</h5>
+                            <span class="aos-init" data-aos="fade-right" data-aos-delay="1200">New Arrival Spring</span>
                         </div>
                     </div>
                 </div>
@@ -280,14 +280,14 @@
             <div class="wide-container">
                 <div class="img__banner--text">
                     <div class="main__common--text">
-                        <p>22 S/S FW</p>
-                        <h5>Best of Season</h5>
+                        <p class="aos-init" data-aos="fade-right">22 S/S FW</p>
+                        <h5 class="aos-init" data-aos="fade-right" data-aos-delay="100">Best of Season</h5>
                     </div>
-                    <div class="img__banner--img">
+                    <div class="img__banner--img" class="aos-init" data-aos="fade-up" data-aos-delay="200">
                         <img src="./img/img_bestofseason03.jpg" alt="베스트시즌 이미지3">
                     </div>
                 </div>
-                <div class="img__banner--slider">
+                <div class="img__banner--slider aos-init" data-aos="fade-down" data-aos-delay="300">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -310,7 +310,7 @@
                 </div>
             </div>
         </section>
-        <section class="multi__slider">
+        <section class="multi__slider aos-init" data-aos="fade-down">
             <h2 class='visual-hidden'>category item slider</h2>
             <div class="wide-container">
                 <ul class="tab-menu">
@@ -2207,7 +2207,7 @@
                 </div>
             </div>
         </section>
-        <section class="two__slider">
+        <section class="two__slider aos-init" data-aos="fade-down">
             <div class="wide-container">
                 <h2>Top Sellers</h2>
                 <div class="two__slider--wrap">
@@ -2266,13 +2266,19 @@
                 </div>
             </div>
         </section>
-        <section class="gift__slider">
+        <section class="gift__slider aos-init" data-aos="fade-down" data-aos-delay="500">
             <div class="wide-container">
                 <h2>Gift certificates</h2>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide items">
                             <div class="items__image">
+                                <div class="items__ranking">
+                                    <i class="ico_best"></i>
+                                    <span class="ranking">
+                                        <i class="number">1</i>
+                                    </span>
+                                </div>
                                 <div class="items__btns">
                                     <a href="./pages/cart.html">
                                         <i class="ico_cart"></i>
@@ -2309,6 +2315,11 @@
                         </div>
                         <div class="swiper-slide items">
                             <div class="items__image">
+                                <div class="items__ranking">
+                                    <span class="ranking">
+                                        <i class="number">2</i>
+                                    </span>
+                                </div>
                                 <div class="items__btns">
                                     <a href="./pages/cart.html">
                                         <i class="ico_cart"></i>
@@ -2345,6 +2356,11 @@
                         </div>
                         <div class="swiper-slide items">
                             <div class="items__image">
+                                <div class="items__ranking">
+                                    <span class="ranking">
+                                        <i class="number">3</i>
+                                    </span>
+                                </div>
                                 <div class="items__btns">
                                     <a href="./pages/cart.html">
                                         <i class="ico_cart"></i>
@@ -2381,6 +2397,11 @@
                         </div>
                         <div class="swiper-slide items">
                             <div class="items__image">
+                                <div class="items__ranking">
+                                    <span class="ranking">
+                                        <i class="number">4</i>
+                                    </span>
+                                </div>
                                 <div class="items__btns">
                                     <a href="./pages/cart.html">
                                         <i class="ico_cart"></i>
@@ -2417,6 +2438,11 @@
                         </div>
                         <div class="swiper-slide items">
                             <div class="items__image">
+                                <div class="items__ranking">
+                                    <span class="ranking">
+                                        <i class="number">5</i>
+                                    </span>
+                                </div>
                                 <div class="items__btns">
                                     <a href="./pages/cart.html">
                                         <i class="ico_cart"></i>
