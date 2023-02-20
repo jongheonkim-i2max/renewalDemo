@@ -14,7 +14,12 @@ ul, ol{
     list-style:none
 }
 button, input, select {
-    margin:0
+    margin:0;
+    background:none;
+    outline:none;
+    box-shadow:none;
+    border:0;
+    padding:0;
 }
 a, a:hover{
     color:var(--color-black);
