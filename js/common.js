@@ -77,3 +77,13 @@ $(document).on('click', '.header__mobile-close', function(){
 $(window).on("load resize", debounce(function(event){
     mobile_add();	
 }, 100));
+
+//모바일 판별
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+jQuery(document).ready(function($){
+    if(!isMobile) {
+        $('body').addClass('pc_body').removeClass('mobile_body');
+    } else {
+        $('body').addClass('mobile_body').removeClass('pc_body');
+    }
+});

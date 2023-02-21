@@ -20,6 +20,7 @@ button, input, select {
     box-shadow:none;
     border:0;
     padding:0;
+    border-radius:0;
 }
 a, a:hover{
     color:var(--color-black);
@@ -28,7 +29,7 @@ a, a:hover{
     text-decoration: none;
     cursor:pointer;
 }
-html, body, *{
+html, body{
     box-sizing:border-box;
     font-size:16px;
     @include mediaQuery(768px){
@@ -36,7 +37,7 @@ html, body, *{
     }
 }
 *, ::after, ::before {
-    box-sizing:inherit
+    box-sizing:border-box;
 }
 img, video {
     display:block;

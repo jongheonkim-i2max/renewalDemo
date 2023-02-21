@@ -9,6 +9,11 @@
     @include mediaQuery(480px){
         margin-top:60px;
     }
+
+    &.no_margin{
+        margin-top:0;
+    }
+
     &__container{
         width:1400px;
         padding:0 15px;
