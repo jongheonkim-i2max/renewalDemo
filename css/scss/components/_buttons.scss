@@ -1,4 +1,6 @@
 .large-button{
+    display:block;
+    text-align:center;
     width:100%;
     height:60px;
     line-height:60px;
@@ -9,6 +11,9 @@
     border:0;
     padding:0;
     margin:0;
+    &:hover{
+        color:var(--color-white);
+    }
     @include mediaQuery(768px){
         height:45px;
         line-height:45px;

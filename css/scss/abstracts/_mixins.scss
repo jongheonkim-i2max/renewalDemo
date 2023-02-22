@@ -87,6 +87,18 @@
         margin-bottom:70px;
     }
 }
+@mixin subCommonPadding{
+    padding:150px 0 0;
+    @include mediaQuery(991px){
+        padding:100px 0 0;
+    }
+    @include mediaQuery(768px){
+        padding:60px 0 0;
+    }
+    @include mediaQuery(480px){
+        padding:30px 0 0;
+    }
+}
 @mixin visualHidden{
     position: absolute;
     white-space: nowrap;

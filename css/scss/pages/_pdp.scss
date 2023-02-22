@@ -855,7 +855,8 @@
                     @include mediaQuery(991px){
                         display:flex;
                     }
-                    button{
+                    button,
+                    a{
                         margin-bottom:15px;
                         @include mediaQuery(991px){
                             margin-bottom:0;

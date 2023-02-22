@@ -1,0 +1,179 @@
+.common-product{
+    &__list{
+        margin-bottom:35px;
+        @include mediaQuery(768px){
+            margin-bottom:25px;
+        }
+        > li{
+            &::before,
+            &::after{
+                content:"";
+                display:block;
+                clear:both;
+            }
+            padding:30px 20px;
+            border:1px solid var(--border-color);
+            @include boxShadow;
+            margin-bottom:35px;
+            display:flex;
+            flex-wrap:wrap;
+            &:last-child{
+                margin-bottom:0;
+            }
+            @include mediaQuery(768px){
+                margin-bottom:25px;
+                padding:25px 20px;
+            }
+        }
+    }
+    &__img{
+        border-radius:35px 0;
+        overflow:hidden;
+        width:200px;
+        position:absolute;
+        @include mediaQuery(768px){
+            border-radius:25px 0;
+            width:calc(50% - 7.5px);
+            margin-right:15px;
+            position:relative;
+        }
+    }
+    &__info{
+        float:right;
+        width:calc(100% - 220px);
+        margin-left:220px;
+
+        .common-product__brand{
+            font-size:12px;
+            font-weight:bold;
+            margin-bottom:10px;
+        }
+        .common-product__subject{
+            font-size:14px;
+        }
+        .common-product__price{
+            display:flex;
+            align-items:center;
+            margin-top:10px;
+
+            .common-product__percent{
+                font-size:16px;
+                font-weight:bold;
+                color:var(--color-coral);
+                margin-right:15px;
+            }
+            .common-product__cost{
+                display:inline-flex;
+                align-items:center;
+                .common-product__sell{
+                    font-size:16px;
+                }
+                .common-product__regular{
+                    font-size:12px;
+                    color: rgba(0,0,0,0.4);
+                    margin-left:15px;
+                }
+            }
+        }
+        @include mediaQuery(768px){
+            width:calc(50% - 7.5px);
+            float:none;
+            margin-left:0;
+
+            .common-product__brand{
+                margin-bottom:5px;
+            }
+
+            .common-product__price{
+                margin-top:5px;
+                align-items:flex-end;
+                justify-content:space-between;
+                .common-product__percent{
+                    margin-right:0;
+                }
+                .common-product__cost{
+                    flex-wrap:wrap;
+                    justify-content:flex-end;
+                    text-align:right;
+                    
+                    .common-product__sell{
+                        order:1;
+                        width:100%;
+                    }
+                    .common-product__regular{
+                        order:0;
+                        width:100%;
+                        margin-bottom:3px;
+                        margin-left:0;
+                    }
+                }
+            }
+        }
+    }
+    &__option{
+        float:right;
+        width:calc(100% - 220px);
+        margin-left:220px;
+        margin-top:15px;
+        
+        &-li{
+            display:flex;
+            align-items:center;
+            background:var(--color-Lgrey);
+            padding:6px 25px 6px 55px;
+            margin-bottom:10px;
+            &:last-child{
+                margin-bottom:0;
+            }
+        }
+        &-name{
+            font-size:14px;
+            width:calc(100% - 156px);
+        }
+        &-value{
+            
+            input{
+                display:block;
+                width:31px;
+                height:31px;
+                border:1px solid #858D96;
+                text-align:center;
+                font-size:12px;
+                font-weight:500;
+                
+            }
+        }
+        &-price{
+            width:125px;
+            font-size:18px;
+            text-align:right;
+        }
+
+        @include mediaQuery(768px){
+            float:none;
+            width:100%;
+            margin-left:0;
+            margin-top:20px;
+
+            &-li{
+                padding:5px 15px;
+            }
+            &-name{
+                font-size:12px;
+                width:calc(100% - 102px);
+            }
+            &-value{
+                input{
+                    width:22px;
+                    height:22px;
+                    line-height:25px;
+                    font-size:10px;
+                }
+            }
+            &-price{
+                width:80px;
+                font-size:14px;
+            }
+        }
+    }
+}

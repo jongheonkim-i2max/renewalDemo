@@ -1,0 +1,37 @@
+select.custom-select{
+    border:1px solid #DEDEDF;
+    height:30px;
+    line-height:28px;
+    padding:0 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    font-weight:400;
+    font-size:14px;
+
+    background: url('../img/Ic_caret-down.png') no-repeat right 6px center/ 12px;
+    color: var(--color-blue-grey);
+    cursor: pointer;
+    &:disabled{
+        cursor:not-allowed;
+        background-color:var(--color-Lgrey);
+    }
+
+    &:focus{
+        outline:none;
+    }
+    &::-ms-expand{
+        display:none;
+    }
+    option{
+        color:inherit;
+    }
+    @include mediaQuery(768px){
+        height:28px;
+        line-height:26px;
+        padding:0 15px;
+        font-size:12px;
+    }
+}
