@@ -100,7 +100,7 @@
 
     .common-customer{
         &__info-wrap{
-            padding:40px 30px;
+            padding:30px 40px;
             border:1px solid var(--border-color);
             display:flex;
             align-items:center;
@@ -196,7 +196,7 @@
         }
 
         .common-shipping__form{
-            padding:40px 30px;
+            padding:30px 40px;
             padding-right:160px;
             border:1px solid var(--border-color);
             @include boxShadow;
@@ -359,6 +359,9 @@
                 border:1px solid #E4E4E5;
                 text-align:center;
                 position:relative;
+                &.active .more-btn__plus::before{
+                    display:none;
+                }
             }
             .more-btn__plus{
                 position:relative;
@@ -383,9 +386,6 @@
                     top:6px;
                     left:0;
                 }
-                &.active::before{
-                    display:none;
-                }
             }
             @include mediaQuery(768px){
                 .more-btn{
@@ -406,6 +406,9 @@
                     }
                 }
             }
+        }
+        .common-common__info-wrap{
+            margin-bottom:25px;
         }
     }
     .common-sale{
@@ -622,12 +625,12 @@
         &__cost{
             margin-top:10px;
             text-align:right;
-            button{
+            button, a{
                 margin-top:15px;
             }
             @include mediaQuery(768px){
                 
-                button{
+                button, a{
                     margin-top:10px;
                 }
             }
@@ -670,6 +673,61 @@
         width:100%;
         .custom-select{
             width:100%;
+        }
+    }
+
+    .common-common{
+        &__info{
+            display: flex;
+            align-items:center;
+            font-size:16px;
+            &-wrap{
+                padding: 40px 30px;
+                border: 1px solid var(--border-color);
+                display: flex;
+                align-items: center;
+                @include boxShadow;
+            }
+        }
+        &__subject{
+            margin-right:20px;
+        }
+        &__content{
+            font-weight:bold;
+        }
+        @include mediaQuery(768px){
+            &__info{
+                font-size:14px;
+                width:100%;
+                &-wrap{
+                    padding:25px 20px;
+                }
+            }
+            &__subject{
+                margin-right:0;
+                width:90px;
+            }
+            &__content{
+                width:calc(100% - 90px);
+            }
+        }
+    }
+}
+
+.orderConfirm{
+    .common-shipping{
+        .common-shipping__addr{
+            .shipping__addr{
+
+                .addr_code{
+                    width:calc(50% - 20px);
+                    margin-right:40px;
+                    @include mediaQuery(991px){
+                        width:100%;
+                        margin-right:0;
+                    }
+                }
+            }
         }
     }
 }

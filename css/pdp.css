@@ -211,7 +211,7 @@ button, input, select {
   border-radius: 0;
 }
 
-a, a:hover {
+a, a:hover, button {
   color: var(--color-black);
   outline: none;
   -webkit-box-shadow: none;

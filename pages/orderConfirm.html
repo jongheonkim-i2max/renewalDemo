@@ -4,16 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo 주문상세</title>
+        <title>Demo 주문완료</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="../css/checkout.css">
+        <link rel="stylesheet" type="text/css" href="../css/orderConfirm.css">
         
         <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
         <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
-        <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script><!--daumApi-->
-        <script defer src="../js/daumAddr.js"></script>
         <script defer src="../js/common.js"></script>
-        <script defer src="../js/checkout.js"></script>
+        <script defer src="../js/orderConfirm.js"></script>
     </head>
     <body>
         <header class="header">
@@ -94,7 +92,7 @@
                 </div>
             </div>
         </header>
-        <section class="checkout checkCommon">
+        <section class="orderConfirm checkCommon">
             <div class="container">
                 <div class="common-left">
                     <h1 class="common-title">주문/결제</h1>
@@ -103,13 +101,23 @@
                             <li>
                                 <a href="cart.html">장바구니</a>
                             </li>
-                            <li class="active">
-                                <a href="/">주문/결제</a>
-                            </li>
                             <li>
-                                <a href="orderConfirm.html">주문완료</a>
+                                <a href="checkout.html">주문/결제</a>
+                            </li>
+                            <li class="active">
+                                <a href="/">주문완료</a>
                             </li>
                         </ol>
+                    </div>
+                    <div class="common-common common-margin">
+                        <h5 class="common-subTitle">주문번호 : $자동 생성된 주문번호$</h5>
+                        <div class="common-common__info-wrap">
+                            <div class="common-common__info">
+                                <div class="common-common__content">
+                                    주문이 완료되었습니다.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="common-customer common-margin">
                         <h5 class="common-subTitle">주문고객</h5>
@@ -131,81 +139,58 @@
                     <div class="common-shipping common-margin">
                         <div class="common-shipping__title">
                             <h5 class="common-subTitle">받는분 정보</h5>
-                            <div class="custom-radio">
-                                <div class="custom-radio__cont">
-                                    <input type="radio" value="same" name="shipping" id="shipping_same" data-name="예시1" data-tel="010-1111-1111" data-addr1="우편번호1" data-addr2="주소1" data-addr3="상세주소1" data-addr4="참고항목1">
-                                    <label for="shipping_same" class="custom-radio__label">
-                                        <span class="custom-radio__circle"></span>
-                                        <span class="custom-radio__text">주문고객과 동일</span>
-                                    </label>
-                                </div>
-                                <div class="custom-radio__cont">
-                                    <input type="radio" value="new" name="shipping" id="shipping_new" checked data-name="" data-tel="" data-addr1="" data-addr2="" data-addr3="" data-addr4="">
-                                    <label for="shipping_new" class="custom-radio__label">
-                                        <span class="custom-radio__circle"></span>
-                                        <span class="custom-radio__text">새로 입력</span>
-                                    </label>
-                                </div>
-                                <div class="custom-radio__cont">
-                                    <input type="radio" value="select" name="shipping" id="shipping_select" data-name="" data-tel="" data-addr1="" data-addr2="" data-addr3="" data-addr4="">
-                                    <label for="shipping_select" class="custom-radio__label">
-                                        <span class="custom-radio__circle"></span>
-                                        <span class="custom-radio__text">배송지 선택</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <select name="shipping_list" id="shipping_list" class="custom-select" disabled>
-                                <option value="배송지 선택">배송지 선택</option>
-                                <option value="배송지 예시2" data-name="예시2" data-tel="010-2222-2222" data-addr1="우편번호2" data-addr2="주소2" data-addr3="상세주소2" data-addr4="참고항목2">배송지 예시 2</option>
-                                <option value="배송지 예시3" data-name="예시3" data-tel="010-3333-3333" data-addr1="우편번호3" data-addr2="주소3" data-addr3="상세주소3" data-addr4="참고항목3">배송지 예시 3</option>
-                                <option value="배송지 예시4" data-name="예시4" data-tel="010-4444-4444" data-addr1="우편번호4" data-addr2="주소4" data-addr3="상세주소4" data-addr4="참고항목4">배송지 예시 4</option>
-                            </select>
                         </div>
                         <div class="common-shipping__form">
                             <div class="common-shipping__input">
                                 <div class="common-shipping__input--half">
                                     <label for="shipping_name" class="">받으시는 분</label>
-                                    <input type="text" class="custom-input shipping_name" name="shipping_name" id="shipping_name" placeholder="성함">
+                                    <input type="text" class="custom-input shipping_name" name="shipping_name" id="shipping_name" value="김유신" readonly>
                                 </div>
                                 <div class="common-shipping__input--half">
                                     <label for="shipping_tel" class="">전화번호</label>
-                                    <input type="text" class="custom-input only_tel shipping_tel" name="shipping_tel" id="shipping_tel" placeholder="숫자만 입력">
+                                    <input type="text" class="custom-input only_tel shipping_tel" name="shipping_tel" id="shipping_tel" value="010-3333-3333" readonly>
                                 </div>
                             </div>
                             <div class="common-shipping__input common-shipping__addr">
                                 <label for="shipping_postcode">우편번호</label>
                                 <div class="shipping__addr">
-                                    <input type="text" class="addr_code custom-input shipping_addr1 only_num" id="shipping_postcode" placeholder="우편번호" maxlength="5">
-                                    <input type="button" class="addr_button" onclick="shipping_execDaumPostcode()" value="주소검색">
+                                    <input type="text" class="addr_code custom-input shipping_addr1 only_num" id="shipping_postcode" value="68493" maxlength="5" readonly>
                                 </div>
                                 <div class="shipping__addr">
-                                    <input type="text" class="custom-input shipping_addr2" id="shipping_address" placeholder="주소">
+                                    <input type="text" class="custom-input shipping_addr2" id="shipping_address" placeholder="주소" value="서울시 마포구 마포대로 137 KPX 빌딩" readonly>
                                 </div>
                                 <div class="shipping__addr">
-                                    <input type="text" class="custom-input shipping_addr3" id="shipping_detailAddress" placeholder="상세주소">
+                                    <input type="text" class="custom-input shipping_addr3" id="shipping_detailAddress" placeholder="상세주소" value="7층" readonly>
                                 </div>
                                 <div class="shipping__addr shipping_hidden">
-                                    <input type="text" class="custom-input shipping_addr4" id="shipping_extraAddress" placeholder="참고항목">
-                                </div>
-                                <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
-                                    <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
-                                </div>
-                            </div>
-                            <div class="custom-checkbox">
-                                <div class="custom-checkbox__cont">
-                                    <input type="checkbox" name="shipping_add" id="shipping_add">
-                                    <label for="shipping_add" class="custom-checkbox__label">
-                                        <span class="custom-checkbox__square"></span>
-                                        <span class="custom-checkbox__text">배송지 목록에 추가</span>
-                                    </label>
+                                    <input type="text" class="custom-input shipping_addr4" id="shipping_extraAddress" placeholder="참고항목" readonly>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="common-product common-margin">
+                    <div class="common-common common-margin">
+                        <h5 class="common-subTitle">결제정보</h5>
+                        <div class="common-common__info-wrap">
+                            <div class="common-common__info">
+                                <div class="common-common__subject">결제 수단</div>
+                                <div class="common-common__content">
+                                    KCP 신용카드
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common-product common-common">
                         <div class="common-product__title">
                             <h5 class="common-subTitle">주문상품</h5>
                             <p>총 <b>22</b>개</p>
+                        </div>
+                        <div class="common-common__info-wrap">
+                            <div class="common-common__info">
+                                <div class="common-common__subject">주문 요약</div>
+                                <div class="common-common__content">
+                                    헤라 로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 21개
+                                </div>
+                            </div>
                         </div>
                         <ul class="common-product__list">
                             <li>
@@ -280,57 +265,6 @@
                             </a>
                         </div>
                     </div>
-                    <div class="common-sale">
-                        <div class="common-sale__title">
-                            <h5 class="common-subTitle">할인적용</h5>
-                            <p><b>98,700</b>원</p>
-                        </div>
-                        <div class="common-sale__info">
-                            <div class="common-sale__cont">
-                                <div class="common-sale__one">
-                                    <div class="common-sale__subject">주문상품 금액</div>
-                                    <div class="common-sale__content">420,000원</div>
-                                </div>
-                            </div>
-                            <div class="common-sale__cont">
-                                <div class="common-sale__one">
-                                    <div class="common-sale__subject">상품 금액 할인</div>
-                                    <div class="common-sale__content"><b>-63,000</b>원</div>
-                                </div>
-                            </div>
-                            <div class="common-sale__cont">
-                                <div class="common-sale__one">
-                                    <div class="common-sale__subject">적립금 사용</div>
-                                    <div class="common-sale__content">0원</div>
-                                </div>
-                                <div class="common-sale__two">
-                                    <div class="common-sale__subject">적립금 사용</div>
-                                    <div class="common-sale__content">
-                                        <input type="text" class="only_num custom-input">
-                                        <button type="button">적립금 사용</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="common-sale__cont">
-                                <div class="common-sale__one">
-                                    <div class="common-sale__subject">쿠폰할인 적용</div>
-                                    <div class="common-sale__content"><b>-35,700</b>원</div>
-                                </div>
-                                <div class="common-sale__two">
-                                    <div class="common-sale__subject">보유쿠폰(2)</div>
-                                    <div class="common-sale__content">
-                                        <select name="" id="" class="custom-select">
-                                            <option value="">선택해주세요.</option>
-                                            <option value="신규 회원 10% 할인 쿠폰">신규 회원 10% 할인 쿠폰</option>
-                                            <option value="신규 회원 10% 할인 쿠폰2">신규 회원 10% 할인 쿠폰2</option>
-                                            <option value="신규 회원 10% 할인 쿠폰3">신규 회원 10% 할인 쿠폰3</option>
-                                            <option value="신규 회원 10% 할인 쿠폰4">신규 회원 10% 할인 쿠폰4</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="common-right">
                     <div class="common-breadcrumb hidden_mobile">
@@ -338,11 +272,11 @@
                             <li>
                                 <a href="cart.html">장바구니</a>
                             </li>
-                            <li class="active">
-                                <a href="/">주문/결제</a>
-                            </li>
                             <li>
-                                <a href="orderConfirm.html">주문완료</a>
+                                <a href="checkout.html">주문/결제</a>
+                            </li>
+                            <li class="active">
+                                <a href="/">주문완료</a>
                             </li>
                         </ol>
                     </div>
@@ -355,43 +289,32 @@
                                     <div class="common-price__price">59,500 원</div>
                                 </div>
                                 <div class="common-price__cont">
-                                    <div class="common-price__subject">할인 금액</div>
+                                    <div class="common-price__subject">상품 할인</div>
+                                    <div class="common-price__price grey">-9,500 원</div>
+                                </div>
+                                <div class="common-price__cont">
+                                    <div class="common-price__subject">쿠폰 할인</div>
+                                    <div class="common-price__price grey">-9,500 원</div>
+                                </div>
+                                <div class="common-price__cont">
+                                    <div class="common-price__subject">적립금 할인</div>
                                     <div class="common-price__price grey">-9,500 원</div>
                                 </div>
                                 <div class="common-price__cont">
                                     <div class="common-price__subject">배송비</div>
-                                    <div class="common-price__price ">2,500 원</div>
-                                </div>
-                            </div>
-                            <div class="custom-checkbox">
-                                <div class="custom-checkbox__cont">
-                                    <input type="checkbox" class="agree" name="agree" id="agree">
-                                    <label for="agree" class="custom-checkbox__label">
-                                        <span class="custom-checkbox__square"></span>
-                                        <span class="custom-checkbox__text">
-                                            주문 상품의 판매조건 및 서비스 이용약관을 
-                                            확인하였으며,구매 진행에 동의합니다.
-                                            (전자상거래법 제8조 2항)
-                                        </span>
-                                    </label>
+                                    <div class="common-price__price ">59,500 원</div>
                                 </div>
                             </div>
                         </div>
                         <div class="common-price__payment">
-                            <select name="payment_method" id="payment_method" class="payment_method custom-select">
-                                <option value="">결제수단 선택</option>
-                                <option value="신용카드">신용카드</option>
-                                <option value="무통장">무통장</option>
-                                <option value="가상계좌">가상계좌</option>
-                                <option value="휴대폰 결제">휴대폰 결제</option>
-                            </select>
                             <div class="common-price__cost">
-                                <p class="common-price__expected">결제 예정 금액</p>
+                                <p class="common-price__expected">결제 금액</p>
                                 <div class="common-price__total">
-                                    <span class="common-price__length">총 1개</span>
+                                    <span class="common-price__length">총 22개</span>
                                     <h5>61,050원</h5>
                                 </div>
-                                <button type="button" class="large-button coral-button">61,050원 결제하기</button>
+                                <a href="mypage_order.html" class="large-button black-button">주문 상세 보기</a>
+                                <a href="plp.html" class="large-button coral-button">쇼핑 계속하기</a>
                             </div>
                         </div>
                     </div>

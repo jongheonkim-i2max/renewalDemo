@@ -10,6 +10,9 @@ input.custom-input{
     &::placeholder{
         color:var(--color-Dblue);
     }
+    &:read-only{
+        background:var(--color-Lgrey);
+    }
     @include mediaQuery(768px){
         height:35px;
         line-height:25px;

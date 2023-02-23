@@ -6,7 +6,7 @@
         element_wrap.style.display = 'none';
     }
 
-    function sample3_execDaumPostcode() {
+    function shipping_execDaumPostcode() {
         // 현재 scroll 위치를 저장해놓는다.
         var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
         new daum.Postcode({
@@ -41,17 +41,17 @@
                         extraAddr = ' (' + extraAddr + ')';
                     }
                     // 조합된 참고항목을 해당 필드에 넣는다.
-                    document.getElementById("sample3_extraAddress").value = extraAddr;
+                    document.getElementById("shipping_extraAddress").value = extraAddr;
                 
                 } else {
-                    document.getElementById("sample3_extraAddress").value = '';
+                    document.getElementById("shipping_extraAddress").value = '';
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('sample3_postcode').value = data.zonecode;
-                document.getElementById("sample3_address").value = addr;
+                document.getElementById('shipping_postcode').value = data.zonecode;
+                document.getElementById("shipping_address").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("sample3_detailAddress").focus();
+                document.getElementById("shipping_detailAddress").focus();
 
                 // iframe을 넣은 element를 안보이게 한다.
                 // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)

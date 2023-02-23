@@ -19,6 +19,7 @@
         .custom-checkbox__text{
             font-size:14px;
             width:calc(100% - 25px);
+            user-select: none;
         }
         @include mediaQuery(768px){
             .custom-checkbox__square{
