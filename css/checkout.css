@@ -1541,6 +1541,7 @@ input.custom-input:read-only {
     position: relative;
     height: auto;
     padding-bottom: calc(50% - 7.5px);
+    float: none;
   }
 }
 .common-product__img img {

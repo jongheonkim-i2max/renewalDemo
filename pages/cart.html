@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 주문완료</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/orderConfirm.css">
+        
+        <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
+        <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+        <script defer src="../js/common.js"></script>
+        <script defer src="../js/cart.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container wide-container">
+                <div class="header__logo">
+                    <a class="header__logo--menu-btn">
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                    </a>
+                    <a href="../index.html" class="logo">
+                        <img src="../img/logo.svg" alt="사이트 로고">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a class="header__mobile-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <ul class="header__menu--ul">
+                        <li class="header__menu--li has--sub-menu">
+                            <a href="plp.html" class="header__menu--a" data-href="plp.html">New Arrivals</a>
+                            <div class="header__menu--sub2">
+                                <ul class="header__menu--ul2">
+                                    <li class="header__menu--li2 has--sub-menu2">
+                                        <a href="plp.html" class="header__menu--a2" data-href="plp.html">subMenu1</a>
+                                        <div class="header__menu--sub3">
+                                            <ul class="header__menu--ul3">
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-1</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-2</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-3</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu2</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu3</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Womens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Mens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Gift Certificates</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Top Sellers</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="mypage.html" class="header__buttons--mypage">
+                        <img src="../img/Ic_mypage_H.png" alt="마이페이지 아이콘">
+                    </a>
+                    <a href="mypage_wish.html" class="header__buttons--wish">
+                        <img src="../img/Ic_favorites_H.png" alt="위시리스트 아이콘">
+                    </a>
+                    <a href="cart.html" class="header__buttons--cart">
+                        <img src="../img/Ic_cart_H.png" alt="장바구니 아이콘">
+                    </a>
+                </div>
+                <div class="header__search">
+                    <form action="">
+                        <button type="submit" class="header__search--button"><img src="../img/Ic_search.png" alt="검색 아이콘"></button>
+                        <input type="text" class="header__search--input" placeholder="상품을 검색해주세요">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <section class="orderConfirm checkCommon">
+            <div class="container">
+                <div class="common-left">
+                    <h1 class="common-title">장바구니</h1>
+                    <div class="common-breadcrumb hidden_pc">
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <a href="/">장바구니</a>
+                            </li>
+                            <li>
+                                <a href="checkout.html">주문/결제</a>
+                            </li>
+                            <li>
+                                <a href="orderConfirm.html">주문완료</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="common-right">
+                    <div class="common-breadcrumb hidden_mobile">
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <a href="/">장바구니</a>
+                            </li>
+                            <li>
+                                <a href="checkout.html">주문/결제</a>
+                            </li>
+                            <li>
+                                <a href="orderConfirm.html">주문완료</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__link">
+                    <div class="footer__link--cont">
+                        <a href="mypage_qa.html" class="footer__link--head">Customer Support</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_qa_write.html">Contact Us</a></li>
+                            <li><a href="mypage_deliAddress.html">Shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Account</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_order.html">Order Status</a></li>
+                            <li><a href="members_login.html">Sign in or create account</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Our Company</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="">Store Locator</a></li>
+                            <li><a href="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__select">
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </div>
+                <div class="footer__copyright">
+                    <h5>© 2023 I2MAX All rights reserved. This is a Demo store only</h5>
+                </div>
+                <ul class="footer__etc">
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Site Map</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
