@@ -1505,11 +1505,8 @@ input.custom-input:read-only {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-bottom: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: block;
+  position: relative;
 }
 .common-product__list > li::before, .common-product__list > li::after {
   content: "";
@@ -1523,13 +1520,18 @@ input.custom-input:read-only {
   .common-product__list > li {
     margin-bottom: 25px;
     padding: 25px 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 .common-product__img {
   border-radius: 35px 0;
   overflow: hidden;
   width: 200px;
-  position: absolute;
+  height: 200px;
+  margin-right: 20px;
+  float: left;
+  position: relative;
 }
 @media (max-width: 768px) {
   .common-product__img {
@@ -1537,12 +1539,22 @@ input.custom-input:read-only {
     width: calc(50% - 7.5px);
     margin-right: 15px;
     position: relative;
+    height: auto;
+    padding-bottom: calc(50% - 7.5px);
   }
+}
+.common-product__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: inherit;
+  width: 100%;
 }
 .common-product__info {
   float: right;
   width: calc(100% - 220px);
-  margin-left: 220px;
 }
 .common-product__info .common-product__brand {
   font-size: 12px;
@@ -1630,7 +1642,6 @@ input.custom-input:read-only {
 .common-product__option {
   float: right;
   width: calc(100% - 220px);
-  margin-left: 220px;
   margin-top: 15px;
 }
 .common-product__option-li {
@@ -2182,10 +2193,25 @@ input.custom-input:read-only {
 .checkCommon .common-product__list > li {
   display: none;
 }
+.checkCommon .common-product__list > li.active {
+  display: block;
+}
+@media (max-width: 768px) {
+  .checkCommon .common-product__list > li.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .checkCommon .common-product__list > li:first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+}
+@media (max-width: 768px) {
+  .checkCommon .common-product__list > li:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .checkCommon .common-product__more .more-btn {
   display: -webkit-box;

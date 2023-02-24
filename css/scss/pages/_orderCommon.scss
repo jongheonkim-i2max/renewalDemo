@@ -341,8 +341,17 @@
 
         &__list{
             > li{display:none;}
+            > li.active{
+                display:block;
+                @include mediaQuery(768px){
+                    display:flex;
+                }
+            }
             > li:first-child{
-                display:flex;
+                display:block;
+                @include mediaQuery(768px){
+                    display:flex;
+                }
             }
         }
 

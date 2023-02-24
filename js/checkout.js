@@ -47,11 +47,11 @@ $(document).on("click", ".common-product .more-btn", function(){
     if($(this).hasClass("active")){
         $(this).removeClass("active");
         $(this).find('.more-btn__text').text('상품 펼처보기');
-        $(".common-product .common-product__list > li:not(:first-child)").css({"display":"none"});
+        $(".common-product .common-product__list > li:not(:first-child)").removeClass("active");
     }else{
         $(this).addClass("active");
         $(this).find('.more-btn__text').text('상품 접어보기');
-        $(".common-product .common-product__list > li").css({"display":"flex"});
+        $(".common-product .common-product__list > li:not(:first-child)").addClass("active");
     }
 });
 
@@ -111,5 +111,5 @@ $(document).on("click", ".common-price__payment button", function(){
         return false;
     }
 
-    $(location).attr("href", "/pages/orderConfirm.html");
+    $(location).attr("href", "../pages/orderConfirm.html");
 });
