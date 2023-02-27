@@ -6,6 +6,7 @@
   --color-white:#ffffff;
   --color-grey:#e5e5e5;
   --color-Lgrey:#f6f6f6;
+  --color-Dgrey:#616060;
   --color-coral:#ff7777;
   --color-Lblue:#C2CAD3;
   --color-Dblue:#858D96;
@@ -1304,6 +1305,45 @@ input.custom-input:read-only {
   margin-right: 0;
 }
 
+.ico_close {
+  width: 20px;
+  height: 20px;
+  background-position: -480px -120px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  .ico_close {
+    background-position: -384px -96px;
+    display: block;
+    position: relative;
+    top: 4px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ico_likeBtn {
+    width: 20px;
+    height: 20px;
+    background-position: -767px -96px;
+  }
+}
+.ico_noneCart {
+  display: block;
+  width: 76px;
+  height: 64px;
+  background-position: -1077px -120px;
+}
+@media (max-width: 768px) {
+  .ico_noneCart {
+    display: block;
+    width: 45px;
+    height: 37px;
+    background-position: -862px -96px;
+  }
+}
+
 .common-product__list {
   margin-bottom: 35px;
 }
@@ -1541,9 +1581,44 @@ input.custom-input:read-only {
   }
 }
 
+.middle-button {
+  display: block;
+  padding: 0 21px;
+  height: 40px;
+  line-height: 40px;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .middle-button {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 0 15px;
+  }
+}
+
+.small-button {
+  display: block;
+  white-space: nowrap;
+  width: 80px;
+  height: 31px;
+  line-height: 31px;
+  padding: 0 18px;
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 300;
+}
+
 /*button color*/
 .black-button {
   background: var(--color-LBlack);
+}
+
+.grey-button {
+  background: var(--color-Lgrey);
+  color: var(--color-Dgrey);
 }
 
 .coral-button {
@@ -1587,6 +1662,8 @@ input.custom-input:read-only {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (max-width: 1230px) {
   .checkCommon > .container {
@@ -1630,6 +1707,7 @@ input.custom-input:read-only {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 30px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .checkCommon .common-title {
@@ -2022,6 +2100,16 @@ input.custom-input:read-only {
 }
 @media (max-width: 768px) {
   .checkCommon .common-product__list > li:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.checkCommon .common-product__list.cart-product__list > li {
+  display: block;
+}
+@media (max-width: 768px) {
+  .checkCommon .common-product__list.cart-product__list > li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

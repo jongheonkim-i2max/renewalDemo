@@ -21,9 +21,41 @@
     }
 }
 
+.middle-button{
+    display:block;
+    padding:0 21px;
+    height:40px;
+    line-height:40px;
+    color: var(--color-white);
+    font-size:14px;
+    font-weight:300;
+    @include mediaQuery(768px){
+        height:30px;
+        line-height:30px;
+        font-size:12px;
+        padding:0 15px;
+    }
+}
+
+.small-button{
+    display:block;
+    white-space:nowrap;
+    width:80px;
+    height:31px;
+    line-height:31px;
+    padding:0 18px;
+    color:var(--color-white);
+    font-size:12px;
+    font-weight:300;
+}
+
 /*button color*/
 .black-button{
     background: var(--color-LBlack);
+}
+.grey-button{
+    background: var(--color-Lgrey);
+    color:var(--color-Dgrey);
 }
 .coral-button{
     background:var(--color-coral);

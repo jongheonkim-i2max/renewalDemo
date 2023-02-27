@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo 주문완료</title>
+        <title>Demo 장바구니</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="../css/orderConfirm.css">
+        <link rel="stylesheet" type="text/css" href="../css/cart.css">
         
         <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
         <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
@@ -92,10 +92,10 @@
                 </div>
             </div>
         </header>
-        <section class="orderConfirm checkCommon">
+        <section class="cart checkCommon">
             <div class="container">
+                <h1 class="common-title">장바구니</h1>
                 <div class="common-left">
-                    <h1 class="common-title">장바구니</h1>
                     <div class="common-breadcrumb hidden_pc">
                         <ol class="breadcrumb">
                             <li class="active">
@@ -109,20 +109,265 @@
                             </li>
                         </ol>
                     </div>
+                    <div class="common-product cart-product">
+                        <div class="custom-checkbox cart-product__totalCheck">
+                            <div class="custom-checkbox__cont">
+                                <input type="checkbox" name="cart_product__allCheck" id="cart_product__allCheck">
+                                <label for="cart_product__allCheck" class="custom-checkbox__label">
+                                    <span class="custom-checkbox__square"></span>
+                                    <span class="custom-checkbox__text">전체선택 (<span class="cart-product__totalLength">4</span>)</span>
+                                </label>
+                            </div>
+                            <button class="middle-button black-button choose_delete">선택삭제</button>
+                        </div>
+                        <ul class="common-product__list cart-product__list">
+                            <li class="cart-product__item">
+                                <div class="common-product__img">
+                                    <img src="../img/img_product26.jpg" alt="장바구니 상품 이미지1">
+                                </div>
+                                <div class="common-product__info">
+                                    <div class="common-product__brand">헤라</div>
+                                    <div class="common-product__subject">
+                                        <div class="custom-checkbox">
+                                            <div class="custom-checkbox__cont">
+                                                <input type="checkbox" name="cart_product__check1" id="cart_product__check1">
+                                                <label for="cart_product__check1" class="custom-checkbox__label">
+                                                    <span class="custom-checkbox__square"></span>
+                                                    <span class="custom-checkbox__text">로즈 인퓨전 컬렉션 센슈얼 파우더 매트</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="common-product__price">
+                                        <div class="common-product__percent">26%</div>
+                                        <div class="common-product__cost">
+                                            <div class="common-product__sell">29,750원</div>
+                                            <del class="common-product__regular">35,000원</del>
+                                        </div>
+                                    </div>
+                                    <div class="cart-product__btn">
+                                        <button class="likeBtn grey-button middle-button" type="button">
+                                            <span class="mobile_none">위시등록</span><i class="ico_likeBtn"></i>
+                                        </button>
+                                        <button class="deleteBtn black-button middle-button" type="button">
+                                            <span class="mobile_none">삭제</span><i class="ico_close"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="common-product__option cart-product__option">
+                                    <li class="common-product__option-li cart-product__option-li">
+                                        <div class="cart-product__option-top">
+                                            <div class="common-product__option-name cart-product__option-select">
+                                                <select name="cart_option" id="cart_option" class="custom-select" disabled>
+                                                    <option value="121호 에피소드">121호 에피소드</option>
+                                                    <option value="122호 에피소드">122호 에피소드</option>
+                                                    <option value="123호 에피소드">123호 에피소드</option>
+                                                    <option value="124호 에피소드">124호 에피소드</option>
+                                                </select>
+                                            </div>
+                                            <div class="cart-product__option-change cart-product__option-right">
+                                                <button class="small-button black-button">옵션변경</button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-product__option-bot">                                        
+                                            <div class="common-product__option-value cart-product__option-value">
+                                                <button class="decrease">
+                                                    <i class="ico_decrease"></i>
+                                                </button>
+                                                <input type="text" class="only_number option-qty" value="01" data-value="1" readonly>
+                                                <button>
+                                                    <i class="ico_increase"></i>   
+                                                </button>
+                                            </div>
+                                            <div class="cart-product__option-right">
+                                                <div class="common-product__option-price">29,750원</div>
+                                                <div class="common-product__option-delete">
+                                                    <button class="close" type="button">
+                                                        <i class="ico_close"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="common-product__option-li cart-product__option-li active">
+                                        <div class="cart-product__option-top">
+                                            <div class="common-product__option-name cart-product__option-select">
+                                                <select name="cart_option" id="cart_option" class="custom-select">
+                                                    <option value="121호 에피소드">121호 에피소드</option>
+                                                    <option value="122호 에피소드">122호 에피소드</option>
+                                                    <option value="123호 에피소드">123호 에피소드</option>
+                                                    <option value="124호 에피소드">124호 에피소드</option>
+                                                </select>
+                                            </div>
+                                            <div class="cart-product__option-change cart-product__option-right">
+                                                <button class="small-button black-button">옵션적용</button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-product__option-bot">                                        
+                                            <div class="common-product__option-value cart-product__option-value">
+                                                <button class="decrease">
+                                                    <i class="ico_decrease"></i>
+                                                </button>
+                                                <input type="text" class="only_number option-qty" value="02" data-value="2" readonly>
+                                                <button>
+                                                    <i class="ico_increase"></i>   
+                                                </button>
+                                            </div>
+                                            <div class="cart-product__option-right">
+                                                <div class="common-product__option-price">59,500원</div>
+                                                <div class="common-product__option-delete">
+                                                    <button class="close" type="button">
+                                                        <i class="ico_close"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="cart-product__total">
+                                    <div class="cart-product__optionLenth">
+                                        총 <span class="option-totalLength">3</span>개
+                                    </div>
+                                    <div class="cart-product__totalPrice">
+                                        <span class="option-totalPrice" data-totalPrice="89250">89,250</span>원
+                                    </div>
+                                    <div class="cart-product__totalbutton">
+                                        <button class="middle-button coral-button">바로구매</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cart-product__item">
+                                <div class="common-product__img">
+                                    <img src="../img/img_product26.jpg" alt="장바구니 상품 이미지1">
+                                </div>
+                                <div class="common-product__info">
+                                    <div class="common-product__brand">헤라</div>
+                                    <div class="common-product__subject">
+                                        <div class="custom-checkbox">
+                                            <div class="custom-checkbox__cont">
+                                                <input type="checkbox" name="cart_product__check2" id="cart_product__check2">
+                                                <label for="cart_product__check2" class="custom-checkbox__label">
+                                                    <span class="custom-checkbox__square"></span>
+                                                    <span class="custom-checkbox__text">로즈 인퓨전 컬렉션 센슈얼 파우더 매트</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="common-product__price">
+                                        <div class="common-product__percent">26%</div>
+                                        <div class="common-product__cost">
+                                            <div class="common-product__sell">29,750원</div>
+                                            <del class="common-product__regular">35,000원</del>
+                                        </div>
+                                    </div>
+                                    <div class="cart-product__btn">
+                                        <button class="likeBtn grey-button middle-button" type="button">
+                                            <span class="mobile_none">위시등록</span><i class="ico_likeBtn"></i>
+                                        </button>
+                                        <button class="deleteBtn black-button middle-button" type="button">
+                                            <span class="mobile_none">삭제</span><i class="ico_close"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="common-product__option cart-product__option">
+                                    <li class="common-product__option-li cart-product__option-li">
+                                        <div class="cart-product__option-top">
+                                            <div class="common-product__option-name cart-product__option-select">
+                                                <select name="cart_option" id="cart_option" class="custom-select" disabled>
+                                                    <option value="121호 에피소드">121호 에피소드</option>
+                                                    <option value="122호 에피소드">122호 에피소드</option>
+                                                    <option value="123호 에피소드">123호 에피소드</option>
+                                                    <option value="124호 에피소드">124호 에피소드</option>
+                                                </select>
+                                            </div>
+                                            <div class="cart-product__option-change cart-product__option-right">
+                                                <button class="small-button black-button">옵션변경</button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-product__option-bot">                                        
+                                            <div class="common-product__option-value cart-product__option-value">
+                                                <button class="decrease">
+                                                    <i class="ico_decrease"></i>
+                                                </button>
+                                                <input type="text" class="only_number option-qty" value="01" data-value="1" readonly>
+                                                <button>
+                                                    <i class="ico_increase"></i>   
+                                                </button>
+                                            </div>
+                                            <div class="cart-product__option-right">
+                                                <div class="common-product__option-price">29,750원</div>
+                                                <div class="common-product__option-delete">
+                                                    <button class="close" type="button">
+                                                        <i class="ico_close"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="cart-product__total">
+                                    <div class="cart-product__optionLenth">
+                                        총 <span class="option-totalLength">1</span>개
+                                    </div>
+                                    <div class="cart-product__totalPrice">
+                                        <span class="option-totalPrice" data-totalPrice="29750">29,750</span>원
+                                    </div>
+                                    <div class="cart-product__totalbutton">
+                                        <button class="middle-button coral-button">바로구매</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="common-noList">
+                        <div class="common-noList__cell">
+                            <i class="ico_noneCart"></i>
+                            <p>등록된 상품이 없습니다.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="common-right">
                     <div class="common-breadcrumb hidden_mobile">
                         <ol class="breadcrumb">
-                            <li class="active">
-                                <a href="/">장바구니</a>
-                            </li>
                             <li>
-                                <a href="checkout.html">주문/결제</a>
+                                <a href="cart.html">장바구니</a>
+                            </li>
+                            <li class="active">
+                                <a href="/">주문/결제</a>
                             </li>
                             <li>
                                 <a href="orderConfirm.html">주문완료</a>
                             </li>
                         </ol>
+                    </div>
+                    <div class="common-price__wrap">
+                        <div class="common-price">
+                            <h5 class="common-subTitle">결제 금액</h5>
+                            <div class="common-price__info">
+                                <div class="common-price__cont">
+                                    <div class="common-price__subject">상품 금액</div>
+                                    <div class="common-price__price">59,500 원</div>
+                                </div>
+                                <div class="common-price__cont">
+                                    <div class="common-price__subject">할인 금액</div>
+                                    <div class="common-price__price grey">-9,500 원</div>
+                                </div>
+                                <div class="common-price__cont">
+                                    <div class="common-price__subject">배송비</div>
+                                    <div class="common-price__price ">2,500 원</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="common-price__payment">
+                            <div class="common-price__cost">
+                                <p class="common-price__expected">결제 예정 금액</p>
+                                <div class="common-price__total">
+                                    <span class="common-price__length">총 <span class="cart-product__totalLength">4</span>개</span>
+                                    <h5 class="" data-totalPriceSum="119000">119,000원</h5>
+                                </div>
+                                <button type="button" class="large-button coral-button">주문하기 (<span class="cart-product__totalLength">4</span>개)</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

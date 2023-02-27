@@ -6,6 +6,7 @@
   --color-white:#ffffff;
   --color-grey:#e5e5e5;
   --color-Lgrey:#f6f6f6;
+  --color-Dgrey:#616060;
   --color-coral:#ff7777;
   --color-Lblue:#C2CAD3;
   --color-Dblue:#858D96;
@@ -1377,6 +1378,45 @@ html, body, * {
 }
 .item-review i:last-child {
   margin-right: 0;
+}
+
+.ico_close {
+  width: 20px;
+  height: 20px;
+  background-position: -480px -120px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  .ico_close {
+    background-position: -384px -96px;
+    display: block;
+    position: relative;
+    top: 4px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ico_likeBtn {
+    width: 20px;
+    height: 20px;
+    background-position: -767px -96px;
+  }
+}
+.ico_noneCart {
+  display: block;
+  width: 76px;
+  height: 64px;
+  background-position: -1077px -120px;
+}
+@media (max-width: 768px) {
+  .ico_noneCart {
+    display: block;
+    width: 45px;
+    height: 37px;
+    background-position: -862px -96px;
+  }
 }
 
 .items .items__image {

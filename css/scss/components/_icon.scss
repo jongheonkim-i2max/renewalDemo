@@ -247,3 +247,37 @@
         }
     }
 }
+
+.ico_close{
+    width: 20px;
+    height: 20px;
+    background-position: -480px -120px;
+    transform: rotate(45deg);
+    @include mediaQuery(768px){
+        background-position:-384px -96px;
+        display: block;
+        position: relative;
+        top: 4px;
+        left: 0px;
+    }
+}
+@include mediaQuery(768px){
+    .ico_likeBtn {
+        width: 20px;
+        height: 20px;
+        background-position: -767px -96px;
+    }
+}
+
+.ico_noneCart{
+    display: block;
+    width: 76px;
+    height: 64px;
+    background-position: -1077px -120px;
+    @include mediaQuery(768px){
+        display: block;
+        width: 45px;
+        height: 37px;
+        background-position: -862px -96px;
+    }
+}
