@@ -2681,7 +2681,7 @@ select.custom-select option {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .cart-product__totalCheck input + label .custom-checkbox__square {
   top: 2px;

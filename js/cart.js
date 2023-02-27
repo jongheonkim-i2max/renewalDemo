@@ -65,11 +65,32 @@ $(document).on("click", ".cart-product__btn .deleteBtn", function(){
     itemLenthCheck();
 });
 
-//선택 삭제 클릭 시 
+//상단 선택 삭제 클릭 시 
 $(document).on("click", ".choose_delete", function(){
     itemCheck();
 });
 
+//옵션변경 버튼 클릭 시
+$(document).on("click", ".cart-product__option-change button", function(){
+    if($(this).parents(".cart-product__option-li").hasClass("active")){
+        $(this).parents(".cart-product__option-li").removeClass("active");
+        $(this).parents(".cart-product__option-li").find("select").attr("disabled", true);
+    }else{
+        $(this).parents(".cart-product__option-li").addClass("active");
+        $(this).parents(".cart-product__option-li").find("select").attr("disabled", false);
+    }
+});
+
+/*
+function personalPriceCheck(){
+    $(".cart-product__option-value input").each(function(index){
+        $(this).on("change", function(){
+            console.log($(this).val());
+        });
+    });
+}
+
 function cartTotalLengthCheck(){
 
 };
+*/
