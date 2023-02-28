@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 마이페이지</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/mypage.css">
+        
+        <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
+        <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!--swiper-->
+        <script defer src="../js/common.js"></script>
+        <script defer src="../js/mypage.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container wide-container">
+                <div class="header__logo">
+                    <a class="header__logo--menu-btn">
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                    </a>
+                    <a href="../index.html" class="logo">
+                        <img src="../img/logo.svg" alt="사이트 로고">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a class="header__mobile-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <ul class="header__menu--ul">
+                        <li class="header__menu--li has--sub-menu">
+                            <a href="plp.html" class="header__menu--a" data-href="plp.html">New Arrivals</a>
+                            <div class="header__menu--sub2">
+                                <ul class="header__menu--ul2">
+                                    <li class="header__menu--li2 has--sub-menu2">
+                                        <a href="plp.html" class="header__menu--a2" data-href="plp.html">subMenu1</a>
+                                        <div class="header__menu--sub3">
+                                            <ul class="header__menu--ul3">
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-1</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-2</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-3</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu2</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu3</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Womens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Mens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Gift Certificates</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Top Sellers</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="mypage.html" class="header__buttons--mypage">
+                        <img src="../img/Ic_mypage_H.png" alt="마이페이지 아이콘">
+                    </a>
+                    <a href="mypage_wish.html" class="header__buttons--wish">
+                        <img src="../img/Ic_favorites_H.png" alt="위시리스트 아이콘">
+                    </a>
+                    <a href="cart.html" class="header__buttons--cart">
+                        <img src="../img/Ic_cart_H.png" alt="장바구니 아이콘">
+                    </a>
+                </div>
+                <div class="header__search">
+                    <form action="">
+                        <button type="submit" class="header__search--button"><img src="../img/Ic_search.png" alt="검색 아이콘"></button>
+                        <input type="text" class="header__search--input" placeholder="상품을 검색해주세요">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <section class="mypage myCommon">
+            <div class="container">
+                <div class="myCommon__menu">
+                    <h1 class="myCommon__title">마이페이지</h1>
+                    <ul class="myCommon__ul hidden_mobile">
+                        <li class="active"><a href="mypage.html">홈</a></li>
+                        <li><a href="mypage_order.html">주문조회</a></li>
+                        <li><a href="mypage_coupon.html">쿠폰</a></li>
+                        <li><a href="mypage_wish.html">위시상품</a></li>
+                        <li><a href="mypage_shipping.html">배송지관리</a></li>
+                        <li><a href="mypage_review.html">리뷰</a></li>
+                        <li><a href="mypage_contact.html">문의내역</a></li>
+                        <li><a href="mypage_info.html">회원정보</a></li>
+                    </ul>
+                    <select name="" id="" class="custom-select hidden_pc">
+                        <option value="mypage.html">홈</option>
+                        <option value="mypage_order.html">주문조회</option>
+                        <option value="mypage_coupon.html">쿠폰</option>
+                        <option value="mypage_wish.html">위시상품</option>
+                        <option value="mypage_shipping.html">배송지관리</option>
+                        <option value="mypage_review.html">리뷰</option>
+                        <option value="mypage_contact.html">문의내역</option>
+                        <option value="mypage_info.html">회원정보</option>
+                    </select>
+                </div>
+                <div class="myCommon__content">
+                    <div class="mypage__count">
+                        <ul class="mypage__count--ul">
+                            <li class="mypage__count--li">
+                                <div class="mypage__count--subject">최근 주문</div>
+                                <div class="mypage__count--count">0</div>
+                            </li>
+                            <li class="mypage__count--li">
+                                <div class="mypage__count--subject">취소/반품</div>
+                                <div class="mypage__count--count">0</div>
+                            </li>
+                            <li class="mypage__count--li">
+                                <div class="mypage__count--subject">쿠폰</div>
+                                <div class="mypage__count--count">0</div>
+                            </li>
+                            <li class="mypage__count--li">
+                                <div class="mypage__count--subject">적립금</div>
+                                <div class="mypage__count--count">0원</div>
+                            </li>
+                            <li class="mypage__count--li">
+                                <div class="mypage__count--subject">위시</div>
+                                <div class="mypage__count--count">0</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mypage__recent">
+                        <h5 class="myCommon__sub-title">최근 주문내역</h5>
+                        <div class="mypage__recent--count">
+                            <ul class="mypage__recent--count-ul">
+                                <li class="mypage__recent--count-li">
+                                    <div class="mypage__recent--count-info">
+                                        <div class="mypage__recent--count-subject">주문접수</div>
+                                        <div class="mypage__recent--count-count coral">1</div>
+                                    </div>
+                                    <div class="mypage__recent--count-icon">
+                                        <img src="../img/Ic_order_count01.png" alt="주문접수 아이콘">
+                                    </div>
+                                </li>
+                                <li class="mypage__recent--count-li">
+                                    <div class="mypage__recent--count-info">
+                                        <div class="mypage__recent--count-subject">결제완료</div>
+                                        <div class="mypage__recent--count-count">0</div>
+                                    </div>
+                                    <div class="mypage__recent--count-icon">
+                                        <img src="../img/Ic_order_count02.png" alt="결제완료 아이콘">
+                                    </div>
+                                </li>
+                                <li class="mypage__recent--count-li">
+                                    <div class="mypage__recent--count-info">
+                                        <div class="mypage__recent--count-subject">상품준비중</div>
+                                        <div class="mypage__recent--count-count coral">1</div>
+                                    </div>
+                                    <div class="mypage__recent--count-icon">
+                                        <img src="../img/Ic_order_count03.png" alt="상품준비중 아이콘">
+                                    </div>
+                                </li>
+                                <li class="mypage__recent--count-li">
+                                    <div class="mypage__recent--count-info">
+                                        <div class="mypage__recent--count-subject">배송중</div>
+                                        <div class="mypage__recent--count-count">0</div>
+                                    </div>
+                                    <div class="mypage__recent--count-icon">
+                                        <img src="../img/Ic_order_count04.png" alt="배송중 아이콘">
+                                    </div>
+                                </li>
+                                <li class="mypage__recent--count-li">
+                                    <div class="mypage__recent--count-info">
+                                        <div class="mypage__recent--count-subject">배송완료</div>
+                                        <div class="mypage__recent--count-count coral">1</div>
+                                    </div>
+                                    <div class="mypage__recent--count-icon">
+                                        <img src="../img/Ic_order_count05.png" alt="배송완료 아이콘">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="my-item">
+                            <ul class="my-item__list">
+                                <li class="my-item__item">
+                                    <div class="my-item__img">
+                                        <a href="pdp.html">
+                                            <img src="../img/img_product26.jpg" alt="최근 주문내역 이미지1">
+                                        </a>
+                                    </div>
+                                    <div class="my-item__info">
+                                        <div class="my-item__brand">헤라</div>
+                                        <h5 class="my-item__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</h5>
+                                        <div class="my-item__price">321,000</div>
+                                        <div class="my-item__order">
+                                            <div class="my-item__state">배송 완료</div>
+                                            <div class="my-item__date">2023.03.01</div>
+                                        </div>
+                                        <div class="my-item__serial">ORD202111112523</div> 
+                                    </div>
+                                    <div class="my-item__button">
+                                        <button class="my-item__cancel middle-button black-button">주문취소</button>
+                                    </div>
+                                </li>
+                                <li class="my-item__item">
+                                    <div class="my-item__img">
+                                        <a href="pdp.html">
+                                            <img src="../img/img_product26.jpg" alt="최근 주문내역 이미지1">
+                                        </a>
+                                    </div>
+                                    <div class="my-item__info">
+                                        <div class="my-item__brand">헤라</div>
+                                        <h5 class="my-item__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</h5>
+                                        <div class="my-item__price">321,000</div>
+                                        <div class="my-item__order">
+                                            <div class="my-item__state">배송 완료</div>
+                                            <div class="my-item__date">2023.03.01</div>
+                                        </div>
+                                        <div class="my-item__serial">ORD202111112523</div> 
+                                    </div>
+                                    <div class="my-item__button">
+                                        <button class="my-item__review middle-button grey-button">리뷰작성</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mypage__wish wish-slider">
+                        <h5 class="myCommon__sub-title">위시 상품</h5>
+                        <div class="items-wrap subItems-wrap row5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="items">
+                                        <div class="items__image">
+                                            <div class="items__btns">
+                                                <a href="cart.html">
+                                                    <i class="ico_cart"></i>
+                                                </a>
+                                                <a href="mypage_wish.html">
+                                                    <i class="ico_like"></i>
+                                                </a>
+                                            </div>
+                                            <a href="pdp.html">
+                                                <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                            </a>
+                                        </div>
+                                        <a href="pdp.html" class="items__link">
+                                            <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                            <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                            <div class="items__price">
+                                                <span class="items__price--sale">24%</span>
+                                                <div class="items__price--price">120,000</div>
+                                                <del class="items__price--regular">120,000</del>
+                                            </div>
+                                        </a>
+                                        <a href="mypage_review.html" class="items__review-link">
+                                            <div class="items__review-count">
+                                                <div class="items__review">
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starG"></i>
+                                                    <i class="ico_starG"></i>
+                                                </div>
+                                                <div class="items__count">리뷰 46</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="items">
+                                        <div class="items__image">
+                                            <div class="items__btns">
+                                                <a href="cart.html">
+                                                    <i class="ico_cart"></i>
+                                                </a>
+                                                <a href="mypage_wish.html">
+                                                    <i class="ico_like"></i>
+                                                </a>
+                                            </div>
+                                            <a href="pdp.html">
+                                                <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                            </a>
+                                        </div>
+                                        <a href="pdp.html" class="items__link">
+                                            <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                            <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                            <div class="items__price">
+                                                <span class="items__price--sale">24%</span>
+                                                <div class="items__price--price">120,000</div>
+                                                <del class="items__price--regular">120,000</del>
+                                            </div>
+                                        </a>
+                                        <a href="mypage_review.html" class="items__review-link">
+                                            <div class="items__review-count">
+                                                <div class="items__review">
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starG"></i>
+                                                    <i class="ico_starG"></i>
+                                                </div>
+                                                <div class="items__count">리뷰 46</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="items">
+                                        <div class="items__image">
+                                            <div class="items__btns">
+                                                <a href="cart.html">
+                                                    <i class="ico_cart"></i>
+                                                </a>
+                                                <a href="mypage_wish.html">
+                                                    <i class="ico_like"></i>
+                                                </a>
+                                            </div>
+                                            <a href="pdp.html">
+                                                <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                            </a>
+                                        </div>
+                                        <a href="pdp.html" class="items__link">
+                                            <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                            <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                            <div class="items__price">
+                                                <span class="items__price--sale">24%</span>
+                                                <div class="items__price--price">120,000</div>
+                                                <del class="items__price--regular">120,000</del>
+                                            </div>
+                                        </a>
+                                        <a href="mypage_review.html" class="items__review-link">
+                                            <div class="items__review-count">
+                                                <div class="items__review">
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starG"></i>
+                                                    <i class="ico_starG"></i>
+                                                </div>
+                                                <div class="items__count">리뷰 46</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="items">
+                                        <div class="items__image">
+                                            <div class="items__btns">
+                                                <a href="cart.html">
+                                                    <i class="ico_cart"></i>
+                                                </a>
+                                                <a href="mypage_wish.html">
+                                                    <i class="ico_like"></i>
+                                                </a>
+                                            </div>
+                                            <a href="pdp.html">
+                                                <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                            </a>
+                                        </div>
+                                        <a href="pdp.html" class="items__link">
+                                            <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                            <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                            <div class="items__price">
+                                                <span class="items__price--sale">24%</span>
+                                                <div class="items__price--price">120,000</div>
+                                                <del class="items__price--regular">120,000</del>
+                                            </div>
+                                        </a>
+                                        <a href="mypage_review.html" class="items__review-link">
+                                            <div class="items__review-count">
+                                                <div class="items__review">
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starG"></i>
+                                                    <i class="ico_starG"></i>
+                                                </div>
+                                                <div class="items__count">리뷰 46</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="items">
+                                        <div class="items__image">
+                                            <div class="items__btns">
+                                                <a href="cart.html">
+                                                    <i class="ico_cart"></i>
+                                                </a>
+                                                <a href="mypage_wish.html">
+                                                    <i class="ico_like"></i>
+                                                </a>
+                                            </div>
+                                            <a href="pdp.html">
+                                                <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                            </a>
+                                        </div>
+                                        <a href="pdp.html" class="items__link">
+                                            <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                            <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                            <div class="items__price">
+                                                <span class="items__price--sale">24%</span>
+                                                <div class="items__price--price">120,000</div>
+                                                <del class="items__price--regular">120,000</del>
+                                            </div>
+                                        </a>
+                                        <a href="mypage_review.html" class="items__review-link">
+                                            <div class="items__review-count">
+                                                <div class="items__review">
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starR"></i>
+                                                    <i class="ico_starG"></i>
+                                                    <i class="ico_starG"></i>
+                                                </div>
+                                                <div class="items__count">리뷰 46</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mypage__faq">
+                        <ul class="mypage__faq--ul">
+                            <li class="mypage__faq--li">
+                                <details>
+                                    <summary>
+                                        <div class="mypage__faq--date">2023.03.01</div>
+                                        <button class="mypage__faq--btn small-button black-button">확인중</button>
+                                        <div class="mypage__faq--subject">Q. 품절상품 재입고 문의합니다.</div>
+                                        <div class="mypage__faq--arrow">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </summary>
+                                    <p>
+                                        최종 결제금액이 20,000원 이상이면 무료로 배송됩니다.
+                                        최종 결제금액이 20,000원 이상이면 무료로 배송됩니다.
+                                    </p>
+                                </details>
+                            </li>
+                            <li class="mypage__faq--li">
+                                <details>
+                                    <summary>
+                                        <div class="mypage__faq--date">2023.03.01</div>
+                                        <button class="mypage__faq--btn small-button grey-button">답변완료</button>
+                                        <div class="mypage__faq--subject">Q. 품절상품 재입고 문의합니다.</div>
+                                        <div class="mypage__faq--arrow">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </summary>
+                                    <p>
+                                        최종 결제금액이 20,000원 이상이면 무료로 배송됩니다.
+                                        최종 결제금액이 20,000원 이상이면 무료로 배송됩니다.
+                                    </p>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__link">
+                    <div class="footer__link--cont">
+                        <a href="mypage_qa.html" class="footer__link--head">Customer Support</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_qa_write.html">Contact Us</a></li>
+                            <li><a href="mypage_deliAddress.html">Shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Account</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_order.html">Order Status</a></li>
+                            <li><a href="members_login.html">Sign in or create account</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Our Company</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="">Store Locator</a></li>
+                            <li><a href="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__select">
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </div>
+                <div class="footer__copyright">
+                    <h5>© 2023 I2MAX All rights reserved. This is a Demo store only</h5>
+                </div>
+                <ul class="footer__etc">
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Site Map</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

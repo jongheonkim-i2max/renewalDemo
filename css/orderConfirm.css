@@ -10,6 +10,7 @@
   --color-coral:#ff7777;
   --color-Lblue:#C2CAD3;
   --color-Dblue:#858D96;
+  --border-grey:#EAEAEB;
   --border-color:#C2CAD3;
 }
 
@@ -1404,7 +1405,7 @@ input.custom-input:read-only {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: inherit;
-  width: 100%;
+  height: 100%;
 }
 .common-product__info {
   float: right;

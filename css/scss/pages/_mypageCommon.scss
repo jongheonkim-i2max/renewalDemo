@@ -1,0 +1,73 @@
+.myCommon{
+    @include subCommonPadding;
+    
+    .display_mobile{
+        display:block;
+    }
+    .hidden_pc{
+        display:none;
+    }
+    @include mediaQuery(991px){
+        .display_pc{
+            display:none;
+        }
+        .display_mobile{
+            display:block;
+        }
+    }
+
+    & > .container{
+        display:flex;
+    }
+
+    & &__menu{
+        width:150px;
+        margin-right:170px;
+    }
+
+    & &__ul{
+        border-right:1px solid var(--border-color);
+        li{
+            &.active a,
+            &:hover a{
+                border:1px solid var(--border-color);
+                border-right:0;
+                &::after{
+                    content:"";
+                    width:1px;
+                    height:100%;
+                    position:absolute;
+                    right:-1px;
+                    top:0;
+                    background-color: var(--color-white);
+                }
+            }
+            a{
+                position:relative;
+                display:block;
+                height:50px;
+                line-height:50px;
+                padding-left:25px;
+                font-size:16px;
+                font-weight:bold;
+                border:1px solid transparent;
+                margin-bottom:-1px;
+            }
+        }
+    }
+
+    & &__content{
+        width:calc(100% - 320px);
+    }
+    & &__title{
+        font-size:28px;
+        font-weight:bold;
+        text-align:right;
+        margin-bottom:35px;
+    }
+    & &__sub-title{
+        font-size:24px;
+        font-weight:bold;
+        margin-bottom:25px;
+    }
+}

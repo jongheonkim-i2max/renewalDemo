@@ -52,13 +52,6 @@ function initSwiper() {
                 delay: 5000,
                 disableOnInteraction: false,
             },
-            on: {
-                activeIndexChange: function () {
-                    var content_length = 4;
-                    var content_percent = 100 / content_length;
-                    $(".list-container.gfijkcomrnhtsvbwzylpeuxqd .virtual_active").css({"left":content_percent * this.realIndex+"%"});
-                }
-            },
             breakpoints: {
                 350:{
                     slidesPerView:2,
@@ -91,13 +84,6 @@ function initSwiper() {
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
-            },
-            on: {
-                activeIndexChange: function () {
-                    var content_length = 4;
-                    var content_percent = 100 / content_length;
-                    $(".list-container.gfijkcomrnhtsvbwzylpeuxqd .virtual_active").css({"left":content_percent * this.realIndex+"%"});
-                }
             },
             breakpoints: {
                 350:{

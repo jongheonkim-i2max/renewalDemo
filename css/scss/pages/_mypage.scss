@@ -1,0 +1,100 @@
+.mypage{
+    $mypage_marginBottom:60px;
+    @include mediaQuery(768px){
+        $mypage_marginBottom:30px;    
+    }
+
+    & &__count{
+        margin-bottom:$mypage_marginBottom;
+        &--ul{
+            display:flex;
+            width:100%;
+        }
+        &--li{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            flex-wrap:wrap;
+            flex-direction: column;
+            width:100%;
+            border:1px solid var(--border-color);
+            border-right:0;
+            text-align:center;
+            min-height:65px;
+            font-size:14px;
+            font-weight:300;
+            &:last-child{
+                border-right:1px solid var(--border-color);
+            }
+            
+            .mypage__count--count{
+                font-weight:500;
+            }
+        }
+    }
+    & &__recent{
+        margin-bottom: $mypage_marginBottom;
+        &--count{
+            margin-bottom:80px;
+            &-ul{
+                display:flex;
+                width:100%;
+                border:1px solid var(--border-grey);
+                border-radius:5px;
+            }
+            &-li{
+                position:relative;
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                text-align:center;
+                width:100%;
+                min-height:70px;
+                border-right:1px solid var(--border-grey);
+                font-size:16px;
+                
+                &:last-child{
+                    border-right:0;
+                }
+                &:last-child::before,
+                &:last-child::after{
+                    display:none;
+                }
+
+                &::before{
+                    content:"";
+                    //border-left: 8px solid var(--color-white);
+                    border-left: 8px solid var(--color-white);
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    @include translateY;
+                    z-index:3;
+                    right:-8px;
+                }
+
+                &::after{
+                    content:"";
+                    border-left: 9px solid var(--border-color);
+                    border-top: 11px solid transparent;
+                    border-bottom: 11px solid transparent;
+                    @include translateY;
+                    z-index:2;
+                    right:-9px;
+                }
+            }
+            &-info{
+                margin-right:20px;
+            }
+            &-subject{
+                font-weight:bold;
+                // margin-bottom:
+            }
+            &-count{
+                font-weight:400;
+                &.coral{
+                    color: var(--color-coral);
+                }
+            }
+        }
+    }
+}

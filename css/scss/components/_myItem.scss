@@ -1,0 +1,32 @@
+.my-item{
+    &__list{
+        border-top:1px solid var(--border-color);
+    }
+    &__item{
+        border-bottom:1px solid var(--border-color);
+        display:flex;
+        align-items:center;
+        padding:25px 45px;
+    }
+
+    &__img{
+        width:150px;
+        height:150px;
+        position:relative;
+        border-radius:25px 0;
+        overflow:hidden;
+        margin-right:50px;
+
+        a{
+            position:relative;
+            width:100%;
+            height:100%;
+            display:block;
+        }
+        img{
+            @include translate;
+            max-height:inherit;
+            height:100%;
+        }
+    }
+}
