@@ -1821,42 +1821,42 @@ ol.breadcrumb li a {
     font-size: 10px;
   }
 }
-.subItems-wrap.row5 .items .items__link .items__brand {
+.subItems-wrap.row5 .items .items__link .items__brand, .subItems-wrap.row4 .items .items__link .items__brand {
   font-size: 12px;
 }
-.subItems-wrap.row5 .items .items__link .items__title {
+.subItems-wrap.row5 .items .items__link .items__title, .subItems-wrap.row4 .items .items__link .items__title {
   font-size: 14px;
 }
-.subItems-wrap.row5 .items .items__price .items__price--sale {
+.subItems-wrap.row5 .items .items__price .items__price--sale, .subItems-wrap.row4 .items .items__price .items__price--sale {
   font-size: 16px;
 }
-.subItems-wrap.row5 .items .items__price .items__price--price {
+.subItems-wrap.row5 .items .items__price .items__price--price, .subItems-wrap.row4 .items .items__price .items__price--price {
   font-size: 16px;
 }
-.subItems-wrap.row5 .items .items__price .items__price--regular {
+.subItems-wrap.row5 .items .items__price .items__price--regular, .subItems-wrap.row4 .items .items__price .items__price--regular {
   font-size: 14px;
 }
-.subItems-wrap.row5 .items .items__review-count .items__count {
+.subItems-wrap.row5 .items .items__review-count .items__count, .subItems-wrap.row4 .items .items__review-count .items__count {
   font-size: 13px;
 }
 @media (max-width: 768px) {
-  .subItems-wrap.row5 .items .items__link .items__brand {
+  .subItems-wrap.row5 .items .items__link .items__brand, .subItems-wrap.row4 .items .items__link .items__brand {
     font-size: 10px;
   }
-  .subItems-wrap.row5 .items .items__link .items__title {
+  .subItems-wrap.row5 .items .items__link .items__title, .subItems-wrap.row4 .items .items__link .items__title {
     font-size: 14px;
   }
-  .subItems-wrap.row5 .items .items__price .items__price--sale {
+  .subItems-wrap.row5 .items .items__price .items__price--sale, .subItems-wrap.row4 .items .items__price .items__price--sale {
     font-size: 12px;
     margin-right: 10px;
   }
-  .subItems-wrap.row5 .items .items__price .items__price--price {
+  .subItems-wrap.row5 .items .items__price .items__price--price, .subItems-wrap.row4 .items .items__price .items__price--price {
     font-size: 14px;
   }
-  .subItems-wrap.row5 .items .items__price .items__price--regular {
+  .subItems-wrap.row5 .items .items__price .items__price--regular, .subItems-wrap.row4 .items .items__price .items__price--regular {
     font-size: 12px;
   }
-  .subItems-wrap.row5 .items .items__review-count .items__count {
+  .subItems-wrap.row5 .items .items__review-count .items__count, .subItems-wrap.row4 .items .items__review-count .items__count {
     font-size: 10px;
   }
 }
@@ -1936,6 +1936,44 @@ ol.breadcrumb li a {
 }
 .row5 .swiper-slide:last-child {
   margin-right: 0;
+}
+
+.row4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.row4 .swiper-slide {
+  width: calc(25% - 21px);
+  margin-right: 28px;
+}
+@media (max-width: 768px) {
+  .row4 .swiper-slide {
+    width: calc(50% - 7.5px);
+    margin-right: 15px;
+  }
+}
+.row4 .swiper-slide:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .mobile_body .horizontal-scroll {
+    width: calc(100% + 15px);
+    overflow: hidden;
+  }
+}
+@media (max-width: 480px) {
+  .mobile_body .horizontal-scroll .items-wrap {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .mobile_body .horizontal-scroll .items-wrap::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .large-button {
@@ -3149,6 +3187,7 @@ ol.breadcrumb li a {
 @media (max-width: 768px) {
   .pdp .recommand-item .horizontal-scroll {
     margin-bottom: 50px;
+    width: 100%;
   }
 }
 .pdp .recommand-item .horizontal-scroll:last-child {
@@ -3180,14 +3219,5 @@ ol.breadcrumb li a {
   .pdp .recommand-item .horizontal-scroll > h5 {
     font-size: 16px;
     margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mobile_body .pdp .recommand-item .items-wrap {
-    overflow-x: auto;
-  }
-  .mobile_body .pdp .recommand-item .items-wrap::-webkit-scrollbar {
-    display: none;
   }
 }

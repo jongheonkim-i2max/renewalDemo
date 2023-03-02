@@ -892,6 +892,7 @@
             margin-bottom:90px;
             @include mediaQuery(768px){
                 margin-bottom:50px;
+                width:100%;
             }
 
             &:last-child{
@@ -924,17 +925,6 @@
                 }
             }
 
-        }
-    }
-}
-
-.mobile_body .pdp .recommand-item .items-wrap{
-    @include mediaQuery(480px){
-        overflow-x:auto;
-        //-ms-overflow-style: none; 
-        //scrollbar-width: none;
-        &::-webkit-scrollbar{
-            display: none;
         }
     }
 }
