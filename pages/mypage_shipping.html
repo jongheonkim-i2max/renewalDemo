@@ -10,6 +10,8 @@
         
         <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
         <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+        <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script><!--daumApi-->
+        <script defer src="../js/daumAddr.js"></script>
         <script defer src="../js/common.js"></script>
         <script defer src="../js/pop_up.js"></script>
         <script defer src="../js/mypage_shipping.js"></script>
@@ -125,7 +127,7 @@
                             <div class="length">총 <b>2</b>개</div>
                         </h5>
                         <div class="mypage_shipping__button">
-                            <a class="shippingAdd coral-button middle-button">배송지 추가</a>
+                            <a class="shippingAdd shippingPop_open coral-button middle-button">배송지 추가</a>
                             <a class="selectDelete Bgrey-button middle-button">선택삭제</a>
                             <a class="allDelete black-button middle-button">전체삭제</a>
                         </div>
@@ -260,6 +262,69 @@
                     </div>
                 </div>
             </div>
+            <div class="pop shippingPop">
+                <div class="pop_title">
+                    <h2>배송지 등록/수정하기</h2>
+                    <a class="pop_close shippingPop_close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                </div>
+                <div class="pop_content shippingPop_content">
+                    <div class="shippingPop_cont">
+                        <div class="shippingPop_cont__input">
+                            <div class="shippingPop_cont__input-half">
+                                <label for="shippingPop_title">배송지명</label>
+                                <input type="text" class="custom-input" name="shippingPop_title" id="shippingPop_title" placeholder="입력">
+                            </div>
+                            <div class="shippingPop_cont__input-half">
+                                <div class="custom-checkbox">
+                                    <div class="custom-checkbox__cont">
+                                        <input type="checkbox" name="shippingPop_basic" id="shippingPop_basic">
+                                        <label for="shippingPop_basic" class="custom-checkbox__label">
+                                            <span class="custom-checkbox__square"></span>
+                                            <span class="custom-checkbox__text">기본 배송지로 설정</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shippingPop_cont__input">
+                            <div class="shippingPop_cont__input-half">
+                                <label for="shippingPop_name">받으시는분</label>
+                                <input type="text" class="custom-input" name="shippingPop_name" id="shippingPop_name" placeholder="성함">
+                            </div>
+                            <div class="shippingPop_cont__input-half">
+                                <label for="shippingPop_tel">전화번호</label>
+                                <input type="text" class="custom-input only_tel" name="shippingPop_tel" id="shippingPop_tel" placeholder="성함">
+                            </div>
+                        </div>
+                        <div class="shippingPop_cont__input shippingPop_cont__input--addr">
+                            <label for="shipping_postcode">우편번호</label>
+                            <div class="shipping__addr">
+                                <input type="text" class="addr_code custom-input shipping_addr1 only_num" id="shipping_postcode" placeholder="우편번호" maxlength="5">
+                                <input type="button" class="addr_button coral-button" onclick="shipping_execDaumPostcode()" value="주소검색">
+                            </div>
+                            <div class="shipping__addr">
+                                <input type="text" class="custom-input shipping_addr2" id="shipping_address" placeholder="주소">
+                            </div>
+                            <div class="shipping__addr">
+                                <input type="text" class="custom-input shipping_addr3" id="shipping_detailAddress" placeholder="상세주소">
+                            </div>
+                            <div class="shipping__addr shipping_hidden">
+                                <input type="text" class="custom-input shipping_addr4" id="shipping_extraAddress" placeholder="참고항목">
+                            </div>
+                            <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
+                                <img src="https://t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop_button">
+                    <button class="coral-button">확인</button>
+                </div>
+            </div>
+            <div class="pop_bg shippingPop_bg"></div>
         </section>
         <footer class="footer">
             <div class="footer__container">

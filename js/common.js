@@ -87,3 +87,13 @@ jQuery(document).ready(function($){
         $('body').addClass('mobile_body').removeClass('pc_body');
     }
 });
+
+//스크롤바 숨김
+function overflow(attr){
+    if(attr == 'visible'){
+        $('html, body').css({'overflow':''});
+    }else if(attr == 'hidden'){
+        $('html, body').css({'overflow':'hidden'});
+    }
+    
+}

@@ -11,6 +11,7 @@
   --color-Lblue:#C2CAD3;
   --color-Dblue:#858D96;
   --border-grey:#EAEAEB;
+  --border-Lgrey: #EBEBEB;
   --border-blue:#E6E6E7;
   --border-color:#C2CAD3;
 }
@@ -2006,7 +2007,7 @@ a.large-button:hover, button.large-button:hover {
 @media (max-width: 768px) {
   a.large-button, button.large-button {
     height: 45px;
-    line-height: 45px;
+    line-height: 43px;
     font-size: 16px;
   }
 }
@@ -2022,7 +2023,7 @@ a.middle-button, button.middle-button {
 @media (max-width: 768px) {
   a.middle-button, button.middle-button {
     height: 30px;
-    line-height: 30px;
+    line-height: 28px;
     font-size: 12px;
     padding: 0 15px;
   }
@@ -2037,6 +2038,13 @@ a.small-button, button.small-button {
   color: var(--color-white);
   font-size: 12px;
   font-weight: 300;
+}
+@media (max-width: 768px) {
+  a.small-button, button.small-button {
+    height: 25px;
+    line-height: 23px;
+    padding: 0 12px;
+  }
 }
 a.black-button, button.black-button {
   background: var(--color-LBlack);

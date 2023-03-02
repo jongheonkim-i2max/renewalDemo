@@ -74,7 +74,7 @@ $(document).on("click", ".common-price__payment button", function(){
         $("input.shipping_tel").focus();
         return false;
     }else if ( !tel_check($("input.shipping_tel").val().trim()) ) { 
-        alert("전화번호가 잘못되었습니다."); 
+        alert("전화번호를 올바르게 입력해주세요."); 
         $("input.shipping_tel").focus();
         return false; 
     }
@@ -84,7 +84,7 @@ $(document).on("click", ".common-price__payment button", function(){
         $("input.shipping_addr1").focus();
         return false;
     }else if($("input.shipping_addr1").val().trim().length != 5){
-        alert("우편번호가 잘못되었습니다.");
+        alert("우편번호를 올바르게 입력해주세요.");
         $("input.shipping_addr1").focus();
         return false;
     }

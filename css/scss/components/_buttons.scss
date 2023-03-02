@@ -17,7 +17,7 @@ a, button{
         }
         @include mediaQuery(768px){
             height:45px;
-            line-height:45px;
+            line-height:43px;
             font-size:16px;
         }
     }
@@ -32,7 +32,7 @@ a, button{
         font-weight:300;
         @include mediaQuery(768px){
             height:30px;
-            line-height:30px;
+            line-height:28px;
             font-size:12px;
             padding:0 15px;
         }
@@ -48,6 +48,11 @@ a, button{
         color:var(--color-white);
         font-size:12px;
         font-weight:300;
+        @include mediaQuery(768px){
+            height:25px;
+            line-height:23px;
+            padding:0 12px;
+        }
     }
     
     /*button color*/
