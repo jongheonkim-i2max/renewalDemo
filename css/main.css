@@ -11,6 +11,7 @@
   --color-Lblue:#C2CAD3;
   --color-Dblue:#858D96;
   --border-grey:#EAEAEB;
+  --border-blue:#E6E6E7;
   --border-color:#C2CAD3;
 }
 
@@ -1431,6 +1432,11 @@ html, body, * {
   opacity: 1;
   visibility: visible;
 }
+@media (max-width: 768px) {
+  .items .items__image:hover > a::before {
+    display: none;
+  }
+}
 .items .items__image:hover > a img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -1463,6 +1469,7 @@ html, body, * {
 @media (max-width: 768px) {
   .items .items__image > a::before {
     border-radius: 25px 0;
+    display: none;
   }
 }
 .items .items__image > a img {
@@ -1916,7 +1923,7 @@ html, body, * {
 }
 @media (max-width: 480px) {
   .mobile_body .horizontal-scroll .items-wrap {
-    overflow-x: auto;
+    overflow-x: auto !important;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }

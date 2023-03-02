@@ -1,0 +1,78 @@
+.pagination{
+    margin-top:50px;
+    @include mediaQuery(768px){
+        margin-top:40px;
+    }
+
+    & &__ol{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        li{
+            &.prev,
+            &.next{
+                .line{
+                    position:absolute;
+                    width:1px;
+                    height:10px;
+                    border-radius:5px;
+                    background: var(--color-black);
+                    transform:rotate(45deg);
+                    top:7.4px;
+
+                    &:nth-child(2){
+                        transform:rotate(-45deg);
+                        top:auto;
+                        bottom:7px;
+                    }
+                }
+            }
+            &.next{
+                .line{
+                    transform:rotate(-45deg);
+
+                    &:nth-child(2){
+                        transform:rotate(45deg);
+                    }
+                }
+            }
+            &.next a,
+            &:last-child a{
+                border-right:1px solid var(--color-Dblue);
+            }
+            a{
+                position:relative;
+                display:flex;
+                width:32px;
+                height:32px;
+                border:1px solid var(--color-Dblue);
+                border-right:0;
+                align-items:center;
+                justify-content:center;
+                text-align:center;
+                font-size:12px;
+                font-weight:500;
+            }
+            @include mediaQuery(768px){
+                &.prev,
+                &.next{
+                    .line{
+                        height:8px;
+                        border-radius:4px;
+                        top:7.4px;
+                        &:nth-child(2){
+                            top:auto;
+                            bottom:7px;
+                        }
+                    }
+                }
+                a{
+                    
+                    width:28px;
+                    height:28px;
+                    font-size:10px;
+                }
+            }
+        }
+    }
+}

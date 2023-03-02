@@ -4,8 +4,10 @@
 $(document).on("change", ".cart-product__totalCheck input[id='cart_product__allCheck']", function(e){
     if($(this).is(":checked")){
         $(".cart-product__list .custom-checkbox input").prop("checked", true);
+        $(".cart-product__item").addClass("on");
     }else{
         $(".cart-product__list .custom-checkbox input").prop("checked", false);
+        $(".cart-product__item").removeClass("on");
     }        
 });
 
@@ -13,11 +15,17 @@ $(document).on("change", ".cart-product__totalCheck input[id='cart_product__allC
 $(document).on("change", ".cart-product__list .custom-checkbox input", function(){
     var allLength = $(this).parents(".cart-product__list").find(".custom-checkbox input").length;
     var activeLength = $(this).parents(".cart-product__list").find(".custom-checkbox input:checked").length;
-
+    
     if(allLength == activeLength){
         $(".cart-product__totalCheck input[id='cart_product__allCheck']").prop("checked", true);
     }else{
         $(".cart-product__totalCheck input[id='cart_product__allCheck']").prop("checked", false);
+    }
+
+    if($(this).is(":checked")){
+        $(this).parents(".cart-product__item").addClass("on");
+    }else{
+        $(this).parents(".cart-product__item").removeClass("on");
     }
 });
 
@@ -74,10 +82,12 @@ $(document).on("click", ".choose_delete", function(){
 $(document).on("click", ".cart-product__option-change button", function(){
     if($(this).parents(".cart-product__option-li").hasClass("active")){
         $(this).parents(".cart-product__option-li").removeClass("active");
+        $(this).text("옵션변경");
         $(this).parents(".cart-product__option-li").find("select").attr("disabled", true);
     }else{
         $(this).parents(".cart-product__option-li").addClass("active");
         $(this).parents(".cart-product__option-li").find("select").attr("disabled", false);
+        $(this).text("옵션적용");
     }
 });
 

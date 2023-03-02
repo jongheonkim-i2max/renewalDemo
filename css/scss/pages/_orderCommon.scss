@@ -355,6 +355,9 @@
                     display:flex;
                 }
             }
+            > li.on{
+                border-color:var(--color-Dgrey);
+            }
 
             &.cart-product__list{
                 > li{

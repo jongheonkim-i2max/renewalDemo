@@ -11,6 +11,7 @@
   --color-Lblue:#C2CAD3;
   --color-Dblue:#858D96;
   --border-grey:#EAEAEB;
+  --border-blue:#E6E6E7;
   --border-color:#C2CAD3;
 }
 
@@ -1509,7 +1510,10 @@ select.custom-select option {
   }
 }
 
-.large-button {
+a, button {
+  /*button color*/
+}
+a.large-button, button.large-button {
   display: block;
   text-align: center;
   width: 100%;
@@ -1523,18 +1527,17 @@ select.custom-select option {
   padding: 0;
   margin: 0;
 }
-.large-button:hover {
+a.large-button:hover, button.large-button:hover {
   color: var(--color-white);
 }
 @media (max-width: 768px) {
-  .large-button {
+  a.large-button, button.large-button {
     height: 45px;
     line-height: 45px;
     font-size: 16px;
   }
 }
-
-.middle-button {
+a.middle-button, button.middle-button {
   display: block;
   padding: 0 21px;
   height: 40px;
@@ -1544,15 +1547,14 @@ select.custom-select option {
   font-weight: 300;
 }
 @media (max-width: 768px) {
-  .middle-button {
+  a.middle-button, button.middle-button {
     height: 30px;
     line-height: 30px;
     font-size: 12px;
     padding: 0 15px;
   }
 }
-
-.small-button {
+a.small-button, button.small-button {
   display: block;
   white-space: nowrap;
   width: 80px;
@@ -1563,19 +1565,25 @@ select.custom-select option {
   font-size: 12px;
   font-weight: 300;
 }
-
-/*button color*/
-.black-button {
+a.black-button, button.black-button {
   background: var(--color-LBlack);
 }
-
-.grey-button {
+a.grey-button, button.grey-button {
   background: var(--color-Lgrey);
   color: var(--color-Dgrey);
 }
-
-.coral-button {
+a.Bgrey-button, button.Bgrey-button {
+  background: var(--color-Lgrey);
+  color: var(--color-Dgrey);
+  border: 1px solid var(--border-color);
+}
+a.coral-button, button.coral-button {
   background: var(--color-coral);
+}
+a.white-button, button.white-button {
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
 }
 
 /*button layout*/
@@ -1602,6 +1610,11 @@ select.custom-select option {
 .items .items__image:hover > a::before {
   opacity: 1;
   visibility: visible;
+}
+@media (max-width: 768px) {
+  .items .items__image:hover > a::before {
+    display: none;
+  }
 }
 .items .items__image:hover > a img {
   -webkit-transform: scale(1.05);
@@ -1635,6 +1648,7 @@ select.custom-select option {
 @media (max-width: 768px) {
   .items .items__image > a::before {
     border-radius: 25px 0;
+    display: none;
   }
 }
 .items .items__image > a img {
@@ -2088,7 +2102,7 @@ select.custom-select option {
 }
 @media (max-width: 480px) {
   .mobile_body .horizontal-scroll .items-wrap {
-    overflow-x: auto;
+    overflow-x: auto !important;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
@@ -2381,12 +2395,50 @@ select.custom-select option {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 768px) {
   .myCommon .myCommon__sub-title {
     font-size: 16px;
     margin-bottom: 15px;
   }
+}
+@media (max-width: 480px) {
+  .myCommon .myCommon__sub-title {
+    width: 100%;
+  }
+}
+.myCommon .myCommon__sub-title .title {
+  margin-right: 40px;
+  position: relative;
+}
+.myCommon .myCommon__sub-title .title::after {
+  content: "";
+  width: 2px;
+  height: 22px;
+  background: var(--color-black);
+  position: absolute;
+  right: -20px;
+  top: 9px;
+}
+@media (max-width: 768px) {
+  .myCommon .myCommon__sub-title .title {
+    margin-right: 20px;
+  }
+  .myCommon .myCommon__sub-title .title::after {
+    width: 1px;
+    height: 16px;
+    right: -10px;
+    top: 6px;
+  }
+}
+.myCommon .myCommon__sub-title .length b {
+  color: var(--color-coral);
 }
 
 @media (max-width: 991px) {
@@ -2629,6 +2681,7 @@ select.custom-select option {
   width: 70px;
   margin-right: 65px;
   padding: 0;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   .mypage .mypage__faq--li details summary button.mypage__faq--btn, .mypage .mypage__faq--li details summary a.mypage__faq--btn {

@@ -11,6 +11,7 @@
   --color-Lblue:#C2CAD3;
   --color-Dblue:#858D96;
   --border-grey:#EAEAEB;
+  --border-blue:#E6E6E7;
   --border-color:#C2CAD3;
 }
 
@@ -1557,7 +1558,10 @@ input.custom-input:read-only {
   }
 }
 
-.large-button {
+a, button {
+  /*button color*/
+}
+a.large-button, button.large-button {
   display: block;
   text-align: center;
   width: 100%;
@@ -1571,18 +1575,17 @@ input.custom-input:read-only {
   padding: 0;
   margin: 0;
 }
-.large-button:hover {
+a.large-button:hover, button.large-button:hover {
   color: var(--color-white);
 }
 @media (max-width: 768px) {
-  .large-button {
+  a.large-button, button.large-button {
     height: 45px;
     line-height: 45px;
     font-size: 16px;
   }
 }
-
-.middle-button {
+a.middle-button, button.middle-button {
   display: block;
   padding: 0 21px;
   height: 40px;
@@ -1592,15 +1595,14 @@ input.custom-input:read-only {
   font-weight: 300;
 }
 @media (max-width: 768px) {
-  .middle-button {
+  a.middle-button, button.middle-button {
     height: 30px;
     line-height: 30px;
     font-size: 12px;
     padding: 0 15px;
   }
 }
-
-.small-button {
+a.small-button, button.small-button {
   display: block;
   white-space: nowrap;
   width: 80px;
@@ -1611,19 +1613,25 @@ input.custom-input:read-only {
   font-size: 12px;
   font-weight: 300;
 }
-
-/*button color*/
-.black-button {
+a.black-button, button.black-button {
   background: var(--color-LBlack);
 }
-
-.grey-button {
+a.grey-button, button.grey-button {
   background: var(--color-Lgrey);
   color: var(--color-Dgrey);
 }
-
-.coral-button {
+a.Bgrey-button, button.Bgrey-button {
+  background: var(--color-Lgrey);
+  color: var(--color-Dgrey);
+  border: 1px solid var(--border-color);
+}
+a.coral-button, button.coral-button {
   background: var(--color-coral);
+}
+a.white-button, button.white-button {
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
 }
 
 /*button layout*/
@@ -2105,6 +2113,9 @@ input.custom-input:read-only {
     display: -ms-flexbox;
     display: flex;
   }
+}
+.checkCommon .common-product__list > li.on {
+  border-color: var(--color-Dgrey);
 }
 .checkCommon .common-product__list.cart-product__list > li {
   display: block;

@@ -1,65 +1,78 @@
-.large-button{
-    display:block;
-    text-align:center;
-    width:100%;
-    height:60px;
-    line-height:60px;
-    font-size:20px;
-    font-weight:300;
-    background: var(--color-LBlack);
-    color:var(--color-white);
-    border:0;
-    padding:0;
-    margin:0;
-    &:hover{
+a, button{
+    &.large-button{
+        display:block;
+        text-align:center;
+        width:100%;
+        height:60px;
+        line-height:60px;
+        font-size:20px;
+        font-weight:300;
+        background: var(--color-LBlack);
         color:var(--color-white);
+        border:0;
+        padding:0;
+        margin:0;
+        &:hover{
+            color:var(--color-white);
+        }
+        @include mediaQuery(768px){
+            height:45px;
+            line-height:45px;
+            font-size:16px;
+        }
     }
-    @include mediaQuery(768px){
-        height:45px;
-        line-height:45px;
-        font-size:16px;
+    
+    &.middle-button{
+        display:block;
+        padding:0 21px;
+        height:40px;
+        line-height:40px;
+        color: var(--color-white);
+        font-size:14px;
+        font-weight:300;
+        @include mediaQuery(768px){
+            height:30px;
+            line-height:30px;
+            font-size:12px;
+            padding:0 15px;
+        }
     }
-}
-
-.middle-button{
-    display:block;
-    padding:0 21px;
-    height:40px;
-    line-height:40px;
-    color: var(--color-white);
-    font-size:14px;
-    font-weight:300;
-    @include mediaQuery(768px){
-        height:30px;
-        line-height:30px;
+    
+    &.small-button{
+        display:block;
+        white-space:nowrap;
+        width:80px;
+        height:31px;
+        line-height:31px;
+        padding:0 18px;
+        color:var(--color-white);
         font-size:12px;
-        padding:0 15px;
+        font-weight:300;
+    }
+    
+    /*button color*/
+    &.black-button{
+        background: var(--color-LBlack);
+    }
+    &.grey-button{
+        background: var(--color-Lgrey);
+        color:var(--color-Dgrey);
+    }
+    &.Bgrey-button{
+        background: var(--color-Lgrey);
+        color:var(--color-Dgrey);
+        border:1px solid var(--border-color);
+    }
+    &.coral-button{
+        background:var(--color-coral);
+    }
+    &.white-button{
+        background:var(--color-white);
+        border:1px solid var(--color-black);
+        color:var(--color-black);
     }
 }
 
-.small-button{
-    display:block;
-    white-space:nowrap;
-    width:80px;
-    height:31px;
-    line-height:31px;
-    padding:0 18px;
-    color:var(--color-white);
-    font-size:12px;
-    font-weight:300;
-}
-
-/*button color*/
-.black-button{
-    background: var(--color-LBlack);
-}
-.grey-button{
-    background: var(--color-Lgrey);
-    color:var(--color-Dgrey);
-}
-.coral-button{
-    background:var(--color-coral);
-}
 
 /*button layout*/
 .two-buttons{
