@@ -1,0 +1,78 @@
+.memberCommon{
+    @include subCommonPadding;
+
+    > .container{
+        width:600px;
+        margin:0 auto;
+
+        @include mediaQuery(768px){
+            width:100%;
+        }
+    }
+
+    .common{
+        padding:90px 75px;
+        border:1px solid var(--border-blue);
+        @include boxShadow;
+        @include mediaQuery(991px){
+            padding:70px 50px;
+        }
+        @include mediaQuery(768px){
+            padding:50px 30px;
+        }
+        @include mediaQuery(480px){
+            padding:35px 20px;
+        }
+
+        .common__title{
+            font-size:28px;
+            font-weight:bold;
+            margin-bottom:20px;
+            @include mediaQuery(768px){
+                font-size:18px;
+                margin-bottom:15px;
+            }
+        }
+
+        .common__content{
+            .common__content--cont{
+                margin-bottom:25px;
+
+                @include mediaQuery(768px){
+                    margin-bottom:15px;
+                }
+
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+            .common__content--input{
+                margin-bottom:20px;
+                
+                @include mediaQuery(768px){
+                    margin-bottom:10px;
+                }
+                &:last-child{
+                    margin-bottom:0;
+                }
+
+                &.common__content--input-code{
+                    display:none;
+                    &.active{
+                        display:block;
+                    }
+                }
+                input + .error_msg{
+                    display:none;
+                }
+                input.is-invalid + .error_msg{
+                    display:block;
+                    margin-top:5px;
+                    font-size:10px;
+                    color:var(--input-error);
+                }
+            }
+        }
+        
+    }
+}

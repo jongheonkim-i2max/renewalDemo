@@ -14,6 +14,11 @@
   --border-Lgrey: #EBEBEB;
   --border-blue:#E6E6E7;
   --border-color:#C2CAD3;
+  --kakao-bg:#F4DC34;
+  --kakao-color:#222322;
+  --naver-bg:#21C629;
+  --naver-color:#ffffff;
+  --input-error: #FD7679;
 }
 
 /*responsive mixin*/
@@ -1512,6 +1517,7 @@ select.custom-select option {
 }
 
 a, button {
+  text-align: center;
   /*button color*/
 }
 a.large-button, button.large-button {
@@ -1555,6 +1561,16 @@ a.middle-button, button.middle-button {
     padding: 0 15px;
   }
 }
+a.middle-button.height45, button.middle-button.height45 {
+  height: 45px;
+  line-height: 45px;
+}
+@media (max-width: 768px) {
+  a.middle-button.height45, button.middle-button.height45 {
+    height: 35px;
+    line-height: 35px;
+  }
+}
 a.small-button, button.small-button {
   display: block;
   white-space: nowrap;
@@ -1592,6 +1608,14 @@ a.white-button, button.white-button {
   background: var(--color-white);
   border: 1px solid var(--color-black);
   color: var(--color-black);
+}
+a.kakao-button, button.kakao-button {
+  background: var(--kakao-bg);
+  color: var(--kakao-color);
+}
+a.naver-button, button.naver-button {
+  background: var(--naver-bg);
+  color: var(--naver-color);
 }
 
 /*button layout*/

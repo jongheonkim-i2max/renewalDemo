@@ -13,6 +13,13 @@ input.custom-input{
     &:read-only{
         background:var(--color-Lgrey);
     }
+
+    &.is-invalid{
+        border-color:var(--input-error);
+        &::placeholder{
+            color:var(--input-error);
+        }
+    }
     @include mediaQuery(768px){
         height:35px;
         line-height:25px;

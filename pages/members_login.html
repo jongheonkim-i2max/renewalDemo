@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 로그인</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/members_login.css">
+        
+        <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
+        <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+        <script defer src="../js/common.js"></script>
+        <script defer src="../js/members_login.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container wide-container">
+                <div class="header__logo">
+                    <a class="header__logo--menu-btn">
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                    </a>
+                    <a href="../index.html" class="logo">
+                        <img src="../img/logo.svg" alt="사이트 로고">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a class="header__mobile-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <ul class="header__menu--ul">
+                        <li class="header__menu--li has--sub-menu">
+                            <a href="plp.html" class="header__menu--a" data-href="plp.html">New Arrivals</a>
+                            <div class="header__menu--sub2">
+                                <ul class="header__menu--ul2">
+                                    <li class="header__menu--li2 has--sub-menu2">
+                                        <a href="plp.html" class="header__menu--a2" data-href="plp.html">subMenu1</a>
+                                        <div class="header__menu--sub3">
+                                            <ul class="header__menu--ul3">
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-1</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-2</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-3</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu2</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu3</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Womens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Mens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Gift Certificates</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Top Sellers</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="members_login.html" class="header__buttons--mypage">
+                        <img src="../img/Ic_mypage_H.png" alt="마이페이지 아이콘">
+                    </a>
+                    <a href="mypage_wish.html" class="header__buttons--wish">
+                        <img src="../img/Ic_favorites_H.png" alt="위시리스트 아이콘">
+                    </a>
+                    <a href="cart.html" class="header__buttons--cart">
+                        <img src="../img/Ic_cart_H.png" alt="장바구니 아이콘">
+                    </a>
+                </div>
+                <div class="header__search">
+                    <form action="">
+                        <button type="submit" class="header__search--button"><img src="../img/Ic_search.png" alt="검색 아이콘"></button>
+                        <input type="text" class="header__search--input" placeholder="상품을 검색해주세요">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <section class="login memberCommon">
+            <div class="container">
+                <div class="common">
+                    <h1 class="common__title">로그인</h1>
+                    <!--기존에 method post이나 get으로 해야 페이지 넘어감-->
+                    <form class="common__content login__content" name="frm" method="get" action="mypage.html" onSubmit="return checkLogin()">
+                        <div class="common__content--cont">
+                            <div class="common__content--input">
+                                <input type="text" class="custom-input" id="login_email" name="login_email" placeholder="이메일 주소">
+                                <div class="error_msg"></div>
+                            </div>
+                            <div class="common__content--input">
+                                <input type="password" class="custom-input" id="login_password" name="login_password" placeholder="비밀번호">
+                                <div class="error_msg"></div>
+                            </div>
+                        </div>
+                        <div class="common__content--cont">
+                            <div class="login__content--sns">
+                                <button type="submit" class="middle-button coral-button login-button height45">
+                                    <span class="text">로그인</span>
+                                </button>
+                                <button class="middle-button kakao-button height45">
+                                    <span class="icon"><img src="../img/Ic_kakao.png" alt="카카오톡 로그인 아이콘"></span>
+                                    <span class="text">로그인</span>
+                                </button>
+                                <button class="middle-button naver-button height45">
+                                    <span class="icon"><img src="../img/Ic_naver.png" alt="네이버 로그인 아이콘"></span>
+                                    <span class="text">로그인</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="common__content--cont">
+                            <div class="login__content--link">
+                                <div class="custom-checkbox">
+                                    <div class="custom-checkbox__cont">
+                                        <input type="checkbox" name="auto_login" id="auto_login">
+                                        <label for="auto_login" class="custom-checkbox__label">
+                                            <span class="custom-checkbox__square"></span>
+                                            <span class="custom-checkbox__text">자동 로그인</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ol class="login__content--ol">
+                                    <li>
+                                        <a href="members_lost.html">아이디 / 비밀번호 찾기</a>
+                                    </li>
+                                    <li>
+                                        <a href="members_join.html">회원가입</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__link">
+                    <div class="footer__link--cont">
+                        <a href="mypage_qa.html" class="footer__link--head">Customer Support</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_qa_write.html">Contact Us</a></li>
+                            <li><a href="mypage_deliAddress.html">Shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Account</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_order.html">Order Status</a></li>
+                            <li><a href="members_login.html">Sign in or create account</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Our Company</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="">Store Locator</a></li>
+                            <li><a href="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__select">
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </div>
+                <div class="footer__copyright">
+                    <h5>© 2023 I2MAX All rights reserved. This is a Demo store only</h5>
+                </div>
+                <ul class="footer__etc">
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Site Map</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
