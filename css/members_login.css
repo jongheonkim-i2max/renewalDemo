@@ -19,6 +19,7 @@
   --naver-bg:#21C629;
   --naver-color:#ffffff;
   --input-error: #FD7679;
+  --tab-color:#F3F5F6;
 }
 
 /*responsive mixin*/
@@ -1383,6 +1384,18 @@ a.small-button, button.small-button {
     height: 25px;
     line-height: 23px;
     padding: 0 12px;
+  }
+}
+a.small-button.height35, button.small-button.height35 {
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  a.small-button.height35, button.small-button.height35 {
+    height: 30px;
+    line-height: 28px;
+    font-size: 12px;
   }
 }
 a.black-button, button.black-button {

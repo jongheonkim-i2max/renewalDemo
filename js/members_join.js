@@ -49,6 +49,14 @@ $(document).on("click", ".email-confirm", function(){
         $(".common__content--input-code").addClass("active")
         $(checkIDCode).focus();
     }
+
+    if($(checkIDCode).val().trim() == ''){
+        errorMessage(checkIDCode, "이메일을 인증코드를 입력해주세요.");
+        $(checkIDCode).val('').addClass('is-invalid').focus();
+        return false;
+    }else{
+        $(checkIDCode).removeClass('is-invalid');
+    }
 });
 
 
@@ -77,6 +85,12 @@ function checkJoin(){
 
     if(!$(".common__content--input-code").hasClass("active")){
         alert("이메일 인증코드를 받아주세요.");
+        return false;
+    }
+
+    if($(checkIDCode).val().trim() == ''){
+        errorMessage(checkIDCode, "이메일을 인증코드를 입력해주세요.");
+        $(checkIDCode).val('').addClass('is-invalid').focus();
         return false;
     }
 

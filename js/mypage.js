@@ -36,7 +36,9 @@ function initSwiper() {
             }
         });
     } else {
-        wishSwiper.destroy();
+        if(wishSwiper){
+            wishSwiper.destroy();
+        }
     }
 }
 var timer;

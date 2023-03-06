@@ -1,12 +1,15 @@
 .my-item{
     &__list{
-        border-top:1px solid var(--border-color);
+        border-top:2px solid var(--border-color);
     }
     &__item{
         border-bottom:1px solid var(--border-color);
         display:flex;
         align-items:center;
         padding:25px 45px;
+        &:last-child{
+            border-width:2px;
+        }
         @include mediaQuery(768px){
             padding:25px 20px;
             flex-wrap:wrap;

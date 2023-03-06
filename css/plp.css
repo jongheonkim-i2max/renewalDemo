@@ -19,6 +19,7 @@
   --naver-bg:#21C629;
   --naver-color:#ffffff;
   --input-error: #FD7679;
+  --tab-color:#F3F5F6;
 }
 
 /*responsive mixin*/
@@ -1352,6 +1353,8 @@ ol.breadcrumb li a {
   height: 100%;
   z-index: 2;
   background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   opacity: 0;

@@ -105,8 +105,12 @@ function initSwiper() {
             }
         });
     } else {
-        recommandSwiper.destroy();
-        attentionSwiper.destroy();
+        if(recommandSwiper){
+            recommandSwiper.destroy();
+        }
+        if(attentionSwiper){
+            attentionSwiper.destroy();
+        }
     }
 }
 

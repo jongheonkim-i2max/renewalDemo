@@ -62,6 +62,17 @@ a, button{
             line-height:23px;
             padding:0 12px;
         }
+
+        &.height35{
+            height:35px;
+            line-height:35px;
+            font-size:14px;
+            @include mediaQuery(768px){
+                height:30px;
+                line-height:28px;
+                font-size:12px;
+            }
+        }
     }
     
     /*button color*/

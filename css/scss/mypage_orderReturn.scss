@@ -7,16 +7,16 @@
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/pop_up';
 
 @import 'components/breadcrumb';
 @import 'components/select';
+@import 'components/textarea';
 @import 'components/icon';
 @import 'components/buttons';
 @import 'components/input';
-@import 'components/inputCheckbox';
-@import 'components/pagination';
+@import 'components/orderItem';
 @import 'layout/addr';
 
 @import 'pages/mypageCommon';
-@import 'pages/mypage_shipping';
+@import 'pages/mypage_orderCommon';
+@import 'pages/mypage_orderReturn';

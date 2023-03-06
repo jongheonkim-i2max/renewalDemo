@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 마이페이지-주문조회</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!--jquery-ui-->
+        <link rel="stylesheet" type="text/css" href="../css/mypage_order.css">
+        
+        <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
+        <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+        <script defer src="../js/common.js"></script>
+        <script defer src="../js/pop_up.js"></script>
+        <script defer src="../js/mypage_order.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container wide-container">
+                <div class="header__logo">
+                    <a class="header__logo--menu-btn">
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                    </a>
+                    <a href="../index.html" class="logo">
+                        <img src="../img/logo.svg" alt="사이트 로고">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a class="header__mobile-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <ul class="header__menu--ul">
+                        <li class="header__menu--li has--sub-menu">
+                            <a href="plp.html" class="header__menu--a" data-href="plp.html">New Arrivals</a>
+                            <div class="header__menu--sub2">
+                                <ul class="header__menu--ul2">
+                                    <li class="header__menu--li2 has--sub-menu2">
+                                        <a href="plp.html" class="header__menu--a2" data-href="plp.html">subMenu1</a>
+                                        <div class="header__menu--sub3">
+                                            <ul class="header__menu--ul3">
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-1</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-2</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-3</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu2</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu3</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Womens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Mens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Gift Certificates</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Top Sellers</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="members_login.html" class="header__buttons--mypage">
+                        <img src="../img/Ic_mypage_H.png" alt="마이페이지 아이콘">
+                    </a>
+                    <a href="mypage_wish.html" class="header__buttons--wish">
+                        <img src="../img/Ic_favorites_H.png" alt="위시리스트 아이콘">
+                    </a>
+                    <a href="cart.html" class="header__buttons--cart">
+                        <img src="../img/Ic_cart_H.png" alt="장바구니 아이콘">
+                    </a>
+                </div>
+                <div class="header__search">
+                    <form action="">
+                        <button type="submit" class="header__search--button"><img src="../img/Ic_search.png" alt="검색 아이콘"></button>
+                        <input type="text" class="header__search--input" placeholder="상품을 검색해주세요">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <section class="mypage-order myCommon">
+            <div class="container">
+                <div class="myCommon__menu">
+                    <h1 class="myCommon__title">마이페이지</h1>
+                    <ul class="myCommon__ul display_pc">
+                        <li><a href="mypage.html">홈</a></li>
+                        <li class="active"><a href="mypage_order.html">주문조회</a></li>
+                        <li><a href="mypage_coupon.html">쿠폰</a></li>
+                        <li><a href="mypage_wish.html">위시상품</a></li>
+                        <li><a href="mypage_shipping.html">배송지관리</a></li>
+                        <li><a href="mypage_review.html">리뷰</a></li>
+                        <li><a href="mypage_contact.html">문의내역</a></li>
+                        <li><a href="mypage_info.html">회원정보</a></li>
+                    </ul>
+                    <select name="" id="" class="custom-select display_mobile" onchange="location.href=this.value">
+                        <option value="mypage_order.html">주문조회</option>
+                        <option value="mypage.html">홈</option>
+                        <option value="mypage_coupon.html">쿠폰</option>
+                        <option value="mypage_wish.html">위시상품</option>
+                        <option value="mypage_shipping.html">배송지관리</option>
+                        <option value="mypage_review.html">리뷰</option>
+                        <option value="mypage_contact.html">문의내역</option>
+                        <option value="mypage_info.html">회원정보</option>
+                    </select>
+                </div>
+                <div class="myCommon__content">
+                    <ul class="mypage-order__tab">
+                        <li class="active">
+                            <a>주문 / 배송</a>
+                        </li>
+                        <li>
+                            <a>취소 / 반품</a>
+                        </li>
+                    </ul>
+                    <div class="mypage-order__content-wrap">
+                        <div class="mypage-order__content active">
+                            <div class="mypage-order__title">
+                                <h5 class="myCommon__sub-title">주문내역</h5>
+                                <div class="mypage-order__choose">
+                                    <div class="mypage-order__choose--radio-wrap display_pc">
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="order_list_view" id="order_list_view_week2" value="week2" checked >
+                                            <label for="order_list_view_week2">
+                                                <span class="text">2주</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="order_list_view" id="order_list_view_month1" value="month1">
+                                            <label for="order_list_view_month1">
+                                                <span class="text">1개월</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="order_list_view" id="order_list_view_month3" value="month3">
+                                            <label for="order_list_view_month3">
+                                                <span class="text">3개월</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="order_list_view" id="order_list_view_month6" value="month6">
+                                            <label for="order_list_view_month6">
+                                                <span class="text">6개월</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="order_list_view" id="order_list_view_year1" value="year1">
+                                            <label for="order_list_view_year1">
+                                                <span class="text">1년</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mypage-order__choose--select display_mobile">
+                                        <select name="order_list_view" id="order_list_view" class="custom-select">
+                                            <option value="">선택하세요.</option>
+                                            <option value="week2">2주</option>
+                                            <option value="month1">1개월</option>
+                                            <option value="month3">3개월</option>
+                                            <option value="month6">6개월</option>
+                                            <option value="year1">1년</option>
+                                        </select>
+                                    </div>
+                                    <div class="mypage-order__date">
+                                        <div class="mypage-order__date--input">
+                                            <input type="text" id="date_in" name="data_in" class="datepicker custom-input" autocomplete="off" placeholder="2020.03.03">
+                                            <label for="date_in"><img src="../img/Ic_calendar.png" alt="달력 아이콘"></label>
+                                        </div>
+                                        <div class="mypage-order__date--input">
+                                            <input type="text" id="date_out" name="date_out" class="datepicker custom-input" autocomplete="off" placeholder="2020.03.03">
+                                            <label for="date_out"><img src="../img/Ic_calendar.png" alt="달력 아이콘"></label>
+                                        </div>
+                                        <button class="small-button black-button height35">조회</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-item">
+                                <ul class="my-item__list">
+                                    <li class="my-item__item">
+                                        <div class="my-item__img">
+                                            <a href="mypage_order02.html">
+                                                <img src="../img/img_product26.jpg" alt="최근 주문내역 이미지1">
+                                            </a>
+                                        </div>
+                                        <div class="my-item__info">
+                                            <div class="my-item__brand">헤라</div>
+                                            <h5 class="my-item__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</h5>
+                                            <div class="my-item__price">321,000</div>
+                                            <div class="my-item__order">
+                                                <div class="my-item__state">배송 완료</div>
+                                                <div class="my-item__date">2023.03.01</div>
+                                            </div>
+                                            <div class="my-item__serial">ORD202111112523</div> 
+                                        </div>
+                                        <div class="my-item__button">
+                                            <button class="my-item__cancel middle-button black-button withdrawPop_open">주문취소</button>
+                                        </div>
+                                    </li>
+                                    <li class="my-item__item">
+                                        <div class="my-item__img">
+                                            <a href="mypage_order02.html">
+                                                <img src="../img/img_product26.jpg" alt="최근 주문내역 이미지1">
+                                            </a>
+                                        </div>
+                                        <div class="my-item__info">
+                                            <div class="my-item__brand">헤라</div>
+                                            <h5 class="my-item__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</h5>
+                                            <div class="my-item__price">321,000</div>
+                                            <div class="my-item__order">
+                                                <div class="my-item__state">배송 완료</div>
+                                                <div class="my-item__date">2023.03.01</div>
+                                            </div>
+                                            <div class="my-item__serial">ORD202111112523</div> 
+                                        </div>
+                                        <div class="my-item__button">
+                                            <button class="my-item__review middle-button grey-button">리뷰작성</button>
+                                        </div>
+                                    </li>
+                                    <li class="my-item__item">
+                                        <div class="my-item__img">
+                                            <a href="mypage_order02.html">
+                                                <img src="../img/img_product26.jpg" alt="최근 주문내역 이미지1">
+                                            </a>
+                                        </div>
+                                        <div class="my-item__info">
+                                            <div class="my-item__brand">헤라</div>
+                                            <h5 class="my-item__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</h5>
+                                            <div class="my-item__price">321,000</div>
+                                            <div class="my-item__order">
+                                                <div class="my-item__state">배송 완료</div>
+                                                <div class="my-item__date">2023.03.01</div>
+                                            </div>
+                                            <div class="my-item__serial">ORD202111112523</div> 
+                                        </div>
+                                        <div class="my-item__button">
+                                            <button class="my-item__shipping middle-button grey-button">배송추적</button>
+                                            <button class="my-item__return middle-button black-button">반품신청</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="pagination">
+                                    <ol class="pagination__ol">
+                                        <li class="prev">
+                                            <a href="">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">01</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">02</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">03</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">04</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">05</span>
+                                            </a>
+                                        </li>
+                                        <li class="next">
+                                            <a href="">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mypage-order__content">
+                            <div class="mypage-order__title">
+                                <h5 class="myCommon__sub-title">주문내역</h5>
+                                <div class="mypage-order__choose">
+                                    <div class="mypage-order__choose--radio-wrap display_pc">
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="return_list_view" id="return_list_view_week2" value="week2" checked >
+                                            <label for="return_list_view_week2">
+                                                <span class="text">2주</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="return_list_view" id="return_list_view_month1" value="month1">
+                                            <label for="return_list_view_month1">
+                                                <span class="text">1개월</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="return_list_view" id="return_list_view_month3" value="month3">
+                                            <label for="return_list_view_month3">
+                                                <span class="text">3개월</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="return_list_view" id="return_list_view_month6" value="month6">
+                                            <label for="return_list_view_month6">
+                                                <span class="text">6개월</span>
+                                            </label>
+                                        </div>
+                                        <div class="mypage-order__choose--radio">
+                                            <input type="radio" name="return_list_view" id="return_list_view_year1" value="year1">
+                                            <label for="return_list_view_year1">
+                                                <span class="text">1년</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mypage-order__choose--select display_mobile">
+                                        <select name="return_list_view" id="return_list_view" class="custom-select">
+                                            <option value="">선택하세요.</option>
+                                            <option value="week2">2주</option>
+                                            <option value="month1">1개월</option>
+                                            <option value="month3">3개월</option>
+                                            <option value="month6">6개월</option>
+                                            <option value="year1">1년</option>
+                                        </select>
+                                    </div>
+                                    <div class="mypage-order__date">
+                                        <div class="mypage-order__date--input">
+                                            <input type="text" id="date_in" name="data_in" class="datepicker custom-input" autocomplete="off" placeholder="2020.03.03">
+                                            <label for="date_in"><img src="../img/Ic_calendar.png" alt="달력 아이콘"></label>
+                                        </div>
+                                        <div class="mypage-order__date--input">
+                                            <input type="text" id="date_out" name="date_out" class="datepicker custom-input" autocomplete="off" placeholder="2020.03.03">
+                                            <label for="date_out"><img src="../img/Ic_calendar.png" alt="달력 아이콘"></label>
+                                        </div>
+                                        <button class="small-button black-button height35">조회</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-item">
+                                <ul class="my-item__list">
+                                    <li class="my-item__item">
+                                        <div class="my-item__img">
+                                            <a href="mypage_order01.html">
+                                                <img src="../img/img_product26.jpg" alt="최근 반품내역 이미지1">
+                                            </a>
+                                        </div>
+                                        <div class="my-item__info">
+                                            <div class="my-item__brand">헤라</div>
+                                            <h5 class="my-item__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</h5>
+                                            <div class="my-item__price">321,000</div>
+                                            <div class="my-item__order">
+                                                <div class="my-item__state">배송 완료</div>
+                                                <div class="my-item__date">2023.03.01</div>
+                                            </div>
+                                            <div class="my-item__serial">ORD202111112523</div> 
+                                        </div>
+                                        <div class="my-item__button">
+                                            <button class="my-item__cancel middle-button black-button withdrawPop_open">주문취소</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="pagination">
+                                    <ol class="pagination__ol">
+                                        <li class="prev">
+                                            <a href="">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">01</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">02</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">03</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">04</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="page">05</span>
+                                            </a>
+                                        </li>
+                                        <li class="next">
+                                            <a href="">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop withdrawPop">
+                <div class="pop_title">
+                    <h2>주문취소</h2>
+                    <a class="pop_close withdrawPop_close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                </div>
+                <div class="pop_content alertPop_content">
+                    <h5>
+                        <span class="icon"><img src="../img/Ic_danger.png" alt="경고 아이콘"></span>
+                        주문을 취소하시겠습니까?
+                    </h5>
+                </div>
+                <div class="pop_button">
+                    <button class="coral-button">확인</button>
+                </div>
+            </div>
+            <div class="pop_bg withdrawPop_bg"></div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__link">
+                    <div class="footer__link--cont">
+                        <a href="mypage_qa.html" class="footer__link--head">Customer Support</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_qa_write.html">Contact Us</a></li>
+                            <li><a href="mypage_deliAddress.html">Shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Account</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_order.html">Order Status</a></li>
+                            <li><a href="members_login.html">Sign in or create account</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Our Company</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="">Store Locator</a></li>
+                            <li><a href="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__select">
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </div>
+                <div class="footer__copyright">
+                    <h5>© 2023 I2MAX All rights reserved. This is a Demo store only</h5>
+                </div>
+                <ul class="footer__etc">
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Site Map</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

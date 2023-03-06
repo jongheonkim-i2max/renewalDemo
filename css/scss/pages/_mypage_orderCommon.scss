@@ -1,0 +1,231 @@
+.mypage_orderCommon{
+    .common-info__text{
+        display:inline-flex;
+        font-size:16px;
+        margin-right:65px;
+        &:last-child{
+            margin-right:0;
+        }
+        &--wrap{
+            padding:40px 30px;
+            border:1px solid var(--border-color);
+            @include boxShadow;
+            margin-bottom:40px;
+        }   
+        &--subject{
+            margin-right:10px;
+        }
+        &--content{
+            font-weight:bold;
+        }
+        @include mediaQuery(991px){
+            margin-right:0;
+            display:flex;
+            margin-bottom:25px;
+            &:last-child{
+                margin-bottom:0;
+            }
+            &--subject{
+                width:100px;
+                margin-right:0;
+            }
+            &--content{
+                width:calc(100% - 100px);
+            }
+        }
+        @include mediaQuery(768px){
+            font-size:14px;
+            margin-bottom:15px;
+            &--wrap{
+                padding:25px 20px;
+                margin-bottom:30px;
+            }
+            &--subject{
+                width:80px;
+            }
+            &--content{
+                width:calc(100% - 80px);
+            }
+        }
+    }
+    
+    .common-product__list{
+        margin-bottom:0px;
+        border-top:2px solid var(--border-color);
+        border-bottom:2px solid var(--border-color);
+        > li{
+            border:0;
+            box-shadow:none;
+            margin-bottom:0;
+            border-bottom:1px solid var(--border-color);
+            &:last-child{
+                border-bottom:0;
+            }
+        }
+    }
+
+    &__price{
+        //border-top:2px solid var(--border-color);
+        border-bottom:2px solid var(--border-color);
+        padding:35px 25px;
+        margin-bottom:40px;
+        @include mediaQuery(768px){
+            padding:25px 20px;
+            margin-bottom:30px;
+        }
+    }
+
+    &__sum{
+        background: var(--color-Lgrey);
+        margin-bottom:30px;
+        display:flex;
+        justify-content:flex-end;
+        align-items:center; 
+        padding:15px 19px;
+        &--text{
+            display:inline-flex;
+            margin-right:60px;
+            font-size:14px;
+            position:relative;
+
+            &.sale{
+                &::before{
+                    content:"";
+                    width:15px;
+                    height:2px;
+                    background: var(--color-coral);
+                    position:absolute;
+                    top:14px;
+                    left:-38px;
+                    @include mediaQuery(991px){
+                        display:none;
+                    }
+                }
+            }
+
+            &.shipping{
+                &::before{
+                    content:"";
+                    width:10px;
+                    height:2px;
+                    background: var(--color-coral);
+                    position:absolute;
+                    top:13px;
+                    left:-36px;
+                    @include mediaQuery(991px){
+                        display:none;
+                    }
+                }
+                &::after{
+                    content:"";
+                    width:2px;
+                    height:10px;
+                    background: var(--color-coral);
+                    position:absolute;
+                    top:9px;
+                    left:-32px;
+                    @include mediaQuery(991px){
+                        display:none;
+                    }
+                }
+            }
+
+            &:last-child{
+                margin-right:0;
+            }
+            @include mediaQuery(991px){
+                &.sale .mypage_orderCommon__sum--content{
+                    position:relative;
+                    &::before{
+                        content:"";
+                        width:12px;
+                        height:1px;
+                        background: var(--color-coral);
+                        position:absolute;
+                        top:12px;
+                        left:-22px;
+                    }
+                }
+                &.shipping .mypage_orderCommon__sum--content{
+                    position:relative;
+                    &::before{
+                        content:"";
+                        width:9px;
+                        height:1px;
+                        background: var(--color-coral);
+                        position:absolute;
+                        top:12px;
+                        left:-19px;
+                    }
+                    &::after{
+                        content:"";
+                        width:1px;
+                        height:9px;
+                        background: var(--color-coral);
+                        position:absolute;
+                        top:8px;
+                        left:-15px;
+                    }
+                }
+            }
+        }
+        &--subject{
+            margin-right:10px;
+            position:relative;
+            top:3px;
+        }
+        &--content{
+            font-size:18px;
+        }
+        @include mediaQuery(768px){
+            margin-bottom:10px;
+            padding:15px 20px;
+            flex-wrap:wrap;
+            &--text{
+                margin-right:0;
+                margin-bottom:10px;
+                display:flex;
+                align-items:center;
+                width:100%;
+                justify-content:space-between;
+                font-size:12px;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+            &--subject{
+                margin-right:0;
+                top:0;
+            }
+            &--content{
+                font-size:16px;
+            }
+        }
+    }
+
+    &__cost{
+        display:flex;
+        justify-content:flex-end;
+        align-items:flex-end;
+        span{
+            margin-right:15px;
+            position:relative;
+            top:-2px;
+        }
+        .cost{
+            font-size:28px;
+            font-weight:bold;
+            color: var(--color-Dgrey);
+        }
+        @include mediaQuery(768px){
+            align-items:flex-end;
+            span{
+                font-size:12px;
+                margin-right:10px;
+            }
+            .cost{
+                font-size:20px;
+            }
+        }
+    }
+}

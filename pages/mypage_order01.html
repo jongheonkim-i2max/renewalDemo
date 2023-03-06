@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 마이페이지-반품 신청하기</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/mypage_orderReturn.css">
+        
+        <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
+        <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+        <script defer src="../js/common.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container wide-container">
+                <div class="header__logo">
+                    <a class="header__logo--menu-btn">
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                    </a>
+                    <a href="../index.html" class="logo">
+                        <img src="../img/logo.svg" alt="사이트 로고">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a class="header__mobile-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <ul class="header__menu--ul">
+                        <li class="header__menu--li has--sub-menu">
+                            <a href="plp.html" class="header__menu--a" data-href="plp.html">New Arrivals</a>
+                            <div class="header__menu--sub2">
+                                <ul class="header__menu--ul2">
+                                    <li class="header__menu--li2 has--sub-menu2">
+                                        <a href="plp.html" class="header__menu--a2" data-href="plp.html">subMenu1</a>
+                                        <div class="header__menu--sub3">
+                                            <ul class="header__menu--ul3">
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-1</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-2</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-3</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu2</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu3</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Womens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Mens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Gift Certificates</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Top Sellers</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="members_login.html" class="header__buttons--mypage">
+                        <img src="../img/Ic_mypage_H.png" alt="마이페이지 아이콘">
+                    </a>
+                    <a href="mypage_wish.html" class="header__buttons--wish">
+                        <img src="../img/Ic_favorites_H.png" alt="위시리스트 아이콘">
+                    </a>
+                    <a href="cart.html" class="header__buttons--cart">
+                        <img src="../img/Ic_cart_H.png" alt="장바구니 아이콘">
+                    </a>
+                </div>
+                <div class="header__search">
+                    <form action="">
+                        <button type="submit" class="header__search--button"><img src="../img/Ic_search.png" alt="검색 아이콘"></button>
+                        <input type="text" class="header__search--input" placeholder="상품을 검색해주세요">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <section class="mypage_orderReturn mypage_orderCommon myCommon">
+            <div class="container">
+                <div class="myCommon__menu">
+                    <h1 class="myCommon__title">마이페이지</h1>
+                    <ul class="myCommon__ul display_pc">
+                        <li><a href="mypage.html">홈</a></li>
+                        <li class="active"><a href="mypage_order.html">주문조회</a></li>
+                        <li><a href="mypage_coupon.html">쿠폰</a></li>
+                        <li><a href="mypage_wish.html">위시상품</a></li>
+                        <li><a href="mypage_shipping.html">배송지관리</a></li>
+                        <li><a href="mypage_review.html">리뷰</a></li>
+                        <li><a href="mypage_contact.html">문의내역</a></li>
+                        <li><a href="mypage_info.html">회원정보</a></li>
+                    </ul>
+                    <select name="" id="" class="custom-select display_mobile" onchange="location.href=this.value">
+                        <option value="mypage_order.html">주문조회</option>
+                        <option value="mypage.html">홈</option>
+                        <option value="mypage_coupon.html">쿠폰</option>
+                        <option value="mypage_wish.html">위시상품</option>
+                        <option value="mypage_shipping.html">배송지관리</option>
+                        <option value="mypage_review.html">리뷰</option>
+                        <option value="mypage_contact.html">문의내역</option>
+                        <option value="mypage_info.html">회원정보</option>
+                    </select>
+                </div>
+                <div class="myCommon__content">
+                    <div class="common-info">
+                        <h5 class="myCommon__sub-title">반품 신청하기</h5>
+                        <div class="common-info__text--wrap">
+                            <div class="common-info__text">
+                                <div class="common-info__text--subject">주문일시</div>
+                                <div class="common-info__text--content">2023.03.06 15:30</div>
+                            </div>
+                            <div class="common-info__text">
+                                <div class="common-info__text--subject">주문번호</div>
+                                <div class="common-info__text--content">ORD2021111112523</div>
+                            </div>
+                            <div class="common-info__text">
+                                <div class="common-info__text--subject">결제금액</div>
+                                <div class="common-info__text--content">321,300원</div>
+                            </div>
+                        </div>
+                        <ul class="common-product__list">
+                            <li>
+                                <div class="common-product__img">
+                                    <img src="../img/img_product26.jpg" alt="주문상품 이미지1">
+                                </div>
+                                <div class="common-product__info">
+                                    <div class="common-product__brand">헤라</div>
+                                    <div class="common-product__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트</div>
+                                    <div class="common-product__price">
+                                        <div class="common-product__percent">26%</div>
+                                        <div class="common-product__cost">
+                                            <div class="common-product__sell">29,750원</div>
+                                            <del class="common-product__regular">35,000원</del>
+                                        </div>
+                                    </div>
+                                    <div class="common-product__button">
+                                        <button class="small-button white-button"><span class="display_pc">결제</span>완료</button>
+                                    </div>
+                                </div>
+                                <ul class="common-product__option">
+                                    <li class="common-product__option-li">
+                                        <div class="common-product__option-name">121호 에피소드</div>
+                                        <div class="common-product__option-value">
+                                            <input type="text" class="only_number" readonly="" value="01">
+                                        </div>
+                                        <div class="common-product__option-price">29,750원</div>
+                                    </li>
+                                    <li class="common-product__option-li">
+                                        <div class="common-product__option-name">121호 에피소드</div>
+                                        <div class="common-product__option-value">
+                                            <input type="text" class="only_number" readonly="" value="02">
+                                        </div>
+                                        <div class="common-product__option-price">29,750원</div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="common-product__img">
+                                    <img src="../img/img_product26.jpg" alt="주문상품 이미지1">
+                                </div>
+                                <div class="common-product__info">
+                                    <div class="common-product__brand">헤라</div>
+                                    <div class="common-product__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트</div>
+                                    <div class="common-product__price">
+                                        <div class="common-product__percent">26%</div>
+                                        <div class="common-product__cost">
+                                            <div class="common-product__sell">29,750원</div>
+                                            <del class="common-product__regular">35,000원</del>
+                                        </div>
+                                    </div>
+                                    <div class="common-product__button">
+                                        <button class="small-button white-button"><span class="display_pc">결제</span>완료</button>
+                                    </div>
+                                </div>
+                                <ul class="common-product__option">
+                                    <li class="common-product__option-li">
+                                        <div class="common-product__option-name">121호 에피소드</div>
+                                        <div class="common-product__option-value">
+                                            <input type="text" class="only_number" readonly="" value="01">
+                                        </div>
+                                        <div class="common-product__option-price">29,750원</div>
+                                    </li>
+                                    <li class="common-product__option-li">
+                                        <div class="common-product__option-name">121호 에피소드</div>
+                                        <div class="common-product__option-value">
+                                            <input type="text" class="only_number" readonly="" value="02">
+                                        </div>
+                                        <div class="common-product__option-price">29,750원</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="mypage_orderCommon__price">
+                            <div class="mypage_orderCommon__sum">
+                                <div class="mypage_orderCommon__sum--text">
+                                    <div class="mypage_orderCommon__sum--subject">주문금액</div>
+                                    <div class="mypage_orderCommon__sum--content">420,000원</div>
+                                </div>
+                                <div class="mypage_orderCommon__sum--text sale">
+                                    <div class="mypage_orderCommon__sum--subject">할인 금액</div>
+                                    <div class="mypage_orderCommon__sum--content">98,700원</div>
+                                </div>
+                                <div class="mypage_orderCommon__sum--text shipping">
+                                    <div class="mypage_orderCommon__sum--subject">배송비</div>
+                                    <div class="mypage_orderCommon__sum--content">0원</div>
+                                </div>
+                            </div>
+                            <div class="mypage_orderCommon__cost">
+                                <span>결제금액</span>
+                                <h5 class="cost">29,750원</h5>
+                            </div>
+                        </div>
+                        <div class="mypage_orderReturn__form">
+                            <div class="mypage_orderReturn__write">
+                                <select name="" id="" class="custom-select">
+                                    <option value="">반품사유 선택</option>
+                                    <option value="변심1">변심1</option>
+                                    <option value="변심2">변심2</option>
+                                    <option value="변심3">변심3</option>
+                                    <option value="변심4">변심4</option>
+                                </select>
+                                <textarea class="custom-textarea" placeholder="기타 반품 사유입력"></textarea>
+                            </div>
+                            <div class="mypage_orderReturn__info">
+                                <div class="mypage_orderReturn__info--cont-wrap">
+                                    <div class="mypage_orderReturn__info--cont">
+                                        <div class="mypage_orderReturn__info--subject">반품상품 개수</div>
+                                        <div class="mypage_orderReturn__info--content">59,500원</div>
+                                    </div>
+                                    <div class="mypage_orderReturn__info--cont">
+                                        <div class="mypage_orderReturn__info--subject">상품금액 합계</div>
+                                        <div class="mypage_orderReturn__info--content">59,500원</div>
+                                    </div>
+                                    <div class="mypage_orderReturn__info--cont">
+                                        <div class="mypage_orderReturn__info--subject">차감 배송비</div>
+                                        <div class="mypage_orderReturn__info--content grey">-9,500원</div>
+                                    </div>
+                                    <div class="mypage_orderReturn__info--cont">
+                                        <div class="mypage_orderReturn__info--subject">환불금액</div>
+                                        <div class="mypage_orderReturn__info--content">59,500원</div>
+                                    </div>
+                                </div>
+                                <button class="large-button coral-button">접수하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__link">
+                    <div class="footer__link--cont">
+                        <a href="mypage_qa.html" class="footer__link--head">Customer Support</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_qa_write.html">Contact Us</a></li>
+                            <li><a href="mypage_deliAddress.html">Shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Account</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_order.html">Order Status</a></li>
+                            <li><a href="members_login.html">Sign in or create account</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Our Company</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="">Store Locator</a></li>
+                            <li><a href="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__select">
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </div>
+                <div class="footer__copyright">
+                    <h5>© 2023 I2MAX All rights reserved. This is a Demo store only</h5>
+                </div>
+                <ul class="footer__etc">
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Site Map</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

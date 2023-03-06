@@ -19,6 +19,7 @@
   --naver-bg:#21C629;
   --naver-color:#ffffff;
   --input-error: #FD7679;
+  --tab-color:#F3F5F6;
 }
 
 /*responsive mixin*/
@@ -1489,11 +1490,6 @@ select.custom-select option {
 .common-product__list {
   margin-bottom: 35px;
 }
-@media (max-width: 768px) {
-  .common-product__list {
-    margin-bottom: 25px;
-  }
-}
 .common-product__list > li {
   padding: 30px 25px;
   border: 1px solid var(--border-color);
@@ -1517,6 +1513,16 @@ select.custom-select option {
     padding: 25px 20px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .common-product__list {
+    margin-bottom: 25px;
+  }
+  .common-product__list > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 .common-product__img {
@@ -1550,6 +1556,7 @@ select.custom-select option {
 }
 .common-product__info {
   float: right;
+  position: relative;
   width: calc(100% - 220px);
 }
 .common-product__info .common-product__brand {
@@ -1697,6 +1704,37 @@ select.custom-select option {
     font-size: 14px;
   }
 }
+.common-product__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.common-product__button button, .common-product__button a {
+  margin-bottom: 7px;
+}
+.common-product__button button:last-child, .common-product__button a:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .common-product__button {
+    top: -5px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .common-product__button button, .common-product__button a {
+    margin-bottom: 0;
+    margin-right: 3px;
+    width: 35px;
+    padding: 0 5px;
+    font-size: 10px;
+    height: 22px;
+    line-height: 20px;
+  }
+  .common-product__button button:last-child, .common-product__button a:last-child {
+    margin-right: 0;
+  }
+}
 
 a, button {
   text-align: center;
@@ -1769,6 +1807,18 @@ a.small-button, button.small-button {
     height: 25px;
     line-height: 23px;
     padding: 0 12px;
+  }
+}
+a.small-button.height35, button.small-button.height35 {
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  a.small-button.height35, button.small-button.height35 {
+    height: 30px;
+    line-height: 28px;
+    font-size: 12px;
   }
 }
 a.black-button, button.black-button {
@@ -1942,6 +1992,9 @@ a.naver-button, button.naver-button {
     height: 5px;
     top: -7px;
   }
+}
+.checkCommon .common-breadcrumb li a {
+  pointer-events: none;
 }
 .checkCommon .common-subTitle {
   font-size: 24px;
