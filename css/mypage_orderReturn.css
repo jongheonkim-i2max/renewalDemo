@@ -990,6 +990,7 @@ select.custom-select option {
     line-height: 26px;
     padding: 0 15px;
     font-size: 12px;
+    background-size: 8px 4px;
   }
 }
 
@@ -1386,7 +1387,6 @@ select.custom-select option {
 }
 
 a, button {
-  text-align: center;
   /*button color*/
 }
 a.large-button, button.large-button {
@@ -1562,10 +1562,20 @@ input.custom-input.is-invalid::-ms-input-placeholder {
 input.custom-input.is-invalid::placeholder {
   color: var(--input-error);
 }
+input.custom-input.height35 {
+  height: 35px;
+  line-height: 35px;
+}
+@media (max-width: 768px) {
+  input.custom-input.height35 {
+    height: 30px;
+    line-height: 30px;
+  }
+}
 @media (max-width: 768px) {
   input.custom-input {
     height: 35px;
-    line-height: 25px;
+    line-height: 35px;
     padding: 0 15px;
     font-size: 14px;
   }
@@ -1780,7 +1790,7 @@ input.custom-input.is-invalid::placeholder {
   .common-product__option-value input {
     width: 22px;
     height: 22px;
-    line-height: 25px;
+    line-height: 20px;
     font-size: 10px;
   }
   .common-product__option-price {

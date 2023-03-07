@@ -1,16 +1,20 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-@import 'vendors/swiper';
-
 @import 'base/reset';
 @import 'base/fonts';
 
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/pop_up';
 
+@import 'components/breadcrumb';
+@import 'components/select';
 @import 'components/icon';
+@import 'components/buttons';
 @import 'components/items';
+@import 'components/pagination';
 
-@import 'pages/home';
+@import 'pages/mypageCommon';
+@import 'pages/mypage_wish';

@@ -1156,6 +1156,7 @@ select.custom-select option {
     line-height: 26px;
     padding: 0 15px;
     font-size: 12px;
+    background-size: 8px 4px;
   }
 }
 
@@ -1518,7 +1519,6 @@ select.custom-select option {
 }
 
 a, button {
-  text-align: center;
   /*button color*/
 }
 a.large-button, button.large-button {
@@ -2294,6 +2294,7 @@ a.naver-button, button.naver-button {
 .my-item__button a {
   width: 100%;
   margin-bottom: 10px;
+  text-align: center;
 }
 .my-item__button button:last-child,
 .my-item__button a:last-child {

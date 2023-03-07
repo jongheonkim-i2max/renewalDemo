@@ -1,8 +1,6 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-@import 'vendors/swiper';
-
 @import 'base/reset';
 @import 'base/fonts';
 
@@ -10,7 +8,11 @@
 @import 'layout/header';
 @import 'layout/footer';
 
+@import 'components/breadcrumb';
+@import 'components/select';
 @import 'components/icon';
-@import 'components/items';
+@import 'components/buttons';
+@import 'components/input';
 
-@import 'pages/home';
+@import 'pages/mypageCommon';
+@import 'pages/mypage_coupon';

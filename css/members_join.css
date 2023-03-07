@@ -1314,7 +1314,6 @@ ol.breadcrumb li a {
 }
 
 a, button {
-  text-align: center;
   /*button color*/
 }
 a.large-button, button.large-button {
@@ -1490,10 +1489,20 @@ input.custom-input.is-invalid::-ms-input-placeholder {
 input.custom-input.is-invalid::placeholder {
   color: var(--input-error);
 }
+input.custom-input.height35 {
+  height: 35px;
+  line-height: 35px;
+}
+@media (max-width: 768px) {
+  input.custom-input.height35 {
+    height: 30px;
+    line-height: 30px;
+  }
+}
 @media (max-width: 768px) {
   input.custom-input {
     height: 35px;
-    line-height: 25px;
+    line-height: 35px;
     padding: 0 15px;
     font-size: 14px;
   }
@@ -1672,6 +1681,9 @@ input.custom-input.is-invalid::placeholder {
   margin-top: 5px;
   font-size: 10px;
   color: var(--input-error);
+}
+.memberCommon .common .common__content .common__content--input a {
+  text-align: center;
 }
 
 .join__content--sns {

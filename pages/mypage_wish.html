@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 마이페이지-위시상품</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/mypage_wish.css">
+        
+        <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
+        <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+        <script defer src="../js/common.js"></script>
+        <script defer src="../js/pop_up.js"></script>
+        <script defer src="../js/mypage_wish.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container wide-container">
+                <div class="header__logo">
+                    <a class="header__logo--menu-btn">
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                        <span class="header__logo--line"></span>
+                    </a>
+                    <a href="../index.html" class="logo">
+                        <img src="../img/logo.svg" alt="사이트 로고">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <a class="header__mobile-close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <ul class="header__menu--ul">
+                        <li class="header__menu--li has--sub-menu">
+                            <a href="plp.html" class="header__menu--a" data-href="plp.html">New Arrivals</a>
+                            <div class="header__menu--sub2">
+                                <ul class="header__menu--ul2">
+                                    <li class="header__menu--li2 has--sub-menu2">
+                                        <a href="plp.html" class="header__menu--a2" data-href="plp.html">subMenu1</a>
+                                        <div class="header__menu--sub3">
+                                            <ul class="header__menu--ul3">
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-1</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-2</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-3</a>
+                                                </li>
+                                                <li class="header__menu--li3">
+                                                    <a href="plp.html" class="header__menu--a3">subMenu1-4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu2</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu3</a>
+                                    </li>
+                                    <li class="header__menu--li2">
+                                        <a href="plp.html" class="header__menu--a2">subMenu4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Womens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Mens</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Gift Certificates</a></li>
+                        <li class="header__menu--li"><a href="plp.html" class="header__menu--a">Top Sellers</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="members_login.html" class="header__buttons--mypage">
+                        <img src="../img/Ic_mypage_H.png" alt="마이페이지 아이콘">
+                    </a>
+                    <a href="mypage_wish.html" class="header__buttons--wish">
+                        <img src="../img/Ic_favorites_H.png" alt="위시리스트 아이콘">
+                    </a>
+                    <a href="cart.html" class="header__buttons--cart">
+                        <img src="../img/Ic_cart_H.png" alt="장바구니 아이콘">
+                    </a>
+                </div>
+                <div class="header__search">
+                    <form action="">
+                        <button type="submit" class="header__search--button"><img src="../img/Ic_search.png" alt="검색 아이콘"></button>
+                        <input type="text" class="header__search--input" placeholder="상품을 검색해주세요">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <section class="mypage_wish myCommon">
+            <div class="container">
+                <div class="myCommon__menu">
+                    <h1 class="myCommon__title">마이페이지</h1>
+                    <ul class="myCommon__ul display_pc">
+                        <li><a href="mypage.html">홈</a></li>
+                        <li><a href="mypage_order.html">주문조회</a></li>
+                        <li><a href="mypage_coupon.html">쿠폰</a></li>
+                        <li class="active"><a href="mypage_wish.html">위시상품</a></li>
+                        <li><a href="mypage_shipping.html">배송지관리</a></li>
+                        <li><a href="mypage_review.html">리뷰</a></li>
+                        <li><a href="mypage_contact.html">문의내역</a></li>
+                        <li><a href="mypage_info.html">회원정보</a></li>
+                    </ul>
+                    <select name="" id="" class="custom-select display_mobile" onchange="location.href=this.value">
+                        <option value="mypage_wish.html">위시상품</option>
+                        <option value="mypage.html">홈</option>
+                        <option value="mypage_order.html">주문조회</option>
+                        <option value="mypage_coupon.html">쿠폰</option>
+                        <option value="mypage_shipping.html">배송지관리</option>
+                        <option value="mypage_review.html">리뷰</option>
+                        <option value="mypage_contact.html">문의내역</option>
+                        <option value="mypage_info.html">회원정보</option>
+                    </select>
+                </div>
+                <div class="myCommon__content">
+                    <div class="mypage_wish__title">
+                        <h5 class="myCommon__sub-title">
+                            <div class="title">위시상품</div>
+                            <div class="length">총 <b>20</b>개</div>
+                        </h5>
+                        <div class="mypage_wish__button">
+                            <a class="select_delete Bgrey-button middle-button">선택삭제</a>
+                            <a class="all_delete black-button middle-button">전체삭제</a>
+                        </div>
+                    </div>
+                    <div class="product__item subItems-wrap row4">
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartSelectPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartAddPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartSelectPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartAddPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartSelectPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartAddPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartSelectPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartAddPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartSelectPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartAddPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartSelectPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                        <div class="items">
+                            <div class="items__image">
+                                <a href="pdp.html">
+                                    <img src="../img/img_product26.jpg" alt="상품이미지 26">
+                                </a>
+                            </div>
+                            <a href="pdp.html" class="items__link">
+                                <p class="items__brand">CHRISTIAN LOUBOUTIN</p>
+                                <h5 class="items__title">CHRISTIAN LOUBOUTIN</h5>
+                                <div class="items__price">
+                                    <span class="items__price--sale">24%</span>
+                                    <div class="items__price--price">120,000</div>
+                                    <del class="items__price--regular">120,000</del>
+                                </div>
+                            </a>
+                            <a href="mypage_review.html" class="items__review-link">
+                                <div class="items__review-count">
+                                    <div class="items__review">
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starR"></i>
+                                        <i class="ico_starG"></i>
+                                        <i class="ico_starG"></i>
+                                    </div>
+                                    <div class="items__count">리뷰 46</div>
+                                </div>
+                            </a>
+                            <a class="cartAddPop_open small-button height35 Bgrey-button">장바구니 추가</a>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <ol class="pagination__ol">
+                            <li class="prev">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="page">01</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="page">02</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="page">03</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="page">04</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="page">05</span>
+                                </a>
+                            </li>
+                            <li class="next">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="pop cartSelectPop">
+                <div class="pop_title">
+                    <h2>장바구니 등록</h2>
+                    <a class="pop_close cartSelectPop_close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                </div>
+                <div class="pop_content cartSelectPop_content">
+                    <p>옵션 선택 후, 장바구니에 추가할 수 있습니다.</p>
+                    <div class="select-choose">
+                        <select name="option_choose" id="option_choose" class="custom-select">
+                            <option value="">옵션 선택</option>
+                            <option value="옵션1">옵션1</option>
+                            <option value="옵션2">옵션2</option>
+                            <option value="옵션3">옵션3</option>
+                            <option value="옵션4">옵션4</option>
+                        </select>
+                        <select name="qty_choose" id="qty_choose" class="custom-select">
+                            <option value="">수량</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pop_button">
+                    <button class="coral-button">장바구니 추가</button>
+                </div>
+            </div>
+            <div class="pop_bg cartSelectPop_bg"></div>
+
+            <div class="pop cartAddPop">
+                <div class="pop_title">
+                    <h2>장바구니 등록</h2>
+                    <a class="pop_close cartAddPop_close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                </div>
+                <div class="pop_content alertPop_content cartAddPop_content">
+                    <h5>
+                        <span class="icon">
+                            <img src="../img/Ic_shopping-cart.png" alt="장바구니 아이콘">
+                        </span>
+                        장바구니 등록이 완료되었습니다.
+                    </h5>
+                </div>
+                <div class="pop_button">
+                    <a class="cartAddPop_close Bgrey-button">닫기</a>
+                    <a class="coral-button" href="cart.html">장바구니 이동</a>
+                </div>
+            </div>
+            <div class="pop_bg cartAddPop_bg"></div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__link">
+                    <div class="footer__link--cont">
+                        <a href="mypage_qa.html" class="footer__link--head">Customer Support</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_qa_write.html">Contact Us</a></li>
+                            <li><a href="mypage_deliAddress.html">Shipping</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Account</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="mypage_order.html">Order Status</a></li>
+                            <li><a href="members_login.html">Sign in or create account</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link--cont">
+                        <a href="" class="footer__link--head">Our Company</a>
+                        <ul class="footer__link--ul">
+                            <li><a href="">Store Locator</a></li>
+                            <li><a href="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__select">
+                    <select name="" id="">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </div>
+                <div class="footer__copyright">
+                    <h5>© 2023 I2MAX All rights reserved. This is a Demo store only</h5>
+                </div>
+                <ul class="footer__etc">
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Site Map</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

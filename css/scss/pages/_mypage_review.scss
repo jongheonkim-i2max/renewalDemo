@@ -1,0 +1,268 @@
+.mypage_review{
+    .product__item{
+        position:relative;
+        display:flex;
+        flex-wrap:wrap;
+        width:100%;
+        margin-bottom:-50px;
+        padding-bottom:70px;
+        @include mediaQuery(768px){
+            margin-bottom:-30px;
+        }
+        .items{
+            width:calc(25% - 19.5px);
+            margin-right:26px;
+            margin-bottom:50px;
+            &:nth-child(4n){
+                margin-right:0;
+            }
+
+            .items__review-btn{
+                width:100%;
+                padding:0 5px;
+                text-align:center;
+                margin-top:15px;
+            }
+            @include mediaQuery(991px){
+                width:calc(50% - 7.5px);
+                margin-right:15px;
+                margin-bottom:30px;
+                &:nth-child(4n){
+                    margin-right:15px;
+                }
+                &:nth-child(3n){
+                    margin-right:15px;
+                }
+                &:nth-child(2n){
+                    margin-right:0px;
+                }
+            }
+        }
+    }
+
+    .my-item{
+        &__review{
+            &--info{
+                margin-bottom:20px;
+                display:flex;
+                flex-wrap:wrap;
+                @include mediaQuery(768px){
+                    flex-wrap:wrap;
+                }
+                .my-item__review--top{
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    .my-item__review--brand{
+                        font-size:12px;
+                        font-weight:bold;
+                    }
+                    .items__review{
+                        margin:0 10px;
+                        position:relative;
+                        top:-2px;
+                    }
+                    .my-item__review--date{
+                        font-size:14px;
+                        color: rgba(155,159,168,0.87);
+                    }
+                    @include mediaQuery(768px){
+                        flex-wrap:wrap;
+                        width:100%;
+                        justify-content:flex-start;
+                        .my-item__review--brand{
+                            font-size:10px;
+                        }
+                        .items__review{
+                            margin:0 8px;
+                            top:-2px;
+                        }
+                        .my-item__review--date{
+                            margin-top:5px;
+                            width:100%;
+                            font-size:12px;
+                        }
+                    }
+                }
+                .my-item__review--subject{
+                    width:100%;
+                    margin-top:7px;
+                    font-size:14px;
+                }
+            }
+            &--text{
+                width:100%;
+                @include mediaQuery(768px){
+                    margin-top:15px;
+                }
+            }
+            &--title{
+                font-size:16px;
+                @include mediaQuery(768px){
+                    font-size:14px;
+                }
+            }
+            &--content{
+                font-size:16px;
+                margin-top:5px;
+                color: rgba(97,96,96,0.87);
+                @include mediaQuery(768px){
+                    font-size:14px;
+                }
+            }
+
+            &--img{
+                &-box{
+                    width:calc(100% - 15px);
+                    overflow:hidden;
+                    position:relative;
+
+                    &::after{
+                        content:"";
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        width:15px;
+                        height:100%;
+                        background: linear-gradient(to left, #fff, transparent);
+                    }
+                }
+                margin-top:10px;
+                display:flex;
+                overflow:hidden;
+                width:10000px;
+                li{
+                    margin-right:15px;
+                    &:last-child{
+                        margin-right:0;
+                    }
+                    width:90px;
+                    @include mediaQuery(768px){
+                        width:80px;
+                    }
+                    a{
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        width:100%;
+                        height:100%;
+                        position:relative;
+
+                        &::before{
+                            content:"";
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            width:100%;
+                            height:100%;
+                            background: rgba(0,0,0,0.5);
+                            @include opacityHidden;
+                            @include transition(200ms);
+                        }
+
+                        &::after{
+                            content:"이미지 보기";
+                            @include translate;
+                            color:var(--color-white);
+                            font-size:12px;
+                            width:100%;
+                            height:100%;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            @include opacityHidden;
+                            @include transition(200ms);
+                            @include mediaQuery(768px){
+                                font-size:10px;
+                            }
+                        }
+                        
+                        &:hover{
+                            &::before{
+                                @include opacityVisible;
+                            }
+
+                            &::after{
+                                @include opacityVisible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include mediaQuery(991px){
+            .display_pc{
+                display:block;
+            }
+            .display_mobile{
+                display:none;
+            }
+        }
+        @include mediaQuery(768px){
+            .display_pc{
+                display:none;
+            }
+            .display_mobile{
+                display:block;
+            }
+            .my-item__review--text.display_mobile{
+                display:none;
+
+                &.active{
+                    display:block;
+                }
+            }
+            .more-btn{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                &.active .more-btn__plus::before{
+                    display:none;
+                }
+                .more-btn__plus{
+                    position:relative;
+                    width:13px;
+                    height:13px;
+                    margin-left:5px;
+                    &::before{
+                        content:"";
+                        width:1px;
+                        height:13px;
+                        background:#747576;
+                        position:absolute;
+                        top:0;
+                        left:6px;
+                    }
+                    &::after{
+                        content:"";
+                        width:13px;
+                        height:1px;
+                        background:#747576;
+                        position:absolute;
+                        top:6px;
+                        left:0;
+                    }
+                }
+                @include mediaQuery(768px){
+                    .more-btn{
+                        font-size:12px;
+                        height:30px;
+                        line-height:30px;
+                    }
+                    .more-btn__plus{
+                        width:10px;
+                        height:10px;
+                        &::before{
+                            height:11px;
+                            left:5px;
+                        }
+                        &::after{
+                            width:11px;
+                            top:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

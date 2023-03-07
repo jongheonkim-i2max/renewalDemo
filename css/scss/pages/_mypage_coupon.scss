@@ -1,0 +1,190 @@
+.mypage_coupon{
+    &.myCommon .myCommon__sub-title{
+        margin-bottom:40px;
+        @include mediaQuery(768px){
+            margin-bottom:25px;
+        }
+    }
+    
+
+    &__search{
+        margin-bottom:80px;
+        padding:20px 40px;
+        border:1px solid var(--border-color);
+        @include boxShadow;
+
+        form{
+            width:100%;
+            display:flex;
+        }
+
+        input{
+            width:360px;
+        }
+        button{
+            width:70px;
+        }
+        @include mediaQuery(768px){
+            padding:25px 20px;
+            margin-bottom:40px;
+            input{
+                width:80%;
+                height:30px;
+                line-height:30px;
+                font-size:12px;
+            }
+        }
+    }
+    &__list{
+        padding-bottom:50px;
+        margin-bottom:70px;
+        border-bottom: 1px solid var(--border-color);
+        display:flex;
+        &:last-child{
+            padding-bottom:10px;
+            margin-bottom:0;
+            border-bottom:0;
+        }
+        @include mediaQuery(768px){
+            padding-bottom:40px;
+            margin-bottom:40px;
+            flex-wrap:wrap;
+            &:last-child{
+                padding-bottom:0;
+            }
+        }
+
+        > li:not(.has_link){
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            width:250px;
+            padding:15px 30px 15px 15px;
+            margin-right:40px;
+            min-height:115px;
+            @include boxShadow;
+
+            &:last-child{
+                margin-right:0;
+            }
+            @include mediaQuery(768px){
+                width:80%;
+                margin:0 auto 20px;
+                min-height:auto;
+                padding:10px 20px 10px 10px;
+                &:last-child{
+                    margin:0 auto 0;
+                }
+            }
+        }
+        li.has_link{
+            position:relative;
+            margin-right:40px;
+            &:last-child{
+                margin-right:0;
+            }
+            @include mediaQuery(768px){
+                margin-right:0;
+                width:100%;
+                margin-bottom:20px;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+            .mypage_coupon__list--link{
+                position:relative;
+                display:flex;
+                flex-wrap:wrap;
+                align-items:center;
+                justify-content:space-between;
+                text-align:left;
+                width:250px;
+                padding:15px 30px 15px 15px;
+                
+                @include boxShadow;
+
+                @include mediaQuery(768px){
+                    width:80%;
+                    margin:0 auto 20px;
+                    min-height:auto;
+                    padding:10px 20px 10px 10px;
+    
+                    &:last-child{
+                        margin:0 auto 0;
+                    }
+                }
+            }
+        }
+        &--title{
+            font-size:13px;
+            color: rgba(0,0,0,0.4);
+            margin-bottom:5px;
+            @include mediaQuery(768px){
+                font-size:11px;
+                margin-bottom:3px;
+            }
+        }
+        &--price{
+            font-size:26px;
+            font-weight:bold;
+            margin-bottom:5px;
+            @include mediaQuery(768px){
+                font-size:18px;
+                margin-bottom:5px;
+            }
+        }
+        &--date{
+            font-size:13px;
+            @include mediaQuery(768px){
+                font-size:11px;
+            }
+        }
+        &--down{
+            display:flex;
+            position:relative;
+            align-items:center;
+            justify-content:center;
+            width:100%;
+            padding:15px 5px 0;
+            margin-top:20px;
+            &::before{
+                content:"";
+                width:calc(100% + 45px);
+                border-top:1px solid #DADADB;
+                position:absolute;
+                top:0;
+                left:-15px;
+            }
+
+            .text{
+                font-size:16px;
+                font-weight:bold;
+                margin-right:5px;
+            }
+            @include mediaQuery(768px){
+                padding:10px 5px 0;
+                margin-top:15px;
+                &::before{
+                    width:calc(100% + 30px);
+                    left:-10px;
+                }
+                .text{
+                    font-size:14px;
+                }
+                .icon{
+                    img{
+                        height:14px;
+                    }
+                }
+            }
+        }
+        @include mediaQuery(768px){
+            &--icon{
+                img{
+                    width:33px;
+                }
+            }
+        }
+    }
+}

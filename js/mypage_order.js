@@ -1,10 +1,10 @@
 //주문조회 상단 탭
-$('.mypage-order__tab > li').on('click', function(){
+$('.mypage_order__tab > li').on('click', function(){
     if(!$(this).hasClass('active')){
-        $('.mypage-order__tab > li').removeClass('active');
+        $('.mypage_order__tab > li').removeClass('active');
         $(this).addClass('active');
-        $('.mypage-order__content-wrap > .mypage-order__content').removeClass('active');
-        $('.mypage-order__content-wrap > .mypage-order__content:nth-child('+($(this).index()+1)+')').addClass('active');
+        $('.mypage_order__content-wrap > .mypage_order__content').removeClass('active');
+        $('.mypage_order__content-wrap > .mypage_order__content:nth-child('+($(this).index()+1)+')').addClass('active');
     }
 });
 
@@ -61,17 +61,17 @@ function changeCheck(el){
 
     if($(el).hasClass('custom-select')){
         elIndex = $(el).parent().index();
-        $(el).parents('.mypage-order__choose').find('.mypage-order__choose--radio input').prop('checked', false);
-        $(el).parents('.mypage-order__choose').find('.mypage-order__choose--radio input[value="'+elValue+'"]').prop('checked', true);
+        $(el).parents('.mypage_order__choose').find('.mypage_order__choose--radio input').prop('checked', false);
+        $(el).parents('.mypage_order__choose').find('.mypage_order__choose--radio input[value="'+elValue+'"]').prop('checked', true);
     }else{
-        $(el).parents('.mypage-order__choose').find('select').val(''+elValue+'').prop('selected', true);
+        $(el).parents('.mypage_order__choose').find('select').val(''+elValue+'').prop('selected', true);
     }
 }
 
-$(document).on('change', '.mypage-order__choose--radio input', function(){
+$(document).on('change', '.mypage_order__choose--radio input', function(){
     changeCheck(this);
 });
 
-$(document).on('change', '.mypage-order__choose--select select', function(){
+$(document).on('change', '.mypage_order__choose--select select', function(){
     changeCheck(this);
 });

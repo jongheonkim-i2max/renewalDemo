@@ -20,9 +20,17 @@ input.custom-input{
             color:var(--input-error);
         }
     }
+    &.height35{
+        height:35px;
+        line-height:35px;
+        @include mediaQuery(768px){
+            height:30px;
+            line-height:30px;
+        }
+    }
     @include mediaQuery(768px){
         height:35px;
-        line-height:25px;
+        line-height:35px;
         padding:0 15px;
         font-size:14px;
     }
