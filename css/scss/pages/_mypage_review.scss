@@ -139,6 +139,7 @@
                     width:90px;
                     @include mediaQuery(768px){
                         width:80px;
+                        margin-right:10px;
                     }
                     a{
                         display:flex;
@@ -259,6 +260,139 @@
                         &::after{
                             width:11px;
                             top:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .reviewPhotoPop{
+        &.pop{
+            width:950px;
+            padding-bottom:40px;
+            @include mediaQuery(991px){
+                width:calc(100% - 30px);
+            }
+            @include mediaQuery(768px){
+                padding-bottom:30px;
+            }
+        }
+        &_content{
+            &.pop_content{
+                max-height:90vh;
+                border:0;
+                box-shadow:none;
+                padding:0 90px;
+                position:relative;
+                @include mediaQuery(768px){
+                    max-height:80vh;
+                    padding:0 30px;
+                }
+            }
+            .photo-slider{
+                overflow:hidden;
+                width:100%;
+                img{
+                    width:100%;
+                    max-height:inherit;
+                    height:auto;
+                }
+            }
+            .swiper-pagination{
+                position:relative;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin-top:30px;
+                .swiper-pagination-bullet{
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background:rgba(0,0,0,0.5);
+                    margin-right:10px;
+                    cursor:pointer;
+                    &:last-child{
+                        margin-right:0;
+                    }
+                    &.swiper-pagination-bullet-active{
+                        background-color: var(--color-coral);
+                    }
+                }
+                @include mediaQuery(768px){
+                    margin-top:15px;
+                    .swiper-pagination-bullet{
+                        width:8px;
+                        height:8px;
+                        margin-right:8px;
+                        &:last-child{
+                            margin-right:0;
+                        }
+                    }
+                }
+            }
+            .swiper-buttons{
+                @include translate;
+                top:calc(50% - 40px);
+                z-index:1;
+                width:100%;
+                @include mediaQuery(768px){
+                    top:calc(50% - 23px);
+                }
+                .swiper-button{
+                    width:24px;
+                    height:44px;
+                    position:absolute;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    z-index:1;
+                    &::before,
+                    &::after{
+                        content:"";
+                        width:2px;
+                        height:30px;
+                        border-radius:15px;
+                        background:var(--color-black);
+                        position:absolute;
+                        top:-3px;
+                        left:11px;
+                        transform:rotate(45deg);
+                    }
+
+                    &::after{
+                        top:auto;
+                        bottom:-3px;
+                        transform:rotate(-45deg);
+                    }
+                    
+                    &.swiper-button-prev{
+                        left:0;
+                    }
+                    &.swiper-button-next{
+                        right:0;
+
+                        &::before{
+                            transform:rotate(-45deg);
+                        }
+                        &::after{
+                            transform:rotate(45deg);
+                        }
+                    }
+                    @include mediaQuery(768px){
+                        width:15px;
+                        height:32px;
+                        &::before,
+                        &::after{
+                            width:1px;
+                            height:20px;
+                            border-radius:10px;
+                            left:7px;
+                            top:-1px;
+                        }
+                        &::after{
+                            top:auto;
+                            bottom:-1px;
                         }
                     }
                 }

@@ -22,15 +22,17 @@ function initSwiper() {
                     spaceBetween:15,
                 },
                 768: {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
                     spaceBetween:15,                            
                 },
+                /*
                 991:{
                     slidesPerView: 3,
                     spaceBetween:30,
                 },
+                */
                 1200:{
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween:30, 
                 }
             }
