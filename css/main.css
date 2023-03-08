@@ -1084,6 +1084,25 @@ html, body, * {
   }
 }
 
+.ico_review {
+  width: 24px;
+  height: 22px;
+  background: url("../img/img_star.png") no-repeat;
+  background-size: 24px 22px;
+  vertical-align: baseline;
+}
+@media (max-width: 768px) {
+  .ico_review {
+    width: 18px;
+    height: 16px;
+    background-size: 18px 16px;
+  }
+}
+
+input:checked + label .ico_review {
+  background-image: url("../img/img_star_red.png");
+}
+
 .ico_starR {
   width: 14px;
   height: 14px;
