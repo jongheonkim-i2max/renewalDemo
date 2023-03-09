@@ -1,0 +1,11 @@
+.mypage_contact{
+    &.myCommon .myCommon__sub-title{
+        margin-bottom:0;
+    }
+    &__title{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        margin-bottom:25px;
+    }
+}

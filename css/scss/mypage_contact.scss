@@ -4,8 +4,6 @@
 @import 'base/reset';
 @import 'base/fonts';
 
-@import 'vendors/swiper';
-
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
@@ -14,9 +12,9 @@
 @import 'components/select';
 @import 'components/icon';
 @import 'components/buttons';
-@import 'components/items';
-@import 'components/myItem';
+@import 'components/textarea';
+@import 'components/pagination';
 @import 'components/myFaq';
 
 @import 'pages/mypageCommon';
-@import 'pages/mypage';
+@import 'pages/mypage_contact';

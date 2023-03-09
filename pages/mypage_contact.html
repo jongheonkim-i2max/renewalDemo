@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo 마이페이지-리뷰 작성</title>
+        <title>Demo 마이페이지-문의 내역</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="../css/mypage_review_write.css">
+        <link rel="stylesheet" type="text/css" href="../css/mypage_contact.css">
         
         <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
         <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
         <script defer src="../js/common.js"></script>
-        <script defer src="../js/mypage_review_write.js"></script>
+        <script defer src="../js/mypage_contact.js"></script>
     </head>
     <body>
         <header class="header">
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </header>
-        <section class="review_write myCommon">
+        <section class="mypage_contact myCommon">
             <div class="container">
                 <div class="myCommon__menu">
                     <h1 class="myCommon__title">마이페이지</h1>
@@ -102,141 +102,150 @@
                         <li><a href="mypage_coupon.html">쿠폰</a></li>
                         <li><a href="mypage_wish.html">위시상품</a></li>
                         <li><a href="mypage_shipping.html">배송지관리</a></li>
-                        <li class="active"><a href="mypage_review.html">리뷰</a></li>
-                        <li><a href="mypage_contact.html">문의내역</a></li>
+                        <li><a href="mypage_review.html">리뷰</a></li>
+                        <li class="active"><a href="mypage_contact.html">문의내역</a></li>
                         <li><a href="mypage_info.html">회원정보</a></li>
                     </ul>
                     <select name="" id="" class="custom-select display_mobile" onchange="location.href=this.value">
-                        <option value="mypage_review.html">리뷰</option>
+                        <option value="mypage_contact.html">문의내역</option>
                         <option value="mypage.html">홈</option>
                         <option value="mypage_order.html">주문조회</option>
                         <option value="mypage_coupon.html">쿠폰</option>
                         <option value="mypage_wish.html">위시상품</option>
                         <option value="mypage_shipping.html">배송지관리</option>
-                        <option value="mypage_contact.html">문의내역</option>
+                        <option value="mypage_review.html">리뷰</option>
                         <option value="mypage_info.html">회원정보</option>
                     </select>
                 </div>
                 <div class="myCommon__content">
-                    <h5 class="myCommon__sub-title">리뷰 작성하기</h5>
-                    <div class="review_write__product">
-                        <div class="review_write__title">상품 정보</div>
-                        <ul class="common-product__list">
-                            <li>
-                                <div class="common-product__img">
-                                    <img src="../img/img_product26.jpg" alt="리뷰 작성 이미지1">
-                                </div>
-                                <div class="common-product__info">
-                                    <div class="common-product__brand">헤라</div>
-                                    <div class="common-product__subject">로즈 인퓨전 컬렉션 센슈얼 파우더 매트</div>
-                                    <div class="common-product__price">
-                                        <div class="common-product__percent">26%</div>
-                                        <div class="common-product__cost">
-                                            <div class="common-product__sell">29,750원</div>
-                                            <del class="common-product__regular">35,000원</del>
+                    <div class="mypage_contact__title">
+                        <h5 class="myCommon__sub-title">
+                            <div class="title">나의 문의</div>
+                            <div class="length">총 <b>2</b>개</div>
+                        </h5>
+                        <div class="mypage_contact__button">
+                            <a href="mypage_contact_write.html"class="coral-button middle-button">문의하기</a>
+                        </div>
+                    </div>
+                    <div class="mypage_contact_list">
+                        <ul class="mypage__faq--ul">
+                            <li class="mypage__faq--li checking">
+                                <details>
+                                    <summary>
+                                        <div class="mypage__faq--date">2023.03.09</div>
+                                        <button class="mypage__faq--btn small-button black-button">확인중</button>
+                                        <div class="mypage__faq--subject">Q. 품절상품 재입고 문의합니다.</div>
+                                        <div class="mypage__faq--arrow">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </summary>
+                                    <div class="answer">
+                                        <div class="answer__self">
+                                            <div class="mypage__faq--view">
+                                                <h5>상품명 / 주문번호</h5>
+                                                <span class="text">문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기</span>
+                                            </div>
+                                            <textarea name="" id="" cols="30" rows="10" class="custom-textarea" readonly data-text="문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기">
+                                            </textarea>
+                                            <div class="mypage__faq--button">
+                                                <a class="modify-button small-button black-button">수정</a>
+                                                <a class="delete-button small-button grey-button">삭제</a>
+                                            </div>
+                                        </div>
+                                        <div class="answer__reply">
+                                            <div class="mypage__faq--reply">
+                                                Q. 품절상품 재입고 답변. <span class="mypage__faq--reply-date">2023.03.09</span>
+                                            </div>
+                                            <div class="mypage__faq--view">
+                                                <h5>상품명 / 주문번호</h5>
+                                                <span class="text">문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <ul class="common-product__option">
-                                    <li class="common-product__option-li">
-                                        <div class="common-product__option-name">121호 에피소드</div>
-                                        <div class="common-product__option-value">
-                                            <input type="text" class="only_number" readonly="" value="01">
+                                </details>
+                            </li>
+                            <li class="mypage__faq--li confirmed">
+                                <details>
+                                    <summary>
+                                        <div class="mypage__faq--date">2023.03.09</div>
+                                        <button class="mypage__faq--btn small-button grey-button">답변완료</button>
+                                        <div class="mypage__faq--subject">Q. 품절상품 재입고 문의합니다.</div>
+                                        <div class="mypage__faq--arrow">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
                                         </div>
-                                        <div class="common-product__option-price">29,750원</div>
-                                    </li>
-                                    <li class="common-product__option-li">
-                                        <div class="common-product__option-name">121호 에피소드</div>
-                                        <div class="common-product__option-value">
-                                            <input type="text" class="only_number" readonly="" value="02">
+                                    </summary>
+                                    <div class="answer">
+                                        <div class="answer__self">
+                                            <div class="mypage__faq--view">
+                                                <h5>상품명 / 주문번호</h5>
+                                                <span class="text">문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기</span>
+                                            </div>
+                                            <textarea name="" id="" cols="30" rows="10" class="custom-textarea" readonly data-text="문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기 문의하기"></textarea>
+                                            <div class="mypage__faq--button">
+                                                <a class="modify-button small-button black-button">수정</a>
+                                                <a class="delete-button small-button grey-button">삭제</a>
+                                            </div>
                                         </div>
-                                        <div class="common-product__option-price">29,750원</div>
-                                    </li>
-                                </ul>
+                                        <div class="answer__reply">
+                                            <div class="mypage__faq--reply">
+                                                Q. 품절상품 재입고 답변. <span class="mypage__faq--reply-date">2023.03.09</span>
+                                            </div>
+                                            <div class="mypage__faq--view">
+                                                <h5>상품명 / 주문번호</h5>
+                                                <span class="text">문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 문의 답변 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </details>
                             </li>
                         </ul>
-                    </div>
-                    <div class="review_write__stars">
-                        <div class="review_write__title">평점</div>
-                        <div class="review_write__star-wrap">
-                            <div class="review_write__star">
-                                <input type="checkbox" name="star1" id="star1" value="star1">
-                                <label for="star1"><i class="ico_review"></i></label>
-                            </div>
-                            <div class="review_write__star">
-                                <input type="checkbox" name="star1" id="star2" value="star2">
-                                <label for="star2"><i class="ico_review"></i></label>
-                            </div>
-                            <div class="review_write__star">
-                                <input type="checkbox" name="star1" id="star3" value="star3">
-                                <label for="star3"><i class="ico_review"></i></label>
-                            </div>
-                            <div class="review_write__star">
-                                <input type="checkbox" name="star1" id="star4" value="star4">
-                                <label for="star4"><i class="ico_review"></i></label>
-                            </div>
-                            <div class="review_write__star">
-                                <input type="checkbox" name="star1" id="star5" value="star5">
-                                <label for="star5"><i class="ico_review"></i></label>
-                            </div>
+                        <div class="pagination">
+                            <ol class="pagination__ol">
+                                <li class="prev">
+                                    <a href="">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="page">01</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="page">02</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="page">03</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="page">04</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="page">05</span>
+                                    </a>
+                                </li>
+                                <li class="next">
+                                    <a href="">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </a>
+                                </li>
+                            </ol>
                         </div>
-                    </div>
-                    <div class="review_write__img">
-                        <div class="review_write__title">이미지 첨부 (최대 5개)</div>
-                        <ul class="review_write__file">
-                            <li>
-                                <input type="file" name="img_add1" id="img_add1" accept="image/*">
-                                <label for="img_add1">
-                                    <span class="plus"></span>
-                                    <span class="img"><img src="" alt="첨부 이미지1"></span>
-                                </label>
-                                <a class="delete_btn">삭제</a>
-                            </li>
-                            <li>
-                                <input type="file" name="img_add2" id="img_add2" accept="image/*">
-                                <label for="img_add2">
-                                    <span class="plus"></span>
-                                    <span class="img"><img src="" alt="첨부 이미지1"></span>                                    
-                                </label>
-                                <a class="delete_btn">삭제</a>
-                            </li>
-                            <li>
-                                <input type="file" name="img_add3" id="img_add3" accept="image/*">
-                                <label for="img_add3">
-                                    <span class="plus"></span>
-                                    <span class="img"><img src="" alt="첨부 이미지1"></span>
-                                </label>
-                                <a class="delete_btn">삭제</a>
-                            </li>
-                            <li>
-                                <input type="file" name="img_add4" id="img_add4" accept="image/*">
-                                <label for="img_add4">
-                                    <span class="plus"></span>
-                                    <span class="img"><img src="" alt="첨부 이미지1"></span>
-                                </label>
-                                <a class="delete_btn">삭제</a>
-                            </li>
-                            <li>
-                                <input type="file" name="img_add5" id="img_add5" accept="image/*">
-                                <label for="img_add5">
-                                    <span class="plus"></span>
-                                    <span class="img"><img src="" alt="첨부 이미지1"></span>
-                                </label>
-                                <a class="delete_btn">삭제</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="review_write__text">
-                        <div class="review_write__title">내용</div>
-                        <div class="review_write__content">
-                            <textarea name="" id="" cols="30" rows="10" class="custom-textarea" placeholder="리뷰 내용을 입력해주세요."></textarea>
-                        </div>
-                    </div>
-                    <div class="review_write__button">
-                        <button class="coral-button large-button height50">등록</button>
                     </div>
                 </div>
             </div>
+
         </section>
         <footer class="footer">
             <div class="footer__container">

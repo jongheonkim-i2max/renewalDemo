@@ -4,19 +4,16 @@
 @import 'base/reset';
 @import 'base/fonts';
 
-@import 'vendors/swiper';
-
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
 
 @import 'components/breadcrumb';
 @import 'components/select';
+@import 'components/input';
 @import 'components/icon';
 @import 'components/buttons';
-@import 'components/items';
-@import 'components/myItem';
-@import 'components/myFaq';
+@import 'components/textarea';
 
 @import 'pages/mypageCommon';
-@import 'pages/mypage';
+@import 'pages/mypage_contact_write';

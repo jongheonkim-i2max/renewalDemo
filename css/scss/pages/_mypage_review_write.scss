@@ -185,9 +185,22 @@
     &__content{
         padding:30px 35px;
         border:1px solid var(--border-color);
+        margin-bottom:60px;
         @include boxShadow;
         @include mediaQuery(768px){
             padding:25px 20px;
+            margin-bottom:30px;
+        }
+    }
+    &__button{
+        text-align:center;
+        button{
+            width:175px;
+            margin:0 auto;
+
+            @include mediaQuery(768px){
+                width:130px;
+            }
         }
     }
 }

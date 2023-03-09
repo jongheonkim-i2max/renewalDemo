@@ -1,0 +1,217 @@
+.mypage__faq{
+    &--ul{
+        border-top:2px solid var(--border-color);
+        border-bottom:2px solid var(--border-color);
+    }
+
+    &--li{
+        border-bottom:1px solid var(--border-color);
+        &:last-child{
+            border-bottom:0;
+        }
+        details{
+            padding:20px;
+            @include mediaQuery(768px){
+                padding:10px 15px;
+            }
+            &[open]{
+                summary{
+                    .mypage__faq--arrow{
+                        transform:rotate(180deg);
+                    }
+                    
+                } 
+                
+            }
+            summary{
+                display:flex;
+                align-items:center;
+                cursor:pointer;
+                outline:none;
+                box-shadow:none;
+                @include mediaQuery(768px){
+                    flex-wrap:wrap;
+                }
+                &::after{
+                    display:none;
+                    content:"";
+                }
+                &::-webkit-details-marker{
+                    display:none;
+                    content:"";
+                }   
+                
+                .mypage__faq--date{
+                    font-size:16px;
+                    width:130px;
+                    @include mediaQuery(768px){
+                        width:calc(100% - 60px);
+                        font-size:12px;
+                    }
+                }
+                button, a{
+                    &.mypage__faq--btn{
+                        width:70px;
+                        margin-right:65px;
+                        padding:0;
+                        pointer-events:none;
+                        @include mediaQuery(768px){
+                            width:60px;
+                            margin-right:0;
+                        }
+                    }
+                }
+
+                .mypage__faq--subject{
+                    width:calc(100% - 265px - 19px);
+                    font-size:16px;
+                    font-weight:bold;
+                    @include mediaQuery(768px){
+                        width:calc(100% - 15px);
+                        font-size:14px;
+                        margin-top:5px;
+                    }
+                }
+
+                .mypage__faq--arrow{
+                    width:19px;
+                    height:11px;
+                    position:relative;
+                    @include transition(200ms);
+                    .line{
+                        width:1px;
+                        height:12px;
+                        border-radius:5px;
+                        position:absolute;
+                        top:0;
+                        left:5px;
+                        transform:rotate(-45deg);
+                        background: var(--color-black);
+
+                        &:nth-child(2){
+                            transform:rotate(45deg);
+                            left:auto;
+                            right:5px;
+                        }
+                    }
+                    @include mediaQuery(768px){
+                        width:15px;
+                        height:9px;
+                        margin-top:5px;
+                        .line{
+                            height:10px;
+                            left:3.4px;
+                            &:nth-child(2){
+                                left:auto;
+                                right:4px;
+                            }
+                        }
+                    }
+                }
+            }
+            .answer{
+                margin-top:10px;
+                margin-left:265px;
+                
+                @include mediaQuery(768px){
+                    margin-left:0;
+                }
+                p{
+                    padding:10px 15px;
+                    background: var(--color-Lgrey);
+                    @include mediaQuery(768px){
+                        margin-left:0;
+                        font-size:14px;
+                    }
+                }
+
+                &__self,
+                &__reply{
+                    
+                }
+                &__reply{
+                    margin-top:20px;
+                    padding-top:35px;
+                    border-top:1px solid var(--border-color);
+                    @include mediaQuery(768px){
+                        padding-top:25px;
+                    }
+                }
+            }
+            .mypage__faq--reply{
+                margin-bottom:20px;
+                font-size:16px;
+                font-weight:bold;
+                display:flex;
+                .mypage__faq--reply-date{
+                    margin-left:10px;
+                    font-weight:400;
+                }
+                @include mediaQuery(768px){
+                    font-size:14px;
+                    margin-bottom:10px;
+                    flex-wrap:wrap;
+                    .mypage__faq--reply-date{
+                        margin-left:5px;
+                    }
+                }
+            }
+            .mypage__faq--view{
+                padding:25px;
+                border:1px solid var(--border-color);
+                font-size:16px;
+                @include mediaQuery(768px){
+                    padding:15px;
+                    font-size:14px;
+                }
+        
+                h5{
+                    margin-bottom:10px;
+                    @include mediaQuery(768px){
+                        margin-bottom:5px;
+                    }
+                }
+                .text{
+                    color:#757575;
+                }
+            }
+            .mypage__faq--button{
+                display:flex;
+                align-items:center;
+                justify-content:flex-end;
+                margin-top:8px;
+                button, a{
+                    width:60px;
+                    text-align:center;
+                    margin-right:7px;
+                    &:last-child{
+                        margin-right:0;
+                    }
+                    @include mediaQuery(768px){
+                        width:50px;
+                        margin-right:5px;
+                    }
+                }
+            }
+            textarea{
+                display:none;
+                padding:25px;
+                font-size:16px;
+                @include mediaQuery(768px){
+                    padding:15px;
+                    font-size:14px;
+                }
+            }
+        }
+        &.modify{
+            details{
+                .mypage__faq--view{
+                    display:none;
+                }
+                textarea{
+                    display:block;
+                }
+            }
+        }
+    }
+}

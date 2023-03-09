@@ -1391,11 +1391,19 @@ a.large-button, button.large-button {
 a.large-button:hover, button.large-button:hover {
   color: var(--color-white);
 }
+a.large-button.height50, button.large-button.height50 {
+  height: 50px;
+  line-height: 50px;
+}
 @media (max-width: 768px) {
   a.large-button, button.large-button {
     height: 45px;
     line-height: 43px;
     font-size: 16px;
+  }
+  a.large-button.height50, button.large-button.height50 {
+    height: 40px;
+    line-height: 37px;
   }
 }
 a.middle-button, button.middle-button {
@@ -2195,11 +2203,25 @@ a.naver-button, button.naver-button {
 .review_write__content {
   padding: 30px 35px;
   border: 1px solid var(--border-color);
+  margin-bottom: 60px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 @media (max-width: 768px) {
   .review_write__content {
     padding: 25px 20px;
+    margin-bottom: 30px;
+  }
+}
+.review_write__button {
+  text-align: center;
+}
+.review_write__button button {
+  width: 175px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .review_write__button button {
+    width: 130px;
   }
 }

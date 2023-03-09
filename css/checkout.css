@@ -1857,11 +1857,19 @@ a.large-button, button.large-button {
 a.large-button:hover, button.large-button:hover {
   color: var(--color-white);
 }
+a.large-button.height50, button.large-button.height50 {
+  height: 50px;
+  line-height: 50px;
+}
 @media (max-width: 768px) {
   a.large-button, button.large-button {
     height: 45px;
     line-height: 43px;
     font-size: 16px;
+  }
+  a.large-button.height50, button.large-button.height50 {
+    height: 40px;
+    line-height: 37px;
   }
 }
 a.middle-button, button.middle-button {
