@@ -62,15 +62,6 @@
                         display:block;
                     }
                 }
-                input + .error_msg{
-                    display:none;
-                }
-                input.is-invalid + .error_msg{
-                    display:block;
-                    margin-top:5px;
-                    font-size:10px;
-                    color:var(--input-error);
-                }
                 a{
                     text-align:center;
                 }

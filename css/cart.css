@@ -1014,6 +1014,15 @@ input.custom-input.height35 {
     line-height: 30px;
   }
 }
+input.custom-input + .error_msg {
+  display: none;
+}
+input.custom-input.is-invalid + .error_msg {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  color: var(--input-error);
+}
 @media (max-width: 768px) {
   input.custom-input {
     height: 35px;
@@ -1803,6 +1812,7 @@ a.large-button.height50, button.large-button.height50 {
 }
 a.middle-button, button.middle-button {
   display: block;
+  text-align: center;
   padding: 0 21px;
   height: 40px;
   line-height: 40px;
@@ -1830,6 +1840,7 @@ a.middle-button.height45, button.middle-button.height45 {
 }
 a.small-button, button.small-button {
   display: block;
+  text-align: center;
   white-space: nowrap;
   width: 80px;
   height: 31px;

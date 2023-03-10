@@ -139,7 +139,7 @@ function checkJoin(){
         $(checkTel).val('').addClass('is-invalid').focus();
         return false;
     }else if ( !telCheck($(checkTel).val().trim()) ) { 
-        errorMessage(checkTel, "전화번호를 올바르게 입력해주세요.");
+        errorMessage(checkTel, "전화번호를 형식이 올바르지 않습니다.");
         $(checkTel).val('').addClass('is-invalid').focus();
         return false; 
     }else{

@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo 로그인</title>
+        <title>Demo 마이페이지-회원정보 수정</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="../css/members_login.css">
+        <link rel="stylesheet" type="text/css" href="../css/mypage_info_write.css">
         
         <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
         <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
         <script defer src="../js/common.js"></script>
-        <script defer src="../js/members_login.js"></script>
+        <script defer src="../js/pop_up.js"></script>
+        <script defer src="../js/mypage_info_write.js"></script>
     </head>
     <body>
         <header class="header">
@@ -92,61 +93,114 @@
                 </div>
             </div>
         </header>
-        <section class="login memberCommon">
+        <section class="info_write myCommon">
             <div class="container">
-                <div class="common">
-                    <h1 class="common__title">로그인</h1>
-                    <!--기존에 method post이나 get으로 해야 페이지 넘어감-->
-                    <form class="common__content login__content" name="frm" method="get" action="mypage.html" onSubmit="return checkLogin()">
-                        <div class="common__content--cont">
-                            <div class="common__content--input">
-                                <input type="text" class="custom-input" id="login_email" name="login_email" placeholder="이메일 주소">
-                                <div class="error_msg"></div>
-                            </div>
-                            <div class="common__content--input">
-                                <input type="password" class="custom-input" id="login_password" name="login_password" placeholder="비밀번호">
-                                <div class="error_msg"></div>
-                            </div>
+                <div class="myCommon__menu">
+                    <h1 class="myCommon__title">마이페이지</h1>
+                    <ul class="myCommon__ul display_pc">
+                        <li><a href="mypage.html">홈</a></li>
+                        <li><a href="mypage_order.html">주문조회</a></li>
+                        <li><a href="mypage_coupon.html">쿠폰</a></li>
+                        <li><a href="mypage_wish.html">위시상품</a></li>
+                        <li><a href="mypage_shipping.html">배송지관리</a></li>
+                        <li><a href="mypage_review.html">리뷰</a></li>
+                        <li><a href="mypage_contact.html">문의내역</a></li>
+                        <li class="active"><a href="mypage_info.html">회원정보</a></li>
+                    </ul>
+                    <select name="" id="" class="custom-select display_mobile" onchange="location.href=this.value">
+                        <option value="mypage_info.html">회원정보</option>
+                        <option value="mypage.html">홈</option>
+                        <option value="mypage_order.html">주문조회</option>
+                        <option value="mypage_coupon.html">쿠폰</option>
+                        <option value="mypage_wish.html">위시상품</option>
+                        <option value="mypage_shipping.html">배송지관리</option>
+                        <option value="mypage_review.html">리뷰</option>
+                        <option value="mypage_contact.html">문의내역</option>
+                    </select>
+                </div>
+                <div class="myCommon__content">
+                    <div class="info_write__title">
+                        <h5 class="myCommon__sub-title">회원정보 수정</h5>
+                        <div class="info_write__button">
+                            <a class="black-button middle-button secessionPop_open">탈퇴하기</a>
                         </div>
-                        <div class="common__content--cont">
-                            <div class="login__content--sns">
-                                <button type="submit" class="middle-button coral-button login-button height45">
-                                    <span class="text">로그인</span>
-                                </button>
-                                <a class="middle-button kakao-button height45">
-                                    <span class="icon"><img src="../img/Ic_kakao.png" alt="카카오톡 로그인 아이콘"></span>
-                                    <span class="text">로그인</span>
-                                </a>
-                                <a class="middle-button naver-button height45">
-                                    <span class="icon"><img src="../img/Ic_naver.png" alt="네이버 로그인 아이콘"></span>
-                                    <span class="text">로그인</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="common__content--cont">
-                            <div class="login__content--link">
-                                <div class="custom-checkbox">
-                                    <div class="custom-checkbox__cont">
-                                        <input type="checkbox" name="auto_login" id="auto_login">
-                                        <label for="auto_login" class="custom-checkbox__label">
-                                            <span class="custom-checkbox__square"></span>
-                                            <span class="custom-checkbox__text">자동 로그인</span>
-                                        </label>
+                    </div>
+                    <form class="info_write__form" name="frm" method="get" action="../index.html" onSubmit="return checkInfo()">
+                        <div class="info_write__content">
+                            <div class="info_write__cont">
+                                <div class="info_write__cont--half">
+                                    <div class="info_write__cont--input">
+                                        <label for="member_name">이름</label>
+                                        <input type="text" name="member_name" id="member_name" value="아이투맥스" class="custom-input" placeholder="이름 입력" >
+                                        <div class="error_msg"></div>
                                     </div>
                                 </div>
-                                <ol class="login__content--ol">
-                                    <li>
-                                        <a href="members_lost.html">아이디 / 비밀번호 찾기</a>
-                                    </li>
-                                    <li>
-                                        <a href="members_join.html">회원가입</a>
-                                    </li>
-                                </ol>
+                                <div class="info_write__cont--half">
+                                    <div class="info_write__cont--input">
+                                        <label for="member_tel">연락처</label>
+                                        <input type="text" class="only_tel custom-input" name="member_tel" id="member_tel" value="02-2222-2222" placeholder="연락처 입력">
+                                        <div class="error_msg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_write__cont">
+                                <div class="info_write__cont--half">
+                                    <div class="info_write__cont--input">
+                                        <label for="member_email">이메일</label>
+                                        <input type="text" name="member_email" id="member_email" value="i2max@gmail.com" class="custom-input" placeholder="이메일 입력">
+                                        <div class="error_msg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_write__cont">
+                                <div class="info_write__cont--half">
+                                    <div class="info_write__cont--input">
+                                        <label for="member_origin_password">현재 비밀번호</label>
+                                        <input type="password" name="member_origin_password" id="member_origin_password" class="custom-input" placeholder="현재 비밀번호 입력">
+                                        <div class="error_msg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_write__cont">
+                                <div class="info_write__cont--half">
+                                    <div class="info_write__cont--input">
+                                        <label for="member_new_password">새 비밀번호</label>
+                                        <input type="password" name="member_new_password" id="member_new_password" class="custom-input" placeholder="새 비밀번호 입력">
+                                        <div class="error_msg"></div>
+                                    </div>
+                                </div>
+                                <div class="info_write__cont--half">
+                                    <div class="info_write__cont--input">
+                                        <label for="member_new_password_confirm">새 비밀번호 확인</label>
+                                        <input type="password" name="member_new_password_confirm" id="member_new_password_confirm" class="custom-input" placeholder="새 비밀번호 확인 입력">
+                                        <div class="error_msg"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <button type="submit" class="coral-button large-button height50">수정</button>
                     </form>
                 </div>
             </div>
+            <div class="pop secessionPop">
+                <div class="pop_title">
+                    <h2>회원 탈퇴하기</h2>
+                    <a class="pop_close secessionPop_close">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                </div>
+                <div class="pop_content alertPop_content">
+                    <h5>
+                        <span class="icon"><img src="../img/Ic_danger.png" alt="경고 아이콘"></span>
+                        회원을 탈퇴하시겠습니까?
+                    </h5>
+                </div>
+                <div class="pop_button">
+                    <button class="coral-button">탈퇴하기</button>
+                </div>
+            </div>
+            <div class="pop_bg secessionPop_bg"></div>
         </section>
         <footer class="footer">
             <div class="footer__container">

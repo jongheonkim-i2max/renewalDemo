@@ -1,0 +1,84 @@
+.info_write{
+    &.myCommon .myCommon__sub-title{
+        margin-bottom:0;
+    }
+
+    &__title{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        margin-bottom:20px;
+        white-space:nowrap;
+
+        @include mediaQuery(768px){
+            button, a{
+                
+            }
+        }
+        
+    }
+
+    &__form{
+        display:block;
+
+        button{
+            width:175px;
+            margin:0 auto;
+            @include mediaQuery(768px){
+                width:130px;
+            }
+        }
+    }
+    
+    &__content{
+        padding:40px;
+        margin-bottom:50px;
+        border:1px solid var(--border-color);
+        @include boxShadow;
+        @include mediaQuery(768px){
+            padding:25px 20px;
+            margin-bottom:30px;
+        }
+    }
+
+    &__cont{
+        margin-bottom:20px;
+        display:flex;
+        align-items:center;
+        @include mediaQuery(768px){
+            flex-wrap:wrap;
+        }
+        &:last-child{
+            margin-bottom:0;
+        }
+
+        &--half{
+            width:calc(50% - 20px);
+            margin-right:40px;
+            &:last-child{
+                margin-right:0;
+            }
+            @include mediaQuery(768px){
+                width:100%;
+                margin-right:0;
+                margin-bottom:10px;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+        }
+
+        &--input{
+            label{
+                font-size:14px;
+                font-weight:bold;
+                display:inline-flex;
+                margin-bottom:10px;
+                @include mediaQuery(768px){
+                    font-size:12px;
+                }
+            }
+        }
+    }
+    
+}

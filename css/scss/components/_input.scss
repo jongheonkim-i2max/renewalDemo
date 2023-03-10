@@ -28,6 +28,15 @@ input.custom-input{
             line-height:30px;
         }
     }
+    & + .error_msg{
+        display:none;
+    }
+    &.is-invalid + .error_msg{
+        display:block;
+        margin-top:5px;
+        font-size:10px;
+        color:var(--input-error);
+    }
     @include mediaQuery(768px){
         height:35px;
         line-height:35px;

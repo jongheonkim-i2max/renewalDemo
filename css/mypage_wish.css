@@ -1617,6 +1617,7 @@ a.large-button.height50, button.large-button.height50 {
 }
 a.middle-button, button.middle-button {
   display: block;
+  text-align: center;
   padding: 0 21px;
   height: 40px;
   line-height: 40px;
@@ -1644,6 +1645,7 @@ a.middle-button.height45, button.middle-button.height45 {
 }
 a.small-button, button.small-button {
   display: block;
+  text-align: center;
   white-space: nowrap;
   width: 80px;
   height: 31px;
