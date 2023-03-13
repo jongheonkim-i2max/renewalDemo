@@ -1500,6 +1500,10 @@ input.custom-input:-moz-read-only {
 input.custom-input:read-only {
   background: var(--color-Lgrey);
 }
+input.custom-input:disabled {
+  background: var(--color-Lgrey);
+  cursor: not-allowed;
+}
 input.custom-input.is-invalid {
   border-color: var(--input-error);
 }
@@ -1561,6 +1565,7 @@ input.custom-input.is-invalid + .error_msg {
 .custom-checkbox input + label .custom-checkbox__square {
   width: 17px;
   height: 17px;
+  background: var(--color-white);
   border: 1px solid var(--color-Lblue);
   margin-right: 8px;
   position: relative;

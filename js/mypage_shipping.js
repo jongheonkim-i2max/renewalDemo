@@ -44,7 +44,7 @@ function selectCheck(){
         if($(this).is(":checked")){
             $(this).parents('.mypage_shipping__cont').remove();
             shippingLength = $('.mypage_shipping__cont').length;
-            console.log(shippingLength);
+
             $('.mypage_shipping__title .length b').text(shippingLength);
         }
     });

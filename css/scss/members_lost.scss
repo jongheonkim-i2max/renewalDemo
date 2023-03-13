@@ -7,15 +7,12 @@
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/pop_up';
 
 @import 'components/breadcrumb';
-@import 'components/select';
-@import 'components/inputCheckbox';
 @import 'components/icon';
 @import 'components/buttons';
-@import 'components/items';
-@import 'components/pagination';
+@import 'components/input';
+@import 'components/inputCheckbox';
 
-@import 'pages/mypageCommon';
-@import 'pages/mypage_wish';
+@import 'pages/membersCommon';
+@import 'pages/members_lost';

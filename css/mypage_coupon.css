@@ -1539,6 +1539,10 @@ input.custom-input:-moz-read-only {
 input.custom-input:read-only {
   background: var(--color-Lgrey);
 }
+input.custom-input:disabled {
+  background: var(--color-Lgrey);
+  cursor: not-allowed;
+}
 input.custom-input.is-invalid {
   border-color: var(--input-error);
 }

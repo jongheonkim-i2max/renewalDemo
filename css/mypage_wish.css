@@ -1203,6 +1203,85 @@ select.custom-select option {
   }
 }
 
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+.custom-checkbox input + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  cursor: pointer;
+}
+.custom-checkbox input + label .custom-checkbox__square {
+  width: 17px;
+  height: 17px;
+  background: var(--color-white);
+  border: 1px solid var(--color-Lblue);
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+}
+.custom-checkbox input + label .custom-checkbox__text {
+  font-size: 14px;
+  width: calc(100% - 25px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (max-width: 768px) {
+  .custom-checkbox input + label .custom-checkbox__square {
+    width: 15px;
+    height: 15px;
+    margin-right: 7px;
+    top: 3px;
+  }
+  .custom-checkbox input + label .custom-checkbox__text {
+    font-size: 12px;
+    width: calc(100% - 22px);
+  }
+}
+.custom-checkbox input:checked + label .custom-checkbox__square {
+  border-color: var(--color-coral);
+}
+.custom-checkbox input:checked + label .custom-checkbox__square::before {
+  content: "";
+  width: 1px;
+  height: 6px;
+  background: #707070;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.custom-checkbox input:checked + label .custom-checkbox__square::after {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background: #707070;
+  position: absolute;
+  top: 2px;
+  left: 9.4px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  .custom-checkbox input:checked + label .custom-checkbox__square::before {
+    height: 4px;
+    top: 6px;
+    left: 4px;
+  }
+  .custom-checkbox input:checked + label .custom-checkbox__square::after {
+    height: 8px;
+    top: 2px;
+    left: 7.9px;
+  }
+}
+
 /*icon*/
 [class^=ico_] {
   display: -webkit-inline-box;
@@ -2570,6 +2649,21 @@ a.naver-button, button.naver-button {
   padding: 0 5px;
   text-align: center;
   margin-top: 15px;
+}
+.mypage_wish .product__item .items .items__image .custom-checkbox {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  z-index: 2;
+}
+.mypage_wish .product__item .items .items__image .custom-checkbox .custom-checkbox__square {
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  .mypage_wish .product__item .items .items__image {
+    top: 5px;
+    right: 5px;
+  }
 }
 @media (max-width: 1230px) {
   .mypage_wish .product__item .items {

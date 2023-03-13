@@ -13,6 +13,10 @@ input.custom-input{
     &:read-only{
         background:var(--color-Lgrey);
     }
+    &:disabled{
+        background: var(--color-Lgrey);
+        cursor:not-allowed;
+    }
 
     &.is-invalid{
         border-color:var(--input-error);

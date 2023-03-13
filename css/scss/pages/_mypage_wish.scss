@@ -50,6 +50,23 @@
                 margin-top:15px;
             }
 
+            .items__image{
+                .custom-checkbox{
+                    position:absolute;
+                    top:7px;
+                    right:7px;
+                    z-index:2;
+
+                    .custom-checkbox__square{
+                        margin-right:0;
+                    }
+                }
+                @include mediaQuery(768px){
+                    top:5px;
+                    right:5px;
+                }
+            }
+
             @include mediaQuery(1230px){
                 width:calc(33.3333% - 20px);
                 margin-right:30px;
