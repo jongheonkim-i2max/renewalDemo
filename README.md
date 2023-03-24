@@ -1,4 +1,4 @@
 #i2max Demo Site
 =================
 
-사이트 바로가기 : <https://jongheonk.github.io/renewalDemo/>
+사이트 바로가기 : <https://jongheonkim-i2max.github.io/renewalDemo/>
